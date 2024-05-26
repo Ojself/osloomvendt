@@ -105,7 +105,7 @@ const WeekClient = ({ events, weekNumber }) => {
         })}
       </div>
       <div className='mt-8 flex justify-between'>
-        {!photoMode ? (
+        {!photoMode || !highlightMode ? (
           <ActionButton
             className={getCalendarStyling(calendarMode)}
             onClick={() => {
