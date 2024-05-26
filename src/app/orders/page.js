@@ -12,9 +12,7 @@ const query = groq`*[_type == 'order' && reference == $reference ] {
   paymentType,
 }`;
 
-const getData = async () => {
-  const { reference } = context.query;
-  const params = { reference };
+const getData = async ({ params }) => {
   try {
     const orders = await client.fetch(query, params);
 
@@ -37,8 +35,8 @@ const getData = async () => {
   }
 };
 
-const Orders = async () => {
-  const sanityOrder = await getData();
+const Orders = async ({ params }) => {
+  const sanityOrder = await getData(params.product);
   return <OrdersClient sanityOrder={sanityOrder} />;
 };
 
