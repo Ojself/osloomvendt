@@ -10,14 +10,14 @@ import Header2 from '@/components/layout/typograhpy/Header2';
 
 const articles = [
   {
-    title: 'Mnmt',
+    title: 'Monument',
     url: 'https://festival.mnmt.no/',
     date: '1st - 4th August',
     location: 'Veggli, Telemark',
     imageSrcs: [
       { original: '/imgs/festivalguide/mnmt/_DSC5590.jpg' },
-      { original: '/imgs/festivalguide/mnmt/_DSC4531.jpg' },
-      { original: '/imgs/festivalguide/mnmt/_DSC2790.jpg' },
+      { original: '/imgs/festivalguide/mnmt/colors.jpeg' },
+      { original: '/imgs/festivalguide/mnmt/community.jpeg' },
     ],
 
     imageCreds: (
