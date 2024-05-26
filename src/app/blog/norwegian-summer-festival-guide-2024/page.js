@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 
 import SummerFestival2024Client from '@/components/blog/SummerFestival2024Client';
@@ -50,7 +50,7 @@ const articles = [
         connections.
         <br />
         <br />
-        This year's lineup features a diverse range of artists, including{' '}
+        This year&apos;s lineup features a diverse range of artists, including{' '}
         <a
           target='_blank'
           className='font-semibold hover:underline'
@@ -92,16 +92,16 @@ const articles = [
     text: (
       <>
         The sun holds ritualistic significance in the Nordics, celebrated
-        through solstice gatherings for thousands of years. This year's Soria
-        Gathering invites attendees to the Lofoten Islands for a five-day
+        through solstice gatherings for thousands of years. This year&apos;s
+        Soria Gathering invites attendees to the Lofoten Islands for a five-day
         festival of tribal electronic music and deep connection with Nordic
         nature. Beyond the Arctic Circle, participants celebrate the
         never-setting sun with fire, art, movement, and bass.
         <br />
         <br />
-        Visitors can immerse in Værøy's raw beauty, where the festival site is
-        an art piece. Attendees can rejuvenate with yoga, breath work, or
-        sound-healing sessions, and join sun ceremonies. This year's lineup
+        Visitors can immerse in Værøy&apos;s raw beauty, where the festival site
+        is an art piece. Attendees can rejuvenate with yoga, breath work, or
+        sound-healing sessions, and join sun ceremonies. This year&apos;s lineup
         includes Andreas Henneberg, Ness, Luigi Tozzi, and Sebastian Mullaert.
       </>
     ),
@@ -123,7 +123,7 @@ const articles = [
         entire city transforms into a festival arena with performances in
         streets, parks, squares, and public spaces. Offering a wide variety of
         free music, the event features over 50 stages and 500 artists, catering
-        to all musical tastes. Let's hope for great weather this year!
+        to all musical tastes. Let&apos;s hope for great weather this year!
         <br />
         <br />
         Enjoy an incredible lineup of artists such as Uteklubb, Streetback Boys,
@@ -170,10 +170,10 @@ const articles = [
     imageCreds: <>photo creds here</>,
     text: (
       <>
-        At Sober Summer Beat Festival, there's something for everyone; health,
-        yoga, movement, workshops and a space for people of all ages to come
-        together and engage in dance, play - and most importantly, an amazing
-        atmosphere!
+        At Sober Summer Beat Festival, there&apos;s something for everyone;
+        health, yoga, movement, workshops and a space for people of all ages to
+        come together and engage in dance, play - and most importantly, an
+        amazing atmosphere!
       </>
     ),
   },
@@ -191,9 +191,9 @@ const articles = [
       <>
         Since 2002, Insomnia Festival has fostered global friendships and
         innovation in electronic music as a non-profit event. It supports the
-        northern electronic music scene's growth by providing a platform for
-        emerging and established artists. The festival features live concerts,
-        DJ events, seminars, workshops, exhibitions, performances,
+        northern electronic music scene&apos;s growth by providing a platform
+        for emerging and established artists. The festival features live
+        concerts, DJ events, seminars, workshops, exhibitions, performances,
         installations, and debates. The Cloud talent program, supported by SNN
         Samfunnsløftet and Talent Norway, nurtures new regional talent in
         electronic music and related arts.
@@ -225,11 +225,11 @@ const articles = [
 ];
 
 const SummerFestival2024 = () => {
-  /* useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.scrollTo({ top: 100, behavior: "smooth" });
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 100, behavior: 'smooth' });
     }
-  }, []); */
+  }, []);
   return (
     <>
       {/* <Image 
