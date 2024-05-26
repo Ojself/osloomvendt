@@ -14,10 +14,11 @@ const WeekClient = ({ events, weekNumber }) => {
   const [photoMode, setPhotoMode] = useState(false);
   const [highlightMode, setHighlightMode] = useState(false);
   const [filteredLocations, setFilteredLocations] = useState([]);
-  const [calendarMode, setCalendarMode] = useLocalStorage(
+  /* const [calendarMode, setCalendarMode] = useLocalStorage(
     'calendarMode',
     false
-  );
+  ); */
+  const [calendarMode, setCalendarMode] = useState(false);
 
   const router = useRouter();
 
@@ -69,8 +70,6 @@ const WeekClient = ({ events, weekNumber }) => {
             highlightMode={highlightMode}
             filteredLocations={filteredLocations}
             setFilteredLocations={setFilteredLocations}
-            calendarMode={calendarMode}
-            setCalendarMode={setCalendarMode}
           />
         </>
       )}
@@ -105,7 +104,7 @@ const WeekClient = ({ events, weekNumber }) => {
         })}
       </div>
       <div className='mt-8 flex justify-between'>
-        {!photoMode || !highlightMode ? (
+        {!photoMode ? (
           <ActionButton
             className={getCalendarStyling(calendarMode)}
             onClick={() => {
