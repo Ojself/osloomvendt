@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 
 import SummerFestival2024Client from '@/components/blog/SummerFestival2024Client';
@@ -225,11 +225,6 @@ const articles = [
 ];
 
 const SummerFestival2024 = () => {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 100, behavior: 'smooth' });
-    }
-  }, []);
   return (
     <>
       {/* <Image 
