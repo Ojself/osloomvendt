@@ -1,6 +1,6 @@
 import React from 'react';
-
 import groq from 'groq';
+
 import { client } from '@/lib/sanity/sanityClient';
 import OrdersClient from '@/components/orders/OrdersClient';
 
