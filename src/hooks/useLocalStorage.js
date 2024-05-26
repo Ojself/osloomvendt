@@ -1,21 +1,47 @@
-'use client';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-function getStorageValue(key, defaultValue) {
-  let saved = localStorage.getItem(key);
+export default function useLocalStorage(key, initialValue) {
+  const [storedValue, setStoredValue] = useState(initialValue);
 
-  const initial = JSON.parse(saved);
-  return initial || defaultValue;
-}
-
-export const useLocalStorage = (key, defaultValue) => {
-  const [value, setValue] = useState(() => {
-    return getStorageValue(key, defaultValue);
-  });
-
+  const [firstLoadDone, setFirstLoadDone] = useState(false);
   useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(value));
-  }, [key, value]);
+    const fromLocal = () => {
+      if (typeof window === 'undefined') {
+        return initialValue;
+      }
+      try {
+        const item = window.localStorage.getItem(key);
+        return item ? JSON.parse(item) : initialValue;
+      } catch (error) {
+        console.error(error);
+        return initialValue;
+      }
+    };
 
-  return [value, setValue];
-};
+    // Set the value from localStorage
+    setStoredValue(fromLocal);
+    // First load is done
+    setFirstLoadDone(true);
+  }, [initialValue, key]);
+
+  // Instead of replacing the setState function, react to changes.
+  // Whenever the state value changes, save it in the local storage.
+  useEffect(() => {
+    // If it's the first load, don't store the value.
+    // Otherwise, the initial value will overwrite the local storage.
+    if (!firstLoadDone) {
+      return;
+    }
+
+    try {
+      if (typeof window !== 'undefined') {
+        window.localStorage.setItem(key, JSON.stringify(storedValue));
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }, [storedValue, firstLoadDone, key]);
+
+  // Return the original useState functions
+  return [storedValue, setStoredValue];
+}
