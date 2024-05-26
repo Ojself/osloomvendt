@@ -1,9 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
 import currentWeekNumber from 'current-week-number';
 import groq from 'groq';
 
-/* import WeekClient from '@/components/week/WeekClient'; */
 import { client } from '@/lib/sanity/sanityClient';
 import { getDateOfIsoWeek } from '@/utils';
 import events from '@/data/events';
@@ -12,7 +10,7 @@ import WeekClient from '@/components/week/WeekClient';
 
 export function generateStaticParams() {
   return Array.from({ length: 52 }).map((n, i) => ({
-    week: i.toString(),
+    week: (i + 1).toString(),
   }));
 }
 
