@@ -2,8 +2,6 @@
 
 - Meta data
 - SEO
-- Layouts
-- Linkedbanner
 - favicon
 - Shop layout
 - getdata naming convention
