@@ -88,7 +88,15 @@ const articles = [
       { original: '/imgs/festivalguide/soria/acticcircle.jpg' },
       { original: '/imgs/festivalguide/soria/celebrationoflights.jpg' },
     ],
-    imageCreds: <>photo creds here</>,
+    imageCreds: (
+      <a
+        className='hover:underline'
+        target='_blank'
+        href='https://soriagathering.com/'
+      >
+        soriagathering.com
+      </a>
+    ),
     text: (
       <>
         The sun holds ritualistic significance in the Nordics, celebrated
@@ -116,7 +124,15 @@ const articles = [
       { original: '/imgs/festivalguide/musikkfest/hill.jpg' },
       { original: '/imgs/festivalguide/musikkfest/stage.jpg' },
     ],
-    imageCreds: <>photo creds here</>,
+    imageCreds: (
+      <a
+        className='hover:underline'
+        target='_blank'
+        href='https://www.instagram.com/musikkfestoslo/'
+      >
+        @musikkfestoslo
+      </a>
+    ),
     text: (
       <>
         On Saturday, June 1st, Musikkfest Oslo returns for its 32nd year. The
@@ -141,7 +157,15 @@ const articles = [
       { original: '/imgs/festivalguide/vaarlys/mood1.jpg' },
       { original: '/imgs/festivalguide/vaarlys/mood2.jpg' },
     ],
-    imageCreds: <>photo creds here</>,
+    imageCreds: (
+      <a
+        className='hover:underline'
+        target='_blank'
+        href='https://www.instagram.com/frostlysburn/'
+      >
+        @frostlysburn
+      </a>
+    ),
     text: (
       <>
         Vårlys is a Burning Man-inspired event at Herøya in Steinsfjorden,
@@ -167,7 +191,15 @@ const articles = [
       { original: '/imgs/festivalguide/summerbeat/hero.png' },
       { original: '/imgs/festivalguide/summerbeat/tent.jpg' },
     ],
-    imageCreds: <>photo creds here</>,
+    imageCreds: (
+      <a
+        className='hover:underline'
+        target='_blank'
+        href='https://www.instagram.com/sobersummerbeat/'
+      >
+        @sobersummerbeat
+      </a>
+    ),
     text: (
       <>
         At Sober Summer Beat Festival, there&apos;s something for everyone;
@@ -186,7 +218,15 @@ const articles = [
       { original: '/imgs/festivalguide/insomnia/date.png' },
       { original: '/imgs/festivalguide/insomnia/logo.png' },
     ],
-    imageCreds: <>photo creds here</>,
+    imageCreds: (
+      <a
+        className='hover:underline'
+        target='_blank'
+        href='http://insomniafestival.no/'
+      >
+        insomniafestival.no
+      </a>
+    ),
     text: (
       <>
         Since 2002, Insomnia Festival has fostered global friendships and
@@ -206,7 +246,15 @@ const articles = [
     date: 'November?',
     location: 'Bergen, Vestland',
     imageSrcs: [{ original: '/imgs/festivalguide/ekko/ekko.png' }],
-    imageCreds: <>photo creds here</>,
+    imageCreds: (
+      <a
+        className='hover:underline'
+        target='_blank'
+        href='https://ekko.no/festival/ekko-festival-xx'
+      >
+        ekko.no
+      </a>
+    ),
     text: (
       <>
         <span className='italic'>From 2023</span>: This year marks the 20th
