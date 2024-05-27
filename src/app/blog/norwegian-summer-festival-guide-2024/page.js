@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+'use client';
+import React, { useState } from 'react';
 
 import SummerFestival2024Client from '@/components/blog/SummerFestival2024Client';
 import Container from '@/components/layout/Container';
@@ -9,12 +9,12 @@ import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
 
 // https://electronicgroove.com/dutch-summer-festival-guide-2024/
 
-const answers = [
+const igAnswers = [
   'Monument!',
   'Tons',
-  'Monument!',
+  'Monument!!',
   'Trevarefest i Lofoten 🥰🏔️',
-  'Monument',
+  'Monument🎵',
   'Stone Techno 🥳',
   'Butik',
   'Soria',
@@ -22,12 +22,12 @@ const answers = [
   'Sober beat og Insomnia',
   'Soria!',
   'Vårlys',
-  'Monument',
+  '🌸Monument',
   'Veggli bby ✨',
   'Musikkens dag',
   'Ozora ❤️❤️❤️',
   'Distortion copenhagen',
-  'Monument',
+  'Monument 😎',
   'mnmnt/øya',
   'Soria and Monument 😍',
   'Ekko i Bergen!',
@@ -35,9 +35,9 @@ const answers = [
   'Monument, Soria gathering',
   'Monument 🖤',
   'Sober Summer Beat',
-  'Monument!',
+  'Monument:)',
   'Musikkens dag! ',
-  'Soria',
+  'Soria Gathering',
   'Sober Beat og Monument',
   'Ekkofestivalen 🫡🫡',
   'Hvem trenger festivaler når det er skogs-raves hver eneste helg 🤩',
@@ -50,7 +50,7 @@ const answers = [
   'Monumeeeent ❤️❤️❤️❤️❤️',
   'Monument 🔥🔥🔥',
   'Vårlys og mnmt 🖤🧡',
-  'Soria',
+  'Soria, Monument, Vårlys',
   'Øya & Monument(forhåpentligvis)',
   'All of them',
   'Monument 🥹🙏',
@@ -59,7 +59,7 @@ const answers = [
   'Defected Croatia 🎛️ 🏝️ 🎚️',
   'Fallofestivalen i Klitten på Færvik',
   'Tons of rock',
-  'Monument',
+  'Monument🧡🖤',
   'Monument, bergtatt',
   'Distortion, Noisly and Monument 🤩',
   'Stone Techno Festival',
@@ -402,19 +402,21 @@ const articles = [
 ];
 
 const SummerFestival2024 = () => {
+  const [answers, setAnswers] = useState(igAnswers);
+
+  const handleClick = (a) => {
+    const newAnswers = answers.filter((ans) => ans !== a);
+    newAnswers.push(a);
+    setTimeout(() => {
+      setAnswers(newAnswers);
+    }, 300);
+  };
   return (
     <>
-      {/* <Image 
-        alt='Festivalguide 2024'
-        blurDataURL='/imgs/festivalguide/tempfestival2blurred.jpg'
-        src='/imgs/festivalguide/tempfestival2.jpg'
-        width={1920}
-        height={1080}
-        
-      /> */}
       <div className='flex h-screen w-full flex-row flex-wrap justify-center overflow-hidden'>
         {answers.map((a) => (
           <IgQuestionAnswer
+            onClick={() => handleClick(a)}
             key={a}
             q={'Which music festival are you attending this summer?'}
             a={a}
@@ -430,7 +432,7 @@ const SummerFestival2024 = () => {
         </p>
         <Header1 className='mt-4' text='Norwegian Summer Festival Guide 2024' />
         <Header2
-          className='mt-2'
+          className='mt-4'
           text='A community made festival guide for norwegian electronic music in 2024.'
         />
 
