@@ -1,8 +1,9 @@
 'use client';
 import React, { useState } from 'react';
 
-const IgQuestionAnswer = ({ q, a, onClick }) => {
+const IgQuestionAnswer = ({ q, a, onClick, i }) => {
   const [clicked, setClicked] = useState(false);
+  const bounce = Math.round(Math.random() * 10) > 8 ? 'animate-wiggle' : '';
   const animation = clicked ? 'opacity-0' : '';
   return (
     <button
@@ -12,7 +13,7 @@ const IgQuestionAnswer = ({ q, a, onClick }) => {
       }}
     >
       <div
-        className={`${animation} m-1 flex w-44 transform flex-col rounded-2xl text-center font-source-sans font-medium duration-300 md:m-2 md:w-72`}
+        className={`${animation} ${bounce} animate animate- m-1 flex w-44 transform  flex-col rounded-2xl text-center font-source-sans font-medium duration-300 md:m-2 md:w-72`}
       >
         <div className='rounded-t-2xl bg-[#262626] px-1 py-3 text-xs text-white md:px-3 md:py-5 md:text-base'>
           {q}

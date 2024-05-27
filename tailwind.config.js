@@ -8,6 +8,16 @@ module.exports = {
 
   theme: {
     extend: {
+      animation: {
+        wiggle: 'wiggle 2.5s ease-in-out',
+      },
+      keyframes: {
+        wiggle: {
+          '0%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+          '100%': { transform: 'rotate(0deg)' },
+        },
+      },
       fontFamily: {
         anton: 'var(--font-anton)',
         'source-code-pro': 'var(--font-source-code-pro)',
