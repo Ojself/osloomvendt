@@ -11,6 +11,11 @@ const nextConfig = {
         destination: currentEventUrl,
         permanent: true,
       },
+      {
+        source: '/festival-guide',
+        destination: '/blog/norwegian-summer-festival-guide-2024',
+        permanent: true,
+      },
     ];
   },
 };
