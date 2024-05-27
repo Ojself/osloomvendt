@@ -2,12 +2,21 @@
 
 import React, { useState } from 'react';
 
+const rotations = [
+  'rotate-1',
+  'rotate-2',
+  'rotate-3',
+  'rotate-6',
+  '-rotate-1',
+  '-rotate-2',
+  '-rotate-3',
+  '-rotate-6',
+];
+
 const IgQuestionAnswer = ({ q, a, onClick }) => {
   const [clicked, setClicked] = useState(false);
   const bounce = Math.round(Math.random() * 10) > 8 ? 'animate-wiggle' : '';
-  const rotation = Math.floor(Math.random() * 6) - 3 ?? -3;
-  const rotationStyle =
-    rotation > 0 ? `rotate-${rotation}` : `-rotate-${rotation}`;
+  const rotation = rotations[Math.floor(Math.random() * rotations.length)];
 
   const animation = clicked ? 'opacity-0' : '';
   return (
@@ -19,7 +28,7 @@ const IgQuestionAnswer = ({ q, a, onClick }) => {
       }}
     >
       <div
-        className={`${animation} ${bounce} ${rotationStyle} m-1 flex w-44 transform flex-col  rounded-2xl text-center font-source-sans font-medium duration-300 hover:rotate-3 md:m-2 md:w-72`}
+        className={`${animation} ${bounce} hover:${rotation}  m-1 flex w-44 transform flex-col  rounded-2xl text-center font-source-sans font-medium duration-300 hover:rotate-3 md:m-2 md:w-72`}
       >
         <div className='rounded-t-2xl bg-[#262626] px-1 py-3 text-xs text-white md:px-3 md:py-5 md:text-base'>
           {q}

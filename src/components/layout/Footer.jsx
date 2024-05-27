@@ -9,6 +9,7 @@ const pagesWhereNavIsVisible = [
   '/supporters',
   '/suggest',
   '/shop',
+  '/blog',
 ];
 const Footer = () => {
   const pathname = usePathname();
