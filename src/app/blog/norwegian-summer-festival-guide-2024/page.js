@@ -15,7 +15,7 @@ const igAnswers = [
   'Monument🎵',
   'Stone Techno 🥳',
   'Vårlys og musikkfest ✨🌸🌞😎🥵🕶️🧴🎤🌻🪐',
-
+  'Musikkfestivalen av ditt pulserende hjerte 💋',
   'Soria',
   'Musikkfest og Vårlys',
   'Sober beat og Insomnia',
@@ -44,7 +44,6 @@ const igAnswers = [
   'Ekkofestivalen 🫡🫡',
 
   'Monument!!!',
-  'Musikkfestivalen av ditt pulserende hjerte 💋',
 
   'Monument',
   'Tomorrowland',
