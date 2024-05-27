@@ -5,8 +5,67 @@ import SummerFestival2024Client from '@/components/blog/SummerFestival2024Client
 import Container from '@/components/layout/Container';
 import Header1 from '@/components/layout/typograhpy/Header1';
 import Header2 from '@/components/layout/typograhpy/Header2';
+import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
 
 // https://electronicgroove.com/dutch-summer-festival-guide-2024/
+
+const answers = [
+  'Monument!',
+  'Tons',
+  'Monument!',
+  'Trevarefest i Lofoten 🥰🏔️',
+  'Monument',
+  'Stone Techno 🥳',
+  'Butik',
+  'Soria',
+  'Musikkfest og Vårlys',
+  'Sober beat og Insomnia',
+  'Soria!',
+  'Vårlys',
+  'Monument',
+  'Veggli bby ✨',
+  'Musikkens dag',
+  'Ozora ❤️❤️❤️',
+  'Distortion copenhagen',
+  'Monument',
+  'mnmnt/øya',
+  'Soria and Monument 😍',
+  'Ekko i Bergen!',
+  'Mnmt og Insomnia',
+  'Monument, Soria gathering',
+  'Monument 🖤',
+  'Sober Summer Beat',
+  'Monument!',
+  'Musikkens dag! ',
+  'Soria',
+  'Sober Beat og Monument',
+  'Ekkofestivalen 🫡🫡',
+  'Hvem trenger festivaler når det er skogs-raves hver eneste helg 🤩',
+  'Monument!!!',
+  'Musikkfestivalen av ditt pulserende hjerte 💋',
+  'Vårlys og musikkfest ✨🌸🌞😎🥵🕶️🧴🎤🌻🪐',
+  'Monument',
+  'Tomorrowland',
+  'Insomniafestivalen ☠️',
+  'Monumeeeent ❤️❤️❤️❤️❤️',
+  'Monument 🔥🔥🔥',
+  'Vårlys og mnmt 🖤🧡',
+  'Soria',
+  'Øya & Monument(forhåpentligvis)',
+  'All of them',
+  'Monument 🥹🙏',
+  "Defqon1, so w'happy and sana duri. And many small in Norway",
+  'Kosefestivalen',
+  'Defected Croatia 🎛️ 🏝️ 🎚️',
+  'Fallofestivalen i Klitten på Færvik',
+  'Tons of rock',
+  'Monument',
+  'Monument, bergtatt',
+  'Distortion, Noisly and Monument 🤩',
+  'Stone Techno Festival',
+  "Can't afford attending any 🥺",
+  'Snusk og lem festival i Flåm',
+];
 
 const articles = [
   {
@@ -351,11 +410,23 @@ const SummerFestival2024 = () => {
         src='/imgs/festivalguide/tempfestival2.jpg'
         width={1920}
         height={1080}
+        
       /> */}
-      <p>Full width image here</p>
+      <div className='flex h-screen w-full flex-row flex-wrap justify-center overflow-hidden'>
+        {answers.map((a) => (
+          <IgQuestionAnswer
+            key={a}
+            q={'Which music festival are you attending this summer?'}
+            a={a}
+          />
+        ))}
+      </div>
+
       <Container className='mt-10 px-2'>
         <p>
-          <time className='text-0primaryDark text-lg '>Mai 28, 2024</time>
+          <time className='text-sm text-secondary md:text-lg '>
+            Mai 28, 2024
+          </time>
         </p>
         <Header1 className='mt-4' text='Norwegian Summer Festival Guide 2024' />
         <Header2

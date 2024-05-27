@@ -18,7 +18,7 @@ const source_code_pro = Source_Code_Pro({
 
 const source_sans = Source_Sans_3({
   subsets: ['latin'],
-  weight: ['500', '400', '700', '600'],
+  weight: ['300', '500', '400', '700', '600'],
   variable: '--font-source-sans',
 });
 
