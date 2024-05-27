@@ -9,12 +9,13 @@ import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
 
 const igAnswers = [
   'Monument!',
-  'Tons',
+
   'Monument!!',
   'Trevarefest i Lofoten 🥰🏔️',
   'Monument🎵',
   'Stone Techno 🥳',
-  'Butik',
+  'Vårlys og musikkfest ✨🌸🌞😎🥵🕶️🧴🎤🌻🪐',
+
   'Soria',
   'Musikkfest og Vårlys',
   'Sober beat og Insomnia',
@@ -23,7 +24,8 @@ const igAnswers = [
   '🌸Monument',
   'Veggli bby ✨',
   'Musikkens dag',
-  'Ozora ❤️❤️❤️',
+  "Can't afford attending any 🥺",
+
   'Distortion copenhagen',
   'Monument 😎',
   'mnmnt/øya',
@@ -33,17 +35,20 @@ const igAnswers = [
   'Monument, Soria gathering',
   'Monument 🖤',
   'Sober Summer Beat',
-  'Monument:)',
+  'Hvem trenger festivaler når det er skogs-raves hver eneste helg 🤩',
+
   'Musikkens dag! ',
+
   'Soria Gathering',
   'Sober Beat og Monument',
   'Ekkofestivalen 🫡🫡',
-  'Hvem trenger festivaler når det er skogs-raves hver eneste helg 🤩',
+
   'Monument!!!',
   'Musikkfestivalen av ditt pulserende hjerte 💋',
-  'Vårlys og musikkfest ✨🌸🌞😎🥵🕶️🧴🎤🌻🪐',
+
   'Monument',
   'Tomorrowland',
+  'Monument:)',
   'Insomniafestivalen ☠️',
   'Monumeeeent ❤️❤️❤️❤️❤️',
   'Monument 🔥🔥🔥',
@@ -55,13 +60,16 @@ const igAnswers = [
   "Defqon1, so w'happy and sana duri. And many small in Norway",
   'Kosefestivalen',
   'Defected Croatia 🎛️ 🏝️ 🎚️',
+  'Butik',
   'Fallofestivalen i Klitten på Færvik',
   'Tons of rock',
   'Monument🧡🖤',
+  'Ozora ❤️❤️❤️',
   'Monument, bergtatt',
   'Distortion, Noisly and Monument 🤩',
+  'Tons',
   'Stone Techno Festival',
-  "Can't afford attending any 🥺",
+
   'Snusk og lem festival i Flåm',
 ];
 
