@@ -110,7 +110,38 @@ const articles = [
         Visitors can immerse in Værøy&apos;s raw beauty, where the festival site
         is an art piece. Attendees can rejuvenate with yoga, breath work, or
         sound-healing sessions, and join sun ceremonies. This year&apos;s lineup
-        includes Andreas Henneberg, Ness, Luigi Tozzi, and Sebastian Mullaert.
+        includes
+        <a
+          target='_blank'
+          className='font-semibold hover:underline'
+          href='https://ra.co/dj/andreashenneberg'
+        >
+          Andreas Henneberg
+        </a>{' '}
+        ,{' '}
+        <a
+          target='_blank'
+          className='font-semibold hover:underline'
+          href='https://ra.co/dj/Ness'
+        >
+          Ness
+        </a>{' '}
+        <a
+          target='_blank'
+          className='font-semibold hover:underline'
+          href='https://ra.co/dj/luigitozzi'
+        >
+          Luigi Tozzi
+        </a>{' '}
+        , and{' '}
+        <a
+          target='_blank'
+          className='font-semibold hover:underline'
+          href='https://ra.co/dj/sebastianmullaert'
+        >
+          Sebastian Mullaert
+        </a>{' '}
+        .
       </>
     ),
   },
@@ -142,8 +173,31 @@ const articles = [
         to all musical tastes. Let&apos;s hope for great weather this year!
         <br />
         <br />
-        Enjoy an incredible lineup of artists such as Uteklubb, Streetback Boys,
-        and Extra Delicious.
+        Enjoy an incredible lineup of artists such as{' '}
+        <a
+          target='_blank'
+          className='font-semibold hover:underline'
+          href='https://linktr.ee/uterec'
+        >
+          Uteklubb
+        </a>{' '}
+        ,{' '}
+        <a
+          target='_blank'
+          className='font-semibold hover:underline'
+          href='https://linktr.ee/streetbackboys'
+        >
+          Streetback Boys
+        </a>
+        , and
+        <a
+          target='_blank'
+          className='font-semibold hover:underline'
+          href='https://www.instagram.com/extradelicious_community/'
+        >
+          Extra Delicious
+        </a>
+        .
       </>
     ),
   },
