@@ -1,5 +1,5 @@
 'use client';
-import react, { useState } from 'react';
+import React, { useState } from 'react';
 
 const IgQuestionAnswer = ({ q, a, onClick }) => {
   const [clicked, setClicked] = useState(false);
