@@ -110,14 +110,14 @@ const articles = [
         Visitors can immerse in Værøy&apos;s raw beauty, where the festival site
         is an art piece. Attendees can rejuvenate with yoga, breath work, or
         sound-healing sessions, and join sun ceremonies. This year&apos;s lineup
-        includes
+        includes artists such as{' '}
         <a
           target='_blank'
           className='font-semibold hover:underline'
           href='https://ra.co/dj/andreashenneberg'
         >
           Andreas Henneberg
-        </a>{' '}
+        </a>
         ,{' '}
         <a
           target='_blank'
@@ -125,15 +125,16 @@ const articles = [
           href='https://ra.co/dj/Ness'
         >
           Ness
-        </a>{' '}
+        </a>
+        ,{' '}
         <a
           target='_blank'
           className='font-semibold hover:underline'
           href='https://ra.co/dj/luigitozzi'
         >
           Luigi Tozzi
-        </a>{' '}
-        , and{' '}
+        </a>
+        ,{' '}
         <a
           target='_blank'
           className='font-semibold hover:underline'
@@ -141,6 +142,14 @@ const articles = [
         >
           Sebastian Mullaert
         </a>{' '}
+        and{' '}
+        <a
+          target='_blank'
+          className='font-semibold hover:underline'
+          href='https://soriagathering.com/artists/'
+        >
+          many more
+        </a>
         .
       </>
     ),
@@ -180,7 +189,7 @@ const articles = [
           href='https://linktr.ee/uterec'
         >
           Uteklubb
-        </a>{' '}
+        </a>
         ,{' '}
         <a
           target='_blank'
@@ -189,13 +198,20 @@ const articles = [
         >
           Streetback Boys
         </a>
-        , and
+        ,{' '}
         <a
           target='_blank'
           className='font-semibold hover:underline'
           href='https://www.instagram.com/extradelicious_community/'
         >
           Extra Delicious
+        </a>
+        <a
+          target='_blank'
+          className='font-semibold hover:underline'
+          href='https://musikkfest.no/nb/program'
+        >
+          and more
         </a>
         .
       </>
