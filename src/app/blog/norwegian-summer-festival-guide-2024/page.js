@@ -6,6 +6,7 @@ import Container from '@/components/layout/Container';
 import Header1 from '@/components/layout/typograhpy/Header1';
 import Header2 from '@/components/layout/typograhpy/Header2';
 import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
+import Header3 from '@/components/layout/typograhpy/Header3';
 
 const igAnswers = [
   'Monument!',
@@ -429,7 +430,7 @@ const SummerFestival2024 = () => {
           </time>
         </p>
         <Header1 className='mt-4' text='Norwegian Summer Festival Guide 2024' />
-        <Header2
+        <Header3
           className='mt-4'
           text='A community made festival guide for norwegian electronic music in 2024.'
         />
