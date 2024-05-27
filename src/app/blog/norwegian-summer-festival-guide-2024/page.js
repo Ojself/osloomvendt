@@ -7,8 +7,6 @@ import Header1 from '@/components/layout/typograhpy/Header1';
 import Header2 from '@/components/layout/typograhpy/Header2';
 import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
 
-// https://electronicgroove.com/dutch-summer-festival-guide-2024/
-
 const igAnswers = [
   'Monument!',
   'Tons',
