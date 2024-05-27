@@ -4,9 +4,8 @@ import React, { useState } from 'react';
 import SummerFestival2024Client from '@/components/blog/SummerFestival2024Client';
 import Container from '@/components/layout/Container';
 import Header1 from '@/components/layout/typograhpy/Header1';
-import Header2 from '@/components/layout/typograhpy/Header2';
-import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
 import Header3 from '@/components/layout/typograhpy/Header3';
+import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
 
 const igAnswers = [
   'Monument!',
@@ -50,7 +49,7 @@ const igAnswers = [
   'Monument 🔥🔥🔥',
   'Vårlys og mnmt 🖤🧡',
   'Soria, Monument, Vårlys',
-  'Øya & Monument(forhåpentligvis)',
+  'Øya & Monument (forhåpentligvis)',
   'All of them',
   'Monument 🥹🙏',
   "Defqon1, so w'happy and sana duri. And many small in Norway",
