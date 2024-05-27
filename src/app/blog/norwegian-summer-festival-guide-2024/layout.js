@@ -6,7 +6,7 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <main
-      className={`min-h-screen bg-blackish pb-12 font-source-code-pro text-whitish`}
+      className={`min-h-screen bg-blackish py-12 font-source-code-pro text-whitish`}
     >
       {children}
     </main>
