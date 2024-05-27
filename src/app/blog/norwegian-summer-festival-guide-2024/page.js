@@ -7,64 +7,6 @@ import Header1 from '@/components/layout/typograhpy/Header1';
 import Header3 from '@/components/layout/typograhpy/Header3';
 import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
 
-const igAnswers = [
-  'Monument!',
-  'Trevarefest i Lofoten 🥰🏔️',
-  'Monument🎵',
-  'Stone Techno 🥳',
-  'Vårlys og musikkfest ✨🌸🌞😎🥵🕶️🧴🎤🌻🪐',
-  'Soria',
-  'Musikkfestivalen av ditt pulserende hjerte 💋',
-  'Monument!!',
-  'Musikkfest og Vårlys',
-  'Sober beat og Insomnia',
-  'Soria!',
-  'Vårlys',
-  '🌸Monument',
-  'Veggli bby ✨',
-  'Musikkfest i Oslo',
-  "Can't afford attending any 🥺",
-  'Distortion copenhagen',
-  'Monument 😎',
-  'mnmnt/øya',
-  'Soria and Monument 😍',
-  'Ekko i Bergen!',
-  'Mnmt og Insomnia',
-  'Monument, Soria gathering',
-  'Monument 🖤',
-  'Sober Summer Beat',
-  'Hvem trenger festivaler når det er skogs-raves hver eneste helg 🤩',
-  'Musikkfest ! ',
-  'Soria Gathering',
-  'Sober Beat og Monument',
-  'Ekkofestivalen 🫡🫡',
-  'Monument!!!',
-  'Monument',
-  'Tomorrowland',
-  'Monument:)',
-  'Insomniafestivalen ☠️',
-  'Monumeeeent ❤️❤️❤️❤️❤️',
-  'Monument 🔥🔥🔥',
-  'Vårlys og mnmt 🖤🧡',
-  'Soria, Monument, Vårlys',
-  'Øya & Monument (forhåpentligvis)',
-  'All of them',
-  'Monument 🥹🙏',
-  "Defqon1, so w'happy and sana duri. And many small in Norway",
-  'Kosefestivalen',
-  'Defected Croatia 🎛️ 🏝️ 🎚️',
-  'Butik',
-  'Fallofestivalen i Klitten på Færvik',
-  'Tons of rock',
-  'Monument🧡🖤',
-  'Ozora ❤️❤️❤️',
-  'Monument, bergtatt',
-  'Distortion, Noisly and Monument 🤩',
-  'Tons',
-  'Stone Techno Festival',
-  'Snusk og lem festival i Flåm',
-];
-
 const articles = [
   {
     title: 'Monument',
@@ -72,9 +14,11 @@ const articles = [
     date: '1st - 4th August',
     location: 'Veggli, Telemark',
     imageSrcs: [
-      { original: '/imgs/festivalguide/mnmt/_DSC5590.jpg' },
+      { original: '/imgs/festivalguide/mnmt/temple.jpeg' },
       { original: '/imgs/festivalguide/mnmt/colors.jpeg' },
       { original: '/imgs/festivalguide/mnmt/community.jpeg' },
+      { original: '/imgs/festivalguide/mnmt/fire.jpeg' },
+      { original: '/imgs/festivalguide/mnmt/crowd.jpeg' },
     ],
 
     imageCreds: (
@@ -268,6 +212,7 @@ const articles = [
           className='font-semibold hover:underline'
           href='https://musikkfest.no/nb/program'
         >
+          {' '}
           and more
         </a>
         .
@@ -372,7 +317,12 @@ const articles = [
     url: 'https://ekko.no/festival/ekko-festival-xx',
     date: 'November?',
     location: 'Bergen, Vestland',
-    imageSrcs: [{ original: '/imgs/festivalguide/ekko/ekko.png' }],
+    imageSrcs: [
+      { original: '/imgs/festivalguide/ekko/ekko.png' },
+      { original: '/imgs/festivalguide/ekko/ekko1.jpeg' },
+      { original: '/imgs/festivalguide/ekko/ekko2.jpeg' },
+      { original: '/imgs/festivalguide/ekko/ekko3.jpeg' },
+    ],
     imageCreds: (
       <a
         className='hover:underline'
@@ -400,12 +350,69 @@ const articles = [
 ];
 
 const SummerFestival2024 = () => {
-  const [answers, setAnswers] = useState(igAnswers);
+  const [answers, setAnswers] = useState([
+    'Monument!',
+    'Trevarefest i Lofoten 🥰🏔️',
+    'Monument🎵',
+    'Stone Techno 🥳',
+    'Vårlys og musikkfest ✨🌸🌞😎🥵🕶️🧴🎤🌻🪐',
+    'Soria',
+    'Musikkfestivalen av ditt pulserende hjerte 💋',
+    'Monument!!',
+    'Musikkfest og Vårlys',
+    'Sober beat og Insomnia',
+    'Soria!',
+    'Vårlys',
+    '🌸Monument',
+    'Veggli bby ✨',
+    'Musikkfest i Oslo',
+    "Can't afford attending any 🥺",
+    'Distortion copenhagen',
+    'Monument 😎',
+    'mnmnt/øya',
+    'Soria and Monument 😍',
+    'Ekko i Bergen!',
+    'Mnmt og Insomnia',
+    'Monument, Soria gathering',
+    'Monument 🖤',
+    'Sober Summer Beat',
+    'Hvem trenger festivaler når det er skogs-raves hver eneste helg 🤩',
+    'Musikkfest ! ',
+    'Soria Gathering',
+    'Sober Beat og Monument',
+    'Ekkofestivalen 🫡🫡',
+    'Monument!!!',
+    'Monument',
+    'Tomorrowland',
+    'Monument:)',
+    'Insomniafestivalen ☠️',
+    'Monumeeeent ❤️❤️❤️❤️❤️',
+    'Monument 🔥🔥🔥',
+    'Vårlys og mnmt 🖤🧡',
+    'Soria, Monument, Vårlys',
+    'Øya & Monument (forhåpentligvis)',
+    'All of them',
+    'Monument 🥹🙏',
+    "Defqon1, so w'happy and sana duri. And many small in Norway",
+    'Kosefestivalen',
+    'Defected Croatia 🎛️ 🏝️ 🎚️',
+    'Butik',
+    'Fallofestivalen i Klitten på Færvik',
+    'Tons of rock',
+    'Monument🧡🖤',
+    'Ozora ❤️❤️❤️',
+    'Monument, bergtatt',
+    'Distortion, Noisly and Monument 🤩',
+    'Tons',
+    'Stone Techno Festival',
+    'Snusk og lem festival i Flåm',
+  ]);
 
   const handleClick = (a) => {
-    const newAnswers = answers.filter((ans) => ans !== a);
     setTimeout(() => {
-      setAnswers([...newAnswers, a]);
+      setAnswers((prevState) => {
+        return [...prevState.filter((p) => p !== a), a];
+      });
     }, 300);
   };
   return (
@@ -413,7 +420,7 @@ const SummerFestival2024 = () => {
       <div className='flex h-screen w-full select-none flex-row flex-wrap justify-around overflow-hidden'>
         {answers.map((a) => (
           <IgQuestionAnswer
-            onClick={() => handleClick(a)}
+            onClick={(a) => handleClick(a)}
             key={a}
             q={'Which music festival are you attending this summer?'}
             a={a}

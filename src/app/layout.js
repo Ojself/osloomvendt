@@ -1,4 +1,5 @@
 import { Anton, Source_Code_Pro, Source_Sans_3 } from 'next/font/google';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 import Providers from './Providers';
 import Footer from '@/components/layout/Footer';
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
           <NavBar />
           {children}
           <Footer />
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
         </Providers>
       </body>
     </html>

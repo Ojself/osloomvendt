@@ -11,13 +11,17 @@ const MenuDropdown = () => {
       href: `/week/${currentWeekNumber()}`,
       label: `Week ${currentWeekNumber()} events`,
     },
+    {
+      href: '/blog/norwegian-summer-festival-guide-2024',
+      label: '2024 Festival Guide',
+    },
     { href: '/shop', label: 'Shop' },
-    { href: '/2023-wrapped', label: '2023 WRAPPED' },
     { href: '/supporters', label: 'Supporters' },
     { href: '/packing-list', label: 'Packing List 🌲' },
     { href: '/links', label: 'Social links' },
     { href: '/faq', label: 'FAQ' },
     { href: '/suggest', label: 'Suggest' },
+    { href: '/2023-wrapped', label: '2023 WRAPPED' },
   ];
 
   const router = useRouter();

@@ -1,4 +1,5 @@
 'use client';
+
 import React, { useState } from 'react';
 
 const IgQuestionAnswer = ({ q, a, onClick }) => {
@@ -9,6 +10,7 @@ const IgQuestionAnswer = ({ q, a, onClick }) => {
     <button
       onClick={() => {
         setClicked(true);
+        setTimeout(() => setClicked(false), 1000);
         return onClick(a);
       }}
     >
