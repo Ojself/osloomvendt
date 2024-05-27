@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 
-const IgQuestionAnswer = ({ q, a, onClick, i }) => {
+const IgQuestionAnswer = ({ q, a, onClick }) => {
   const [clicked, setClicked] = useState(false);
   const bounce = Math.round(Math.random() * 10) > 8 ? 'animate-wiggle' : '';
   const animation = clicked ? 'opacity-0' : '';
