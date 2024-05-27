@@ -9,14 +9,13 @@ import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
 
 const igAnswers = [
   'Monument!',
-
-  'Monument!!',
   'Trevarefest i Lofoten 🥰🏔️',
   'Monument🎵',
   'Stone Techno 🥳',
   'Vårlys og musikkfest ✨🌸🌞😎🥵🕶️🧴🎤🌻🪐',
-  'Musikkfestivalen av ditt pulserende hjerte 💋',
   'Soria',
+  'Musikkfestivalen av ditt pulserende hjerte 💋',
+  'Monument!!',
   'Musikkfest og Vårlys',
   'Sober beat og Insomnia',
   'Soria!',
@@ -63,7 +62,6 @@ const igAnswers = [
   'Distortion, Noisly and Monument 🤩',
   'Tons',
   'Stone Techno Festival',
-
   'Snusk og lem festival i Flåm',
 ];
 
