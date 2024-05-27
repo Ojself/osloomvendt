@@ -37,7 +37,7 @@ const BlogArticle = ({
 
         <p className='text-center text-xs'>📸 {imageCreds}</p>
       </div>
-      <p className=' mt-4 text-lg md:text-xl'>{text}</p>
+      <p className=' mt-4 text-base md:text-xl'>{text}</p>
     </article>
   );
 };
