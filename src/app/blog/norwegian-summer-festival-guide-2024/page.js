@@ -25,7 +25,6 @@ const igAnswers = [
   'Veggli bby ✨',
   'Musikkens dag',
   "Can't afford attending any 🥺",
-
   'Distortion copenhagen',
   'Monument 😎',
   'mnmnt/øya',
@@ -36,15 +35,11 @@ const igAnswers = [
   'Monument 🖤',
   'Sober Summer Beat',
   'Hvem trenger festivaler når det er skogs-raves hver eneste helg 🤩',
-
   'Musikkens dag! ',
-
   'Soria Gathering',
   'Sober Beat og Monument',
   'Ekkofestivalen 🫡🫡',
-
   'Monument!!!',
-
   'Monument',
   'Tomorrowland',
   'Monument:)',
@@ -418,7 +413,7 @@ const SummerFestival2024 = () => {
   };
   return (
     <>
-      <div className='flex h-screen w-full flex-row flex-wrap justify-center overflow-hidden'>
+      <div className='flex h-screen w-full flex-row flex-wrap justify-around overflow-hidden'>
         {answers.map((a) => (
           <IgQuestionAnswer
             onClick={() => handleClick(a)}

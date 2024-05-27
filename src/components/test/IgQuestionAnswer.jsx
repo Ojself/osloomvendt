@@ -12,7 +12,7 @@ const IgQuestionAnswer = ({ q, a, onClick }) => {
       }}
     >
       <div
-        className={`${animation} m-1 flex w-40 transform flex-col rounded-2xl text-center font-source-sans font-medium duration-300 md:m-2 md:w-72`}
+        className={`${animation} m-1 flex w-44 transform flex-col rounded-2xl text-center font-source-sans font-medium duration-300 md:m-2 md:w-72`}
       >
         <div className='rounded-t-2xl bg-[#262626] px-1 py-3 text-xs text-white md:px-3 md:py-5 md:text-base'>
           {q}
