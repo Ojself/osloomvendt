@@ -417,13 +417,14 @@ const SummerFestival2024 = () => {
   };
   return (
     <>
-      <div className='flex h-screen w-full select-none flex-row flex-wrap justify-around'>
-        {answers.map((a) => (
+      <div className='flex h-screen w-full select-none flex-row flex-wrap justify-around  overflow-hidden  rounded-b-[120px]'>
+        {answers.map((a, i) => (
           <IgQuestionAnswer
             onClick={(a) => handleClick(a)}
             key={a}
             q={'Which music festival are you attending this summer?'}
             a={a}
+            i={i}
           />
         ))}
       </div>
