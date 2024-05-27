@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Festivalguide - Oslo Omvendt',
-  description: 'Norwegian Festivalguide 2024',
+  title: 'FAQ - Oslo Omvendt',
+  description: 'Frequency Asked Questions about Oslo Omvendt',
 };
 
 export default function Layout({ children }) {

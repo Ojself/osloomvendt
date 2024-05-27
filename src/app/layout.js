@@ -8,7 +8,6 @@ import NavBar from '@/components/layout/NavBar';
 const anton = Anton({
   subsets: ['latin'],
   weight: ['400'],
-
   variable: '--font-anton',
 });
 const source_code_pro = Source_Code_Pro({
