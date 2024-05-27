@@ -417,7 +417,7 @@ const SummerFestival2024 = () => {
   };
   return (
     <>
-      <div className='flex h-screen w-full select-none flex-row flex-wrap justify-around overflow-hidden'>
+      <div className='flex h-screen w-full select-none flex-row flex-wrap justify-around'>
         {answers.map((a) => (
           <IgQuestionAnswer
             onClick={(a) => handleClick(a)}
@@ -431,7 +431,7 @@ const SummerFestival2024 = () => {
       <Container className='mt-10 px-2'>
         <p>
           <time className='text-sm text-secondary md:text-lg '>
-            Mai 28, 2024
+            May 28th, 2024
           </time>
         </p>
         <Header1 className='mt-4' text='Norwegian Summer Festival Guide 2024' />
