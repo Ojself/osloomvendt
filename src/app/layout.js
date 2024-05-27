@@ -27,7 +27,7 @@ export const metadata = {
   title: 'Oslo Omvendt',
   description: "The Ultimate Guide to Oslo's Clubs and Raves",
   openGraph: {
-    images: '/og-image.png',
+    images: 'https://i.imgur.com/rO9yY4J.png',
   },
 };
 
