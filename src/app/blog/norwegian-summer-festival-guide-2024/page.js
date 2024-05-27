@@ -406,9 +406,8 @@ const SummerFestival2024 = () => {
 
   const handleClick = (a) => {
     const newAnswers = answers.filter((ans) => ans !== a);
-    newAnswers.push(a);
     setTimeout(() => {
-      setAnswers(newAnswers);
+      setAnswers([...newAnswers, a]);
     }, 300);
   };
   return (
