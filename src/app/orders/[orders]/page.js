@@ -3,6 +3,7 @@ import groq from 'groq';
 
 import { client } from '@/lib/sanity/sanityClient';
 import OrdersClient from '@/components/orders/OrdersClient';
+import { anonymizeEmail } from '@/utils';
 
 const query = groq`*[_type == 'order' && reference == $reference ] {
   _id,

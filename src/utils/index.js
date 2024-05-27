@@ -8,7 +8,7 @@ export const ignoreUnwantedKeysForNumberInput = (e) => {
   }
 };
 
-const anonymizeEmail = (email) => {
+export const anonymizeEmail = (email) => {
   const [username, domain] = email.split('@');
   const usernameLength = username.length;
 
@@ -38,7 +38,6 @@ export const addNDayToEvent = (startDate, i) => {
 };
 
 export function getDateOfIsoWeek(week, year, returnEndOfWeek = false) {
-  console.log(week);
   week = parseFloat(week);
   year = parseFloat(year);
 

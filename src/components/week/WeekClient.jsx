@@ -104,7 +104,8 @@ const WeekClient = ({ events, weekNumber }) => {
         })}
       </div>
       <div className='mt-8 flex justify-between'>
-        {!photoMode ? (
+        <div></div>
+        {/* {!photoMode ? (
           <ActionButton
             className={getCalendarStyling(calendarMode)}
             onClick={() => {
@@ -118,7 +119,7 @@ const WeekClient = ({ events, weekNumber }) => {
           </ActionButton>
         ) : (
           <div></div>
-        )}
+        )} */}
         <LinkedBanner />
       </div>
     </Container>
