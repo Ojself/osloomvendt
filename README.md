@@ -13,6 +13,5 @@
 - Festival guide
 - search for todos
 - test order
-- bingsite xml
 - prdocutsv4? feil priser
 - deploy token vercel sanity
