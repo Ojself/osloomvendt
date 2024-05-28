@@ -1,6 +1,14 @@
 import currentWeekNumber from 'current-week-number';
 import Link from 'next/link';
 
+export const metadata = {
+  title: 'Oslo Omvendt',
+  description: "The Ultimate Guide to Oslo's Clubs and Raves",
+  openGraph: {
+    images: 'https://i.imgur.com/rO9yY4J.png',
+  },
+};
+
 export default function Home() {
   const currentWeekNumberString = currentWeekNumber().toString();
   const currentEventUrl = `/week/${currentWeekNumberString}`;

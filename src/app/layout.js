@@ -22,14 +22,6 @@ const source_sans = Source_Sans_3({
   variable: '--font-source-sans',
 });
 
-export const metadata = {
-  title: 'Oslo Omvendt',
-  description: "The Ultimate Guide to Oslo's Clubs and Raves",
-  openGraph: {
-    images: 'https://i.imgur.com/rO9yY4J.png',
-  },
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
