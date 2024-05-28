@@ -110,8 +110,16 @@ const articles = [
         <br />
         Visitors can immerse in Værøy&apos;s raw beauty, where the festival site
         is an art piece. Attendees can rejuvenate with yoga, breath work, or
-        sound-healing sessions, and join sun ceremonies. This year&apos;s lineup
-        includes artists such as{' '}
+        sound-healing sessions, and join sun ceremonies. Check out their
+        most-comprehensive{' '}
+        <a
+          target='_blank'
+          className='font-semibold hover:underline'
+          href='https://soriagathering.com/wp-content/uploads/2024/05/Event-Guide-Soria-Gathering-2024-1-7.pdf'
+        >
+          event guide here
+        </a>
+        . This year&apos;s lineup includes artists such as{' '}
         <a
           target='_blank'
           className='font-semibold hover:underline'
