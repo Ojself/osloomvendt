@@ -42,16 +42,18 @@ const articles = [
     ),
     text: (
       <>
-        Monument Festival is a four-day electronic music festival in the forests
-        near Oslo, Norway. It attracts ravers and music lovers worldwide,
-        offering a blend of music, nature, and community. At sunrise,
-        festival-goers can enjoy yoga with ambient soundtracks and dance under
-        summer skies. The immersive experience connects people with nature. By
-        night, attendees gather around the fire, fostering new and old
-        connections.
+        Monument Festival is a four-day electronic music festival in the
+        Forgotten Valley, near Oslo, Norway. It attracts ravers and music lovers
+        worldwide, offering a blend of deep electronic music, nature, and
+        community. At sunrise, festival-goers can enjoy yoga with ambient
+        soundtracks and dance under summer skies. By night, attendees gather
+        around the fire, fostering new and old connections, soundtracked by some
+        of the finest DJs and live artists from around the world.
         <br />
         <br />
-        This year&apos;s lineup features a diverse range of artists, including{' '}
+        This year&apos;s lineup features a diverse range of artists from around
+        the world, showcasing the best in cutting edge electronic music
+        including{' '}
         <a
           target='_blank'
           className='font-semibold hover:underline'
@@ -75,7 +77,10 @@ const articles = [
         >
           DJ Nobu
         </a>
-        .
+        . Expect the best sound in Norway, visuals from another world, hypnotic
+        music, lots of dance floor hugs and a stunning natural setting. As this
+        is Monuments fifth year anniversary, we know they will deliver something
+        special….
       </>
     ),
   },
