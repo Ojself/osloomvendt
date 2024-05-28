@@ -77,10 +77,12 @@ const articles = [
         >
           DJ Nobu
         </a>
-        . Expect the best sound in Norway, visuals from another world, hypnotic
+        . <br />
+        <br />
+        Expect the best sound in Norway, visuals from another world, hypnotic
         music, lots of dance floor hugs and a stunning natural setting. As this
         is Monuments fifth year anniversary, we know they will deliver something
-        special….
+        special…
       </>
     ),
   },
