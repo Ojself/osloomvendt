@@ -17,7 +17,7 @@ import {
 } from 'react-icons/tb';
 import Link from 'next/link';
 
-const iconStyle = 'bg-white text-[#1466FF] rounded-full my-auto';
+const iconStyle = 'bg-white text-[#1466FF] text-2xl rounded-full my-auto';
 
 const events = [
   {
