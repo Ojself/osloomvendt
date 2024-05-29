@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body
-        className={`${anton.variable} ${source_code_pro.variable} ${source_sans.variable} relative w-full bg-blackish`}
+        className={`${anton.variable} ${source_code_pro.variable} ${source_sans.variable} relative w-full bg-blackish `}
       >
         <Providers>
           <NavBar />

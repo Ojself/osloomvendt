@@ -24,11 +24,12 @@ const Footer = () => {
   const shouldShowFooter = pagesWhereNavIsVisible.some((page) =>
     pathname.includes(page)
   );
+
   return (
     <div
       className={`${
         shouldShowFooter ? '' : 'hidden'
-      } absolute -bottom-20 flex h-10 w-full justify-center  pt-10`}
+      }  absolute -bottom-20 flex h-10 w-full justify-center  pt-10`}
     >
       <footer className='m-auto flex w-full max-w-[900px] justify-between bg-linkGray px-6 py-2 font-source-code-pro text-whitish'>
         <Link href='/privacy'>

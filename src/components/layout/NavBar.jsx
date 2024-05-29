@@ -19,7 +19,7 @@ const NavBar = () => {
     '/blog',
   ].some((url) => pathname.includes(url));
 
-  const lightMode = ['/links', '/2023-wrapped'].some((url) =>
+  const lightMode = ['/links', '/2023-wrapped', 'faq'].some((url) =>
     pathname.includes(url)
   );
 
@@ -30,8 +30,10 @@ const NavBar = () => {
       } flex h-[5vh] max-h-[80px] w-full justify-between md:h-[6vh]  `}
     >
       {shouldShowLogo ? (
-        <div className='flex items-center justify-center bg-whitish'>
-          <LinkedBanner />
+        <div
+          className={`flex items-center justify-center ${lightMode ? 'bg-gray-200' : 'bg-whitish'}`}
+        >
+          <LinkedBanner bg={lightMode ? 'bg-gray-200' : ''} />
         </div>
       ) : (
         <div> </div>
