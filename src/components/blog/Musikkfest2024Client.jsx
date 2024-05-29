@@ -25,7 +25,6 @@ const Musikkfest2024Client = ({ events }) => {
   }, []);
 
   const dateWithoutYear = `01.06`;
-  events.sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <>
