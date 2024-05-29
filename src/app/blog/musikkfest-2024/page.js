@@ -17,23 +17,9 @@ import {
 } from 'react-icons/tb';
 import Link from 'next/link';
 
-const iconStyle = 'bg-white text-[#1466FF] text-2xl rounded-full my-auto';
+const iconStyle = 'bg-white text-[#1466FF] text-xl rounded-full my-auto';
 
 const events = [
-  {
-    location: 'Utsikten',
-    url: 'https://www.facebook.com/events/750289996932133/',
-    name: 'Back2Basic Musikkens dag 2024 (public)',
-    startDate: '2024-06-01T10:00:00.000Z',
-    icon: <TbCircleLetterCFilled className={iconStyle} />,
-  },
-  {
-    location: 'MS Bjørvika',
-    url: 'https://www.facebook.com/events/445430307977947/',
-    name: 'Båtfest med Husvogna',
-    startDate: '2024-06-01T11:00:00.000Z',
-    icon: <TbCircleLetterDFilled className={iconStyle} />,
-  },
   {
     startDate: '2024-06-01T09:00:00.000Z',
     location: 'Torshovdalen',
@@ -49,13 +35,27 @@ const events = [
     icon: <TbCircleLetterBFilled className={iconStyle} />,
   },
   {
-    location: 'Storgata 26',
-    url: 'https://fb.me/e/4s403k1QO',
-
-    name: 'Musikkfest 2024 // Storgata 26',
+    url: 'https://www.facebook.com/events/7266751620119593/',
+    name: 'SUBS AND WUBS MUSIKKFEST 2024',
     startDate: '2024-06-01T20:00:00.000Z',
-    icon: <TbCircleLetterHFilled className={iconStyle} />,
+    location: 'Kampen Park',
+    icon: <TbCircleLetterBFilled className={iconStyle} />,
   },
+  {
+    location: 'Utsikten',
+    url: 'https://www.facebook.com/events/750289996932133/',
+    name: 'Back2Basic Musikkens dag 2024 (public)',
+    startDate: '2024-06-01T10:00:00.000Z',
+    icon: <TbCircleLetterCFilled className={iconStyle} />,
+  },
+  {
+    location: 'MS Bjørvika',
+    url: 'https://www.facebook.com/events/445430307977947/',
+    name: 'Båtfest med Husvogna',
+    startDate: '2024-06-01T11:00:00.000Z',
+    icon: <TbCircleLetterDFilled className={iconStyle} />,
+  },
+
   {
     location: 'Dattera til Hagen',
     url: 'https://www.facebook.com/events/3627925854137301/',
@@ -63,13 +63,12 @@ const events = [
     startDate: '2024-06-01T20:00:00.000Z',
     icon: <TbCircleLetterEFilled className={iconStyle} />,
   },
-
   {
-    name: 'Musikkfest x Sous-Vide Records',
-    startDate: '2024-06-01T10:00:00.000Z',
-    location: 'Brød og sirkus',
-    url: 'https://www.facebook.com/events/1821354228374091/',
-    icon: <TbCircleLetterIFilled className={iconStyle} />,
+    startDate: '2024-06-01T20:00:00.000Z',
+    location: 'Eventyrbrua',
+    url: 'https://www.facebook.com/events/765298949118404/',
+    name: 'Uteklubb // Musikkfest 2024',
+    icon: <TbCircleLetterFFilled className={iconStyle} />,
   },
   {
     name: 'Streetbackboys x Musikkfest',
@@ -79,20 +78,20 @@ const events = [
     icon: <TbCircleLetterGFilled className={iconStyle} />,
   },
   {
-    url: 'https://www.facebook.com/events/7266751620119593/',
-
-    name: 'SUBS AND WUBS MUSIKKFEST 2024',
+    location: 'Storgata 26',
+    url: 'https://fb.me/e/4s403k1QO',
+    name: 'Musikkfest 2024 // Storgata 26',
     startDate: '2024-06-01T20:00:00.000Z',
-    location: 'Kampen Park',
-    icon: <TbCircleLetterBFilled className={iconStyle} />,
+    icon: <TbCircleLetterHFilled className={iconStyle} />,
   },
   {
-    startDate: '2024-06-01T20:00:00.000Z',
-    location: 'Eventyrbrua',
-    url: 'https://www.facebook.com/events/765298949118404/',
-    name: 'Uteklubb // Musikkfest 2024',
-    icon: <TbCircleLetterFFilled className={iconStyle} />,
+    name: 'Musikkfest x Sous-Vide Records',
+    startDate: '2024-06-01T10:00:00.000Z',
+    location: 'Brød og sirkus',
+    url: 'https://www.facebook.com/events/1821354228374091/',
+    icon: <TbCircleLetterIFilled className={iconStyle} />,
   },
+
   {
     name: 'Extra Delicious - After Hours Pres. Kozy (CA)',
     startDate: '2024-06-01T21:00:00.000Z',

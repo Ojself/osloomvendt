@@ -6,8 +6,8 @@ import LinkedBanner from '../layout/LinkedBanner';
 
 const ConstDayClient = ({ events }) => {
   const [iframeDimensions, setIframeDimensions] = useState({
-    width: 800,
-    height: 600,
+    width: 400,
+    height: 300,
   });
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -17,8 +17,8 @@ const ConstDayClient = ({ events }) => {
   useEffect(() => {
     const handleResize = () => {
       setIframeDimensions({
-        width: Math.min(window.innerWidth, 800),
-        height: Math.min(window.innerHeight, 600),
+        width: Math.min(window.innerWidth - 2),
+        height: Math.min(window.innerHeight - 2),
       });
     };
     handleResize();
