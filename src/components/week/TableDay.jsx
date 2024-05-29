@@ -15,9 +15,6 @@ const TableDay = ({ date, events, photoMode, calendarMode }) => {
 
   return (
     <section className='font-source-sans font-bold' id={dateWithoutYear}>
-      {dateWithoutYear === '1.6' && (
-        <Link href='/blog/musikkfest-2024'>Musikkfest kart</Link>
-      )}
       {!photoMode && (
         <EventDateBannerOutline weekday={weekDay} date={dateWithoutYear} />
       )}
