@@ -5,6 +5,7 @@ import { LuCalendarRange } from 'react-icons/lu';
 import ICalendarLink from 'react-icalendar-link';
 import { getWeekDay } from '@/utils';
 import EventDateBannerOutline from './EventDateBannerOutline';
+import Link from 'next/link';
 
 const TableDay = ({ date, events, photoMode, calendarMode }) => {
   const weekDay = getWeekDay(date);
@@ -14,11 +15,11 @@ const TableDay = ({ date, events, photoMode, calendarMode }) => {
 
   return (
     <section className='font-source-sans font-bold' id={dateWithoutYear}>
-      {!photoMode && (
-        <EventDateBannerOutline weekday={weekDay} date={dateWithoutYear} />
-      )}
       {dateWithoutYear === '1.6' && (
         <Link href='/blog/musikkfest-2024'>Musikkfest kart</Link>
+      )}
+      {!photoMode && (
+        <EventDateBannerOutline weekday={weekDay} date={dateWithoutYear} />
       )}
       {events.map((event, i) => {
         const { startDate, name, location, url } = event;

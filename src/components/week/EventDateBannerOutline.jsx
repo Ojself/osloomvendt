@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import React from 'react';
+import { FaMap } from 'react-icons/fa';
 
 const addEmoji = (date) => {
   const emojis = {
@@ -12,9 +14,17 @@ const EventDateBannerOutline = ({ weekday, date }) => {
   const formattedDate = `${weekday},${date}${addEmoji(date)}`;
   return (
     <div
-      className={`bg-blackish sticky top-0 z-50 mt-6 border-b-2 border-b-primary py-2 pl-4 font-source-code-pro text-lg font-bold text-primary sm:text-xl md:text-2xl lg:text-3xl`}
+      className={`sticky top-0 z-50 mt-6 flex border-b-2 border-b-primary bg-blackish py-2 pl-4 font-source-code-pro text-lg font-bold text-primary sm:text-xl md:text-2xl lg:text-3xl`}
     >
       <time>{formattedDate}</time>
+      {date === '1.6' && (
+        <Link
+          className='my-auto ml-4 inline animate-pulse text-xl text-primaryLight hover:text-secondary '
+          href='/blog/musikkfest-2024'
+        >
+          <FaMap />
+        </Link>
+      )}
     </div>
   );
 };

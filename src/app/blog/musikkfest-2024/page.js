@@ -71,6 +71,13 @@ const events = [
     icon: <TbCircleLetterFFilled className={iconStyle} />,
   },
   {
+    startDate: '2024-06-01T20:00:00.000Z',
+    location: 'Ingensteds',
+    url: 'https://www.facebook.com/events/3807216669514589/',
+    name: 'Musikkfest / Indigo / Ingensteds / Bortenfor ',
+    icon: <TbCircleLetterFFilled className={iconStyle} />,
+  },
+  {
     name: 'Streetbackboys x Musikkfest',
     startDate: '2024-06-01T12:00:00.000Z',
     location: 'Rockefeller',
