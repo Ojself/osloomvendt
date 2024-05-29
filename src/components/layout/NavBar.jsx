@@ -30,7 +30,7 @@ const NavBar = () => {
       } flex h-[10vh] w-full justify-between  `}
     >
       {shouldShowLogo ? (
-        <div>
+        <div className='flex items-center bg-whitish'>
           <LinkedBanner />
         </div>
       ) : (

@@ -6,6 +6,7 @@ import Container from '@/components/layout/Container';
 import Header1 from '@/components/layout/typograhpy/Header1';
 import Header3 from '@/components/layout/typograhpy/Header3';
 import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
+import festivalAnswers from '@/data/festival-2024-ig-ansers';
 
 const articles = [
   {
@@ -365,63 +366,7 @@ const articles = [
 ];
 
 const SummerFestival2024 = () => {
-  const [answers, setAnswers] = useState([
-    'Monument!',
-    'Trevarefest i Lofoten 🥰🏔️',
-    'Monument🎵',
-    'Stone Techno 🥳',
-    'Vårlys og musikkfest ✨🌸🌞😎🥵🕶️🧴🎤🌻🪐',
-    'Soria',
-    'Musikkfestivalen av ditt pulserende hjerte 💋',
-    'Monument!!',
-    'Musikkfest og Vårlys',
-    'Sober beat og Insomnia',
-    'Soria!',
-    'Vårlys',
-    '🌸Monument',
-    'Veggli bby ✨',
-    'Musikkfest i Oslo',
-    "Can't afford attending any 🥺",
-    'Distortion copenhagen',
-    'Monument 😎',
-    'mnmnt/øya',
-    'Soria and Monument 😍',
-    'Ekko i Bergen!',
-    'Mnmt og Insomnia',
-    'Monument, Soria gathering',
-    'Monument 🖤',
-    'Sober Summer Beat',
-    'Hvem trenger festivaler når det er skogs-raves hver eneste helg 🤩',
-    'Musikkfest ! ',
-    'Soria Gathering',
-    'Sober Beat og Monument',
-    'Ekkofestivalen 🫡🫡',
-    'Monument!!!',
-    'Monument',
-    'Tomorrowland',
-    'Monument:)',
-    'Insomniafestivalen ☠️',
-    'Monumeeeent ❤️❤️❤️❤️❤️',
-    'Monument 🔥🔥🔥',
-    'Vårlys og mnmt 🖤🧡',
-    'Soria, Monument, Vårlys',
-    'Øya & Monument (forhåpentligvis)',
-    'All of them',
-    'Monument 🥹🙏',
-    "Defqon1, so w'happy and sana duri. And many small in Norway",
-    'Kosefestivalen',
-    'Defected Croatia 🎛️ 🏝️ 🎚️',
-    'Butik',
-    'Fallofestivalen i Klitten på Færvik',
-    'Tons of rock',
-    'Monument🧡🖤',
-    'Ozora ❤️❤️❤️',
-    'Monument, bergtatt',
-    'Distortion, Noisly and Monument 🤩',
-    'Tons',
-    'Stone Techno Festival',
-    'Snusk og lem festival i Flåm',
-  ]);
+  const [answers, setAnswers] = useState(festivalAnswers);
 
   const handleClick = (a) => {
     setTimeout(() => {
