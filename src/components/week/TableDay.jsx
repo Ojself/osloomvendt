@@ -17,6 +17,9 @@ const TableDay = ({ date, events, photoMode, calendarMode }) => {
       {!photoMode && (
         <EventDateBannerOutline weekday={weekDay} date={dateWithoutYear} />
       )}
+      {dateWithoutYear === '1.6' && (
+        <Link href='/blog/musikkfest-2024'>Musikkfest kart</Link>
+      )}
       {events.map((event, i) => {
         const { startDate, name, location, url } = event;
         const endTime = new Date(startDate);
