@@ -11,9 +11,10 @@ const Musikkfest2024Client = ({ events }) => {
   useEffect(() => {
     const handleResize = () => {
       const refWidth = ref.current.offsetWidth;
+      const isMobile = refWidth < 768;
       setIframeDimensions({
         width: refWidth,
-        height: refWidth * 0.8,
+        height: isMobile ? refWidth : refWidth * 0.8,
       });
     };
     handleResize();
