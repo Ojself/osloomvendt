@@ -1,17 +1,19 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const Musikkfest2024Client = ({ events }) => {
+  const ref = useRef(null);
   const [iframeDimensions, setIframeDimensions] = useState({
     width: 350,
     height: 280,
   });
   useEffect(() => {
     const handleResize = () => {
+      const refWidth = ref.current.offsetWidth;
       setIframeDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: refWidth,
+        height: refWidth * 0.8,
       });
     };
     handleResize();
@@ -26,7 +28,11 @@ const Musikkfest2024Client = ({ events }) => {
 
   return (
     <>
-      <section className='font-source-sans font-bold' id={dateWithoutYear}>
+      <section
+        ref={ref}
+        className='font-source-sans font-bold'
+        id={dateWithoutYear}
+      >
         {events.map((event, i) => {
           const { startDate, name, location, url, icon } = event;
           const endTime = new Date(startDate);
@@ -53,18 +59,18 @@ const Musikkfest2024Client = ({ events }) => {
           );
         })}
       </section>
-      <div className='mx-auto my-12'>
+      <section className='mx-auto my-12'>
         <iframe
           src='https://www.google.com/maps/d/embed?mid=1VM8tbyCc6JRlNUHoPmEhLTg_C72NrpY&ehbc=2E312F'
           className='mx-auto'
-          width={iframeDimensions.width - 20}
+          width={iframeDimensions.width - 10}
           height={iframeDimensions.height}
           style={{ border: 0 }}
           allowFullScreen=''
           loading='lazy'
           referrerPolicy='no-referrer-when-downgrade'
         />
-      </div>
+      </section>
     </>
   );
 };
