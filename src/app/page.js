@@ -13,7 +13,7 @@ export default function Home() {
   const currentWeekNumberString = currentWeekNumber().toString();
   const currentEventUrl = `/week/${currentWeekNumberString}`;
   return (
-    <main className='h-[90vh]'>
+    <main className='h-[91vh]'>
       <div className='flex h-full flex-col items-center justify-center overflow-hidden bg-blackish'>
         <Link className='w-full' href={currentEventUrl}>
           <div
