@@ -50,6 +50,10 @@ const links = [
     children: <>Instagram</>,
   },
   {
+    href: '/blog/17may-2024',
+    children: <>🇳🇴 17. mai-program</>,
+  },
+  {
     href: SOCIALS.paypal,
     children: (
       <>
