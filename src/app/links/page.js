@@ -19,7 +19,11 @@ const links = [
   },
   {
     href: '/blog/norwegian-summer-festival-guide-2024',
-    children: <>2024 Festival Guide</>,
+    children: <>Festival Guide 2024</>,
+  },
+  {
+    href: '/blog/musikkfest-2024',
+    children: <>Musikkfest 2024</>,
   },
   {
     href: `/week/${currentWeekNumber()}`,

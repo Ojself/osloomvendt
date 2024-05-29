@@ -13,7 +13,11 @@ const MenuDropdown = () => {
     },
     {
       href: '/blog/norwegian-summer-festival-guide-2024',
-      label: '2024 Festival Guide',
+      label: 'Festival Guide 2024',
+    },
+    {
+      href: '/blog/musikkfest-2024',
+      label: 'Musikkfest 2024',
     },
     { href: '/shop', label: 'Shop' },
     { href: '/supporters', label: 'Supporters' },
@@ -21,7 +25,7 @@ const MenuDropdown = () => {
     { href: '/links', label: 'Social links' },
     { href: '/faq', label: 'FAQ' },
     { href: '/suggest', label: 'Suggest' },
-    { href: '/2023-wrapped', label: '2023 WRAPPED' },
+    { href: '/2023-wrapped', label: 'WRAPPED 2023' },
   ];
 
   const router = useRouter();
