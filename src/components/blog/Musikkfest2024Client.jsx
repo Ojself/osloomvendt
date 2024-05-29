@@ -4,14 +4,14 @@ import React, { useEffect, useState } from 'react';
 
 const Musikkfest2024Client = ({ events }) => {
   const [iframeDimensions, setIframeDimensions] = useState({
-    width: 800,
-    height: 600,
+    width: 400,
+    height: 300,
   });
   useEffect(() => {
     const handleResize = () => {
       setIframeDimensions({
-        width: Math.min(window.innerWidth, 800),
-        height: Math.min(window.innerHeight, 600),
+        width: Math.min(window.innerWidth - 2),
+        height: Math.min(window.innerHeight - 2),
       });
     };
     handleResize();
