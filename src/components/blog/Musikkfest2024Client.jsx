@@ -56,7 +56,7 @@ const Musikkfest2024Client = ({ events }) => {
       <div className='mx-auto my-12'>
         <iframe
           src='https://www.google.com/maps/d/embed?mid=1VM8tbyCc6JRlNUHoPmEhLTg_C72NrpY&ehbc=2E312F'
-          className=''
+          className='mx-auto'
           width={iframeDimensions.width}
           height={iframeDimensions.height}
           style={{ border: 0 }}
