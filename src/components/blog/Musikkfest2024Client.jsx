@@ -10,8 +10,8 @@ const Musikkfest2024Client = ({ events }) => {
   useEffect(() => {
     const handleResize = () => {
       setIframeDimensions({
-        width: Math.min(window.innerWidth - 2),
-        height: Math.min(window.innerHeight - 2),
+        width: window.innerWidth,
+        height: window.innerHeight,
       });
     };
     handleResize();
@@ -57,7 +57,7 @@ const Musikkfest2024Client = ({ events }) => {
         <iframe
           src='https://www.google.com/maps/d/embed?mid=1VM8tbyCc6JRlNUHoPmEhLTg_C72NrpY&ehbc=2E312F'
           className='mx-auto'
-          width={iframeDimensions.width}
+          width={iframeDimensions.width - 20}
           height={iframeDimensions.height}
           style={{ border: 0 }}
           allowFullScreen=''
