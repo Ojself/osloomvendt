@@ -16,6 +16,7 @@ import {
   TbCircleLetterJFilled,
 } from 'react-icons/tb';
 import Link from 'next/link';
+import { HiQuestionMarkCircle } from 'react-icons/hi';
 
 const iconStyle = 'bg-white text-[#1466FF] text-xl rounded-full my-auto';
 
@@ -105,6 +106,14 @@ const events = [
     location: 'Pakkhuset',
     url: 'https://www.facebook.com/events/840994817908487/',
     icon: <TbCircleLetterJFilled className={iconStyle} />,
+  },
+
+  {
+    name: 'FRAGMENTS OPEN AIR',
+    startDate: '2024-06-01T21:00:00.000Z',
+    location: 'Secret',
+    url: 'https://www.instagram.com/frgmnts/',
+    icon: <HiQuestionMarkCircle className={iconStyle} />,
   },
 ];
 
