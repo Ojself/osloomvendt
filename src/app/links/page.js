@@ -17,10 +17,7 @@ const links = [
     children: <>OsloOmvendt.no</>,
     large: true,
   },
-  {
-    href: '/blog/norwegian-summer-festival-guide-2024',
-    children: <>Festival Guide 2024</>,
-  },
+
   {
     href: '/blog/musikkfest-2024',
     children: <>Musikkfest 2024</>,
@@ -52,6 +49,10 @@ const links = [
   {
     href: SOCIALS.instagram,
     children: <>Instagram</>,
+  },
+  {
+    href: '/blog/norwegian-summer-festival-guide-2024',
+    children: <>Festival Guide 2024</>,
   },
   {
     href: '/blog/17may-2024',

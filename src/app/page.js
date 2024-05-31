@@ -24,15 +24,12 @@ export default function Home() {
             </h1>
           </div>
         </Link>
-        <Link
-          className='w-full'
-          href={'/blog/norwegian-summer-festival-guide-2024'}
-        >
+        <Link className='w-full' href={'/blog/musikkfest-2024'}>
           <div
             className={`mb-20 flex h-32 w-full items-center bg-blackish text-whitish transition duration-300 ease-in-out hover:bg-whitish hover:text-blackish sm:h-36 md:h-40 lg:h-64 `}
           >
             <h1 className='w-full select-none whitespace-nowrap text-center font-anton text-5xl sm:text-7xl md:text-8xl lg:text-9xl'>
-              2024 FESTIVAL GUIDE
+              MUSIKKFEST
             </h1>
           </div>
         </Link>

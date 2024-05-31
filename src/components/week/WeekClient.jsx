@@ -1,14 +1,13 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { useLocalStorage } from '../../hooks/useLocalStorage';
+
 import LinkedBanner from '../layout/LinkedBanner';
 import { useRouter } from 'next-nprogress-bar';
 import TableDay from './TableDay';
 import Container from '../layout/Container';
 import { HeroDateBanner } from './HeroDateBanner';
 import NavigationArrows from './NavigationArrows';
-import ActionButtons, { getCalendarStyling } from './ActionButtons';
-import ActionButton from './ActionButton';
+import ActionButtons from './ActionButtons';
 
 const WeekClient = ({ events, weekNumber }) => {
   const [photoMode, setPhotoMode] = useState(false);
