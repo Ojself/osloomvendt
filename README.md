@@ -14,4 +14,4 @@
 - search for todos
 - test order
 - prdocutsv4? feil priser
-- deploy token vercel sanity
+- deploy token vercel sanity.
