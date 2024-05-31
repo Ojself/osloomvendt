@@ -5,7 +5,7 @@ export async function POST(request) {
   try {
     const body = await request.json();
     const { notificationType, data } = body;
-    const env = process.env.NEXT_PUBLIC_ENV;
+    const env = process.env.NEXT_PUBLIC_ENV || process.env.NODE_ENV;
 
     let text = `Environment ${env} \\n`;
     if (env === 'production') {

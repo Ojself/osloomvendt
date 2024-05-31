@@ -50,10 +50,7 @@ const links = [
     href: SOCIALS.instagram,
     children: <>Instagram</>,
   },
-  {
-    href: '/blog/norwegian-summer-festival-guide-2024',
-    children: <>Festival Guide 2024</>,
-  },
+
   {
     href: '/blog/17may-2024',
     children: <>🇳🇴 17. mai-program</>,
@@ -65,6 +62,10 @@ const links = [
         <span className='mr-1 text-lg'>🙏</span> PayPal
       </>
     ),
+  },
+  {
+    href: '/blog/norwegian-summer-festival-guide-2024',
+    children: <>Festival Guide 2024</>,
   },
   {
     href: '/2023-wrapped',
