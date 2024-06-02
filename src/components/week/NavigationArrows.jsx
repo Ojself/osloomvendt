@@ -8,7 +8,7 @@ const pStyle = 'text-xs text-whitish';
 
 const NavigationArrows = ({ previousWeekHref, nextWeekHref }) => {
   return (
-    <div className='mt-4 flex w-40 justify-between uppercase'>
+    <div className='mt-4 flex w-32 justify-between uppercase md:w-40'>
       <Link className={`${linkStyle} pl-1`} href={previousWeekHref}>
         <AiOutlineArrowLeft className={iconStyle} />
         <p className={pStyle}>Prev</p>

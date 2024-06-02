@@ -13,5 +13,3 @@
 - Festival guide
 - search for todos
 - test order
-- prdocutsv4? feil priser
-- deploy token vercel sanity

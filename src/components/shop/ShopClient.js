@@ -10,16 +10,14 @@ const ShopClient = ({ products }) => {
   const existingProductsFromState = useAppSelector((state) => state.products);
 
   useEffect(() => {
-    const productIds = existingProductsFromState?.products?.map(
-      (product) => product._id
-    );
+    const productIds = existingProductsFromState?.map((product) => product._id);
     const newProducts = products.filter(
       (product) => !productIds?.includes(product._id)
     );
     const productsHaveUpdated = products.some(
       (product) =>
         product._updatedAt >
-        existingProductsFromState?.products?.find(
+        existingProductsFromState?.find(
           (existingProduct) => existingProduct._id === product._id
         )?._updatedAt
     );

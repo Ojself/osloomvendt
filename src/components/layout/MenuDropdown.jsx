@@ -11,10 +11,6 @@ const MenuDropdown = () => {
       href: `/week/${currentWeekNumber()}`,
       label: `Week ${currentWeekNumber()} events`,
     },
-    {
-      href: '/blog/musikkfest-2024',
-      label: 'Musikkfest 2024',
-    },
 
     { href: '/shop', label: 'Shop' },
     { href: '/supporters', label: 'Supporters' },
@@ -22,6 +18,10 @@ const MenuDropdown = () => {
     { href: '/links', label: 'Social links' },
     { href: '/faq', label: 'FAQ' },
     { href: '/suggest', label: 'Suggest' },
+    {
+      href: '/blog/musikkfest-2024',
+      label: 'Musikkfest 2024',
+    },
     {
       href: '/blog/norwegian-summer-festival-guide-2024',
       label: 'Festival Guide 2024',

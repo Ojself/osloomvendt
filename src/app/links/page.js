@@ -19,10 +19,6 @@ const links = [
   },
 
   {
-    href: '/blog/musikkfest-2024',
-    children: <>Musikkfest 2024</>,
-  },
-  {
     href: `/week/${currentWeekNumber()}`,
     children: <>Week {currentWeekNumber()} events</>,
   },
@@ -50,7 +46,6 @@ const links = [
     href: SOCIALS.instagram,
     children: <>Instagram</>,
   },
-
   {
     href: '/blog/17may-2024',
     children: <>🇳🇴 17. mai-program</>,
@@ -62,6 +57,10 @@ const links = [
         <span className='mr-1 text-lg'>🙏</span> PayPal
       </>
     ),
+  },
+  {
+    href: '/blog/musikkfest-2024',
+    children: <>Musikkfest 2024</>,
   },
   {
     href: '/blog/norwegian-summer-festival-guide-2024',
@@ -122,7 +121,6 @@ const Links = () => {
           width={100}
         />
       </div>
-
       <a
         target='_blank'
         aria-label='Visit us on Instagram'
