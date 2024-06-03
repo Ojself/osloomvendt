@@ -16,7 +16,7 @@
   mask: var(--mask);
 }
 
-.pride {
+.pride-bg {
   background: -webkit-linear-gradient(
     top,
     #e40303 25%,
@@ -35,19 +35,19 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.pride:hover {
+.pride-bg:hover {
   background: -webkit-linear-gradient(
     top,
-    #e40303 25%,
-    #ff8c00 26%,
-    #ff8c00 37%,
-    #ffed00 38%,
+    #e40303 16%,
+    #ff8c00 17%,
+    #ff8c00 33%,
+    #ffed00 34%,
     #ffed00 50%,
-    #008026 52%,
-    #008026 63%,
-    #24408e 64%,
-    #24408e 74%,
-    #732982 75%,
+    #008026 51%,
+    #008026 69%,
+    #24408e 70%,
+    #24408e 84%,
+    #732982 85%,
     #732982 100%
   );
 
