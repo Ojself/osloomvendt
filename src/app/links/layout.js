@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'FAQ - Oslo Omvendt',
-  description: 'Frequently Asked Questions',
+  title: 'Links - Oslo Omvendt',
+  description: 'Social Links for Oslo Omvendt',
 };
 
 export default function Layout({ children }) {

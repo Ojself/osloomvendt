@@ -10,6 +10,6 @@
 - opengraph
 - shop
 - typography
-- Festival guide
+
 - search for todos
 - test order
