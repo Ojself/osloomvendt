@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'FAQ - Oslo Omvendt',
-  description: 'Frequently Asked Questions',
+  title: '2023 Wrapped - Oslo Omvendt',
+  description: '2023 wrapped by Oslo Omvendt',
 };
 
 export default function Layout({ children }) {
