@@ -1,6 +1,11 @@
 export const metadata = {
   title: 'Order - Oslo Omvendt',
   description: 'Your shop order',
+  openGraph: {
+    title: 'Order - Oslo Omvendt',
+    description: 'Your shop order',
+    images: 'https://i.imgur.com/rO9yY4J.png',
+  },
 };
 
 export default function Layout({ children }) {

@@ -5,6 +5,8 @@ export const metadata = {
   title: 'Oslo Omvendt',
   description: "The Ultimate Guide to Oslo's Clubs and Raves",
   openGraph: {
+    title: 'Oslo Omvendt',
+    description: "The Ultimate Guide to Oslo's Clubs and Raves",
     images: 'https://i.imgur.com/rO9yY4J.png',
   },
 };

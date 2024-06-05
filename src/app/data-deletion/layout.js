@@ -1,6 +1,11 @@
 export const metadata = {
   title: 'Data deletion - Oslo Omvendt',
   description: 'Data deletion policy',
+  openGraph: {
+    title: 'Data deletion - Oslo Omvendt',
+    description: 'Data deletion policy',
+    images: 'https://i.imgur.com/rO9yY4J.png',
+  },
 };
 
 export default function Layout({ children }) {

@@ -1,6 +1,11 @@
 export const metadata = {
   title: 'Links - Oslo Omvendt',
   description: 'Social Links for Oslo Omvendt',
+  openGraph: {
+    title: 'Links - Oslo Omvendt',
+    description: 'Social Links for Oslo Omvendt',
+    images: 'https://i.imgur.com/rO9yY4J.png',
+  },
 };
 
 export default function Layout({ children }) {
