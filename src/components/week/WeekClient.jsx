@@ -75,10 +75,11 @@ const WeekClient = ({ events, weekNumber }) => {
 
       <div>
         {allDatesShort.map((eventDate, i) => {
-          let filteredEvents;
-          filteredEvents = events.filter(
-            (e) => e.startDate.toLocaleDateString('nb-NO') === eventDate
-          );
+          let filteredEvents = events
+            .filter(
+              (e) => e.startDate.toLocaleDateString('nb-NO') === eventDate
+            )
+            .sort((a, b) => a.name.localeCompare(b.name));
 
           if (filteredLocations.length > 0) {
             filteredEvents = filteredEvents.filter((event) =>

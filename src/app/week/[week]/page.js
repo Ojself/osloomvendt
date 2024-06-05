@@ -38,7 +38,7 @@ const getData = async (weekNumber) => {
     weekEndIsoDate: endDate.toISOString().split('T')[0], // Format as YYYY-MM-DD
   };
 
-  const tags = ['event', weekNumber];
+  const tags = ['event', weekNumber.toString()];
   const sanityEvents = await sanityFetch({
     query: eventsQuery,
     params: eventParams,

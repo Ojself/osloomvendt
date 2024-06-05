@@ -16,7 +16,6 @@ export const client = createClient({
 });
 
 export async function sanityFetch({ query, params = {}, tags }) {
-  console.log(query, params, tags, '<---tt');
   return client.fetch(query, params, {
     next: {
       tags, // for tag-based revalidation
