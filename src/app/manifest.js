@@ -17,19 +17,19 @@ export default function manifest() {
         rel: 'apple-touch-icon',
         type: 'image/png',
         sizes: '32x32',
-        url: './favicons/apple-touch-icon.png',
+        url: '/favicons/apple-touch-icon.png',
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '192x192',
-        url: './favicons/android-chrome-192x192',
+        url: '/favicons/android-chrome-192x192',
       },
       {
         rel: 'icon',
         type: 'image/png',
         sizes: '256x256',
-        url: './favicons/android-chrome-256x256',
+        url: '/favicons/android-chrome-256x256',
       },
     ],
   };

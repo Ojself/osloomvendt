@@ -4,31 +4,7 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Oslo Omvendt',
   description: "The Ultimate Guide to Oslo's Clubs and Raves",
-  icons: [
-    {
-      rel: 'apple-touch-icon',
-      type: 'image/png',
-      sizes: '32x32',
-      url: './favicons/apple-touch-icon.png',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '192x192',
-      url: './favicons/android-chrome-192x192',
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      sizes: '256x256',
-      url: './favicons/android-chrome-256x256',
-    },
-    {
-      rel: 'apple-touch-icon',
-      sizes: '180x180',
-      url: './favicons/apple-touch-icon.png',
-    },
-  ],
+
   openGraph: {
     title: 'Oslo Omvendt',
     description: "The Ultimate Guide to Oslo's Clubs and Raves",
