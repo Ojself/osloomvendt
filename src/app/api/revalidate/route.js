@@ -14,12 +14,12 @@ export async function POST(req) {
       });
     }
 
-    if (!body?.slug) {
+    if (!body?.startDate) {
       const message = 'Bad Request';
       return new Response(JSON.stringify({ message, body }), { status: 400 });
     }
 
-    const staleRoute = `/week/${currentWeekNumber()}`;
+    const staleRoute = `/week/${currentWeekNumber(body.startDate)}`;
     revalidatePath(staleRoute);
     const message = `Updated route: ${staleRoute}`;
     return NextResponse.json({ body, message });
