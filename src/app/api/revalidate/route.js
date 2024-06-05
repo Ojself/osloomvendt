@@ -28,3 +28,35 @@ export async function POST(req) {
     return new Response(err.message, { status: 500 });
   }
 }
+
+export async function GET() {
+  const message = 'Invalid method: GET';
+  return new Response(JSON.stringify({ message }), {
+    status: 401,
+  });
+}
+
+export async function PATCH() {
+  const message = 'Invalid method: PATCH';
+  return new Response(JSON.stringify({ message }), {
+    status: 401,
+  });
+}
+export async function PUT() {
+  const message = 'Invalid method: PUT';
+  return new Response(JSON.stringify({ message }), {
+    status: 401,
+  });
+}
+export async function OPTIONS() {
+  const message = 'Invalid method: OPTIONS';
+  return new Response(JSON.stringify({ message }), {
+    status: 401,
+  });
+}
+export async function DELETE() {
+  const message = 'Invalid method: DELETE';
+  return new Response(JSON.stringify({ message }), {
+    status: 401,
+  });
+}
