@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
-import { useDispatch } from 'react-redux';
 import crypto from 'crypto';
 import { generateNewCartId } from '@/lib/redux/cart.slice';
+import { useAppDispatch } from '@/lib/redux/hooks';
 
 const VippsWrapper = ({
   redirectToPage,
@@ -15,7 +15,8 @@ const VippsWrapper = ({
 }) => {
   const [accessToken, setAccessToken] = useState('');
   const [loading, setLoading] = useState(false);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+  console.log({ accessToken });
 
   const vippsFormattedMobile =
     customer.mobile.length === 8 ? `47${customer.mobile}` : customer.mobile;

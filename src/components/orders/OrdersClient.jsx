@@ -1,28 +1,70 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import { useSearchParams } from 'next/navigation';
 import LoadingSpinner from '../LoadingSpinner';
-import SuccessBox from './SuccessBox';
 import FailBox from './FailBox';
-import { useRouter } from 'next-nprogress-bar';
 import { emptyCart } from '@/lib/redux/cart.slice';
 import { useAppDispatch, useAppSelector } from '@/lib/redux/hooks';
+import groq from 'groq';
 
-const OrdersClient = ({ sanityOrder }) => {
+import { client } from '@/lib/sanity/sanityClient';
+import { anonymizeEmail } from '@/utils';
+import VippsOrder from './VippsOrder';
+
+const query = groq`*[_type == 'order' && reference == $reference ] {
+  _id,
+  reference,
+  vippsStatus,
+  email,
+  paymentType,
+}`;
+
+const getSanityOrder = async (reference) => {
+  try {
+    const orders = await client.fetch(query, { reference });
+    console.log({ orders }, '<--');
+
+    const anonymizedOrders = orders.map((order) => {
+      order.email = anonymizeEmail(order.email);
+      return order;
+    });
+
+    const sanityOrder = anonymizedOrders[0];
+
+    return sanityOrder;
+  } catch (e) {
+    return {
+      sanityOrder: {},
+    };
+  }
+};
+
+const OrdersClient = () => {
+  const searchParams = useSearchParams();
+  const reference = searchParams.get('reference');
   const [loading, setLoading] = useState(true);
-  const [vippsError, setVippsError] = useState(false);
   const [vippsOrder, setVippsOrder] = useState(null);
-  const router = useRouter();
+  const [vippsError, setVippsError] = useState(false);
+
+  const [sanityOrder, setSanityOrder] = useState(null);
+  const [sanityError, setSanityError] = useState(false);
   const dispatch = useAppDispatch();
   const cart = useAppSelector((state) => state.cart);
   const cartId = cart?.metadata.cartId;
 
-  const { reference } = router.query;
-
+  console.log({ sanityOrder, vippsOrder });
   useEffect(() => {
     const getPaymentInformation = async () => {
       setLoading(true);
+      try {
+        const data = await getSanityOrder(reference);
+
+        setSanityOrder(data);
+      } catch (e) {
+        console.error(e);
+        setSanityError(true);
+      }
       try {
         const accessTokenData = await axios.post('/api/vipps/accesstoken');
         const { access_token } = accessTokenData.data;
@@ -51,7 +93,7 @@ const OrdersClient = ({ sanityOrder }) => {
     <>
       {loading && <LoadingSpinner />}
       {vippsOrder && (
-        <SuccessBox sanityOrder={sanityOrder} vippsOrder={vippsOrder} />
+        <VippsOrder sanityOrder={sanityOrder} vippsOrder={vippsOrder} />
       )}
       {vippsError && <FailBox />}
     </>

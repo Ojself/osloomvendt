@@ -39,7 +39,7 @@ const ShippingForm = ({
           </button>
           <input
             value='Continue'
-            className='mt-2 w-full bg-shopred py-4 text-whitish md:mt-0 md:w-48 lg:w-52'
+            className='mt-2 w-full cursor-pointer bg-shopredDark py-4 text-whitish duration-200 hover:bg-shopred md:mt-0 md:w-48 lg:w-52'
             type='submit'
           />
         </div>

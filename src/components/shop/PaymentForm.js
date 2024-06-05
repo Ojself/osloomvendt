@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 import Creatable from 'react-select';
-import { useSelector } from 'react-redux';
 
 import countries from '../../data/countries.json';
 import norwegian_counties from '../../data/norwegian_counties.json';
@@ -13,6 +12,7 @@ import VippsIcon from './VippsIcon';
 import VippsWrapper from './VippsWrapper';
 import Link from 'next/link';
 import { progresses } from './CheckoutClient';
+import { useAppSelector } from '@/lib/redux/hooks';
 
 const PayPalWrapper = ({ totalPrice, cart, redirectToPage }) => {
   return (
@@ -158,7 +158,7 @@ const PaymentForm = ({
   const billingSameAsShipping = watch('billing-same-as-shipping');
   const vippsPaymentShouldBeDisabled = customerCountry !== 'Norway';
 
-  const cart = useSelector((state) => state.cart);
+  const cart = useAppSelector((state) => state.cart);
 
   const redirectToPage = (url) => {
     if (window) {
@@ -234,7 +234,7 @@ const PaymentForm = ({
               {...register('terms-of-sale')}
             />
             <p>
-              I accept{' '}
+              I accept the{' '}
               <Link
                 rel='noopener noreferrer'
                 target='_blank'

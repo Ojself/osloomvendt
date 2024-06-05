@@ -19,6 +19,7 @@ export default function manifest() {
         sizes: '32x32',
         url: '/apple-touch-icon.png',
       },
+
       {
         rel: 'icon',
         type: 'image/png',

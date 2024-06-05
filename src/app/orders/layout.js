@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function Layout({ children }) {
   return (
-    <main className='min-h-screen  bg-gray-200 px-2 font-source-code-pro'>
+    <main className='min-h-screen bg-gray-200 px-2 font-source-code-pro'>
       {children}
     </main>
   );

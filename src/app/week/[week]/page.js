@@ -49,7 +49,8 @@ const getData = async (weekNumber) => {
     .map((event) => ({
       ...event,
       startDate: new Date(event.startDate),
-    }));
+    }))
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return allEvents;
 };

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { BiError } from 'react-icons/bi';
 
-const FailBox = ({}) => {
+const FailBox = () => {
   return (
     <section className='mt-36 flex items-center justify-center rounded-lg bg-whitish p-6 shadow-2xl'>
       <div className='flex flex-col text-center'>

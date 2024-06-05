@@ -5,13 +5,11 @@ import { LuCalendarRange } from 'react-icons/lu';
 import ICalendarLink from 'react-icalendar-link';
 import { getWeekDay } from '@/utils';
 import EventDateBannerOutline from './EventDateBannerOutline';
-import Link from 'next/link';
 
 const TableDay = ({ date, events, photoMode, calendarMode }) => {
   const weekDay = getWeekDay(date);
   const [dd, mm] = date.split('.');
   const dateWithoutYear = `${dd}.${mm}`;
-  events.sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <section className='font-source-sans font-bold' id={dateWithoutYear}>

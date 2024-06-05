@@ -96,8 +96,8 @@ const InformationForm = ({
           />
           <FormErrorMessage error={errors.city} />
         </div>
-        <div className='mb-4 flex justify-between'>
-          <div className='w-1/3'>
+        <div className='mb-4 flex flex-col justify-between md:flex-row'>
+          <div className='mb-4 w-full md:mb-0 md:w-1/3'>
             <label htmlFor='country'>Country</label>
             <Creatable
               value={{
@@ -124,7 +124,7 @@ const InformationForm = ({
             />
             <FormErrorMessage error={errors['country']} />
           </div>
-          <div className='w-1/4'>
+          <div className='mb-4 w-full md:mb-0 md:w-1/4'>
             <label htmlFor='state'>State</label>
             {countyInputIsDropdown ? (
               <Creatable
@@ -157,7 +157,7 @@ const InformationForm = ({
             )}
             <FormErrorMessage error={errors['county']} />
           </div>
-          <div className='flex w-1/4 flex-col'>
+          <div className='mb-4 flex w-full flex-col md:mb-0 md:w-1/4'>
             <label htmlFor='zipCode'>Zip code</label>
             <input
               style={{ height: '38px' }}
@@ -200,7 +200,7 @@ const InformationForm = ({
           </button>
           <input
             value='Continue'
-            className='bg-shopred mt-2 w-full py-4 md:mt-0 md:w-48 lg:w-52'
+            className='mt-2 w-full bg-shopred py-4 md:mt-0 md:w-48 lg:w-52'
             type='submit'
           />
         </div>

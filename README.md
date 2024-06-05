@@ -1,13 +1,6 @@
 # todos
 
-- SEO
-- favicon
-- Shop layout
-- getdata naming convention
-- manifest
-- apple icon
-- opengraph
-- shop
-- typography
-- search for todos
+- Shop JSONLD
+- Event JSONLD
 - test order
+- revalidate

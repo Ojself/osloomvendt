@@ -10,8 +10,6 @@ export const metadata = {
   },
 };
 
-/* TODO METADATA PRODUCT NAME */
-
 export default function Layout({ children }) {
   return (
     <main

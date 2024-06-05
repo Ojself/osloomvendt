@@ -1,23 +1,24 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import ReactImageGallery from 'react-image-gallery';
-import { useDispatch, useSelector } from 'react-redux';
+
 import { useNextSanityImage } from 'next-sanity-image';
 import Creatable from 'react-select';
 import { addToCart } from '@/lib/redux/cart.slice';
 import { client } from '@/lib/sanity/sanityClient';
 import '../image-gallery.css';
+import { useAppDispatch, useAppSelector } from '@/lib/redux/hooks';
 
 const ProductSlugClient = ({ product }) => {
   const { title, available, description, images, _id } = product;
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const [selectedQuantity, setSelectedQuantity] = useState({
     value: 1,
     label: 1,
   });
   const [selectedSize, setSelectedSize] = useState(available[0].size);
 
-  const cart = useSelector((state) => state.cart);
+  const cart = useAppSelector((state) => state.cart);
   const { items } = cart;
 
   const imageProps = useNextSanityImage(client, images[0]);
