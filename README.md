@@ -1,6 +1,5 @@
 # todos
 
-- Meta data
 - SEO
 - favicon
 - Shop layout
@@ -10,6 +9,5 @@
 - opengraph
 - shop
 - typography
-
 - search for todos
 - test order
