@@ -44,7 +44,6 @@ const getData = async (weekNumber) => {
     params: eventParams,
     tags,
   });
-  console.log(sanityEvents, '<----');
 
   const weekEvents = events.find((e) => e.week === weekNumber);
   weekEvents.events?.sort(
@@ -55,8 +54,7 @@ const getData = async (weekNumber) => {
     .map((event) => ({
       ...event,
       startDate: new Date(event.startDate),
-    }))
-    .sort((a, b) => a.name.localeCompare(b.name));
+    }));
 
   return allEvents;
 };
