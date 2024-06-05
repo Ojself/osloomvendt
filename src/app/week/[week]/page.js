@@ -2,7 +2,7 @@ import React from 'react';
 import currentWeekNumber from 'current-week-number';
 import groq from 'groq';
 
-import { client } from '@/lib/sanity/sanityClient';
+import { client, sanityFetch } from '@/lib/sanity/sanityClient';
 import { getDateOfIsoWeek } from '@/utils';
 import events from '@/data/events';
 import EmptyWeekPage from '@/components/week/EmptyWeekPage';
@@ -38,7 +38,8 @@ const getData = async (weekNumber) => {
     weekEndIsoDate: endDate.toISOString().split('T')[0], // Format as YYYY-MM-DD
   };
 
-  const sanityEvents = await client.fetch(eventsQuery, eventParams);
+  const tags = ['event', weekNumber];
+  const sanityEvents = await sanityFetch({ eventsQuery, eventParams, tags });
 
   const weekEvents = events.find((e) => e.week === weekNumber);
   weekEvents.events?.sort(

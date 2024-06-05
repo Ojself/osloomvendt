@@ -14,3 +14,11 @@ export const client = createClient({
   token,
   withCredentials: true,
 });
+
+export async function sanityFetch({ query, params = {}, tags }) {
+  return client.fetch(query, params, {
+    next: {
+      tags, // for tag-based revalidation
+    },
+  });
+}
