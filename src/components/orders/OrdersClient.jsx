@@ -23,7 +23,6 @@ const query = groq`*[_type == 'order' && reference == $reference ] {
 const getSanityOrder = async (reference) => {
   try {
     const orders = await client.fetch(query, { reference });
-    console.log({ orders }, '<--');
 
     const anonymizedOrders = orders.map((order) => {
       order.email = anonymizeEmail(order.email);
@@ -53,7 +52,6 @@ const OrdersClient = () => {
   const cart = useAppSelector((state) => state.cart);
   const cartId = cart?.metadata.cartId;
 
-  console.log({ sanityOrder, vippsOrder });
   useEffect(() => {
     const getPaymentInformation = async () => {
       setLoading(true);

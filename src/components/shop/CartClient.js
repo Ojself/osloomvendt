@@ -28,6 +28,7 @@ const CartClient = ({ products }) => {
 
   const getProductById = (id) => {
     const item = existingProductsFromState.find((item) => item._id === id);
+
     return item;
   };
 

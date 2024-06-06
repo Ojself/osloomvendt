@@ -16,7 +16,6 @@ const VippsWrapper = ({
   const [accessToken, setAccessToken] = useState('');
   const [loading, setLoading] = useState(false);
   const dispatch = useAppDispatch();
-  console.log({ accessToken });
 
   const vippsFormattedMobile =
     customer.mobile.length === 8 ? `47${customer.mobile}` : customer.mobile;

@@ -5,10 +5,10 @@ const productsSlice = createSlice({
   initialState: [],
   reducers: {
     addToProducts: (state, action) => {
-      state = [...state, ...action.payload.products];
+      state.push(...action.payload.products);
     },
     setToProducts: (state, action) => {
-      state = [...action.payload.products];
+      return action.payload.products;
     },
   },
 });
