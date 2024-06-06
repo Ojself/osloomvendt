@@ -27,7 +27,7 @@ const NavBar = () => {
     <nav
       className={`${
         lightMode ? 'bg-gray-200' : `bg-transparent`
-      } flex h-[5vh] max-h-[80px] w-full justify-between md:h-[6vh]  `}
+      } flex h-[5vh] max-h-[80px] w-full items-center justify-between md:h-[7vh]`}
     >
       {shouldShowLogo ? (
         <div
@@ -38,7 +38,7 @@ const NavBar = () => {
       ) : (
         <div> </div>
       )}
-      <div className='mr-4 flex items-center sm:mr-6 md:mr-10 '>
+      <div className='mr-4 flex items-center sm:mr-6 md:mr-10'>
         <NavBarCart />
         <MenuDropdown />
       </div>
