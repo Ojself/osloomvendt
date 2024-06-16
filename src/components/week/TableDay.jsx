@@ -50,10 +50,14 @@ const TableDay = ({ date, events, photoMode, calendarMode }) => {
                     {dateWithoutYear}
                   </time>
                 )}
-                <h3 className='ml-4 w-2/3 py-1 '>{name}</h3>
-                <h3 className='absolute right-1 top-1/2 -translate-y-1/2 rounded bg-whitish px-1 italic text-blackish md:right-3 md:px-2'>
-                  {location}
-                </h3>
+                <div className='ml-4 w-2/3 py-1'>
+                  <h3 className='w-fit '>{name}</h3>
+                </div>
+                <div className='absolute right-1 top-1/2 -translate-y-1/2  md:right-3 '>
+                  <h3 className='rounded bg-whitish px-1 italic text-blackish md:px-2'>
+                    {location}
+                  </h3>
+                </div>
               </a>
             </div>
             <hr />
