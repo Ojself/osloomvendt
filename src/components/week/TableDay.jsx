@@ -1,8 +1,5 @@
 'use client';
 import React from 'react';
-
-import { LuCalendarRange } from 'react-icons/lu';
-import ICalendarLink from 'react-icalendar-link';
 import { getWeekDay } from '@/utils';
 import EventDateBannerOutline from './EventDateBannerOutline';
 
@@ -23,21 +20,6 @@ const TableDay = ({ date, events, photoMode, calendarMode }) => {
         return (
           <div key={`${url}.${i}`}>
             <div className='relative my-2 flex text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl'>
-              {calendarMode && !photoMode && (
-                <ICalendarLink
-                  className='flex h-fit flex-col items-center justify-center self-center rounded-lg p-1 text-center text-tertiary transition duration-200 hover:bg-tertiary  hover:text-blackish'
-                  filename={name}
-                  event={{
-                    title: name,
-                    startTime: startDate, //yyyyMMdd'T'HHmmss
-                    endTime,
-                    location: location,
-                    url: url,
-                  }}
-                >
-                  <LuCalendarRange />
-                </ICalendarLink>
-              )}
               <a
                 className={`${location}-analytics flex grow font-source-sans transition duration-200 hover:text-primaryDark`}
                 id={`${name}-analytics`} // For google analytics
