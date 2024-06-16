@@ -27,7 +27,7 @@ const NavBar = () => {
     <nav
       className={`${
         lightMode ? 'bg-gray-200' : `bg-transparent`
-      } flex h-[5vh] max-h-[80px] w-full items-center justify-between md:h-[7vh]`}
+      } flex h-[6vh] max-h-[80px] w-full items-center justify-between md:h-[7vh]`}
     >
       {shouldShowLogo ? (
         <div
