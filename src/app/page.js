@@ -1,4 +1,3 @@
-'use client';
 import currentWeekNumber from 'current-week-number';
 import Link from 'next/link';
 
