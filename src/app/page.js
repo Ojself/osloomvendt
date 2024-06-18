@@ -5,7 +5,6 @@ import Link from 'next/link';
 export const metadata = {
   title: 'Oslo Omvendt',
   description: "The Ultimate Guide to Oslo's Clubs and Raves",
-
   openGraph: {
     title: 'Oslo Omvendt',
     description: "The Ultimate Guide to Oslo's Clubs and Raves",
