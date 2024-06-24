@@ -1,5 +1,4 @@
-import currentWeekNumber from 'current-week-number';
-import Link from 'next/link';
+import HeroLink from '@/components/HeroLink';
 
 export const metadata = {
   title: 'Oslo Omvendt',
@@ -12,8 +11,6 @@ export const metadata = {
 };
 
 export default function Home() {
-  const currentWeekNumberString = currentWeekNumber().toString();
-  const currentEventUrl = `/week/${currentWeekNumberString}`;
   return (
     <main className='h-[93vh]'>
       <div className='flex h-full flex-col items-center justify-center overflow-hidden bg-blackish'>
@@ -26,15 +23,7 @@ export default function Home() {
             </h1>
           </div>
         </Link> */}
-        <Link className='w-full' href={currentEventUrl}>
-          <div
-            className={`pride-bg mb-20 flex h-20  w-full items-center transition duration-500 ease-in-out sm:h-36 md:h-40 lg:h-64 `}
-          >
-            <h1 className=' w-full select-none whitespace-nowrap text-center font-anton text-6xl  sm:text-8xl md:text-9xl lg:text-10xl'>
-              OSLO OMVENDT
-            </h1>
-          </div>
-        </Link>
+        <HeroLink />
       </div>
     </main>
   );
