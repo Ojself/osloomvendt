@@ -2,7 +2,6 @@ import { locations } from './locations';
 
 const {
   BABA_BAR,
-  BECCO,
   BLAA,
   BLITZ,
   BOKSEN,
@@ -10,76 +9,49 @@ const {
   BROD_OG_SIRKUS,
   BYENS_TAK,
   BYMAD,
-
   CHATEAU_NEUF,
-
   DATTERA_TIL_HAGEN,
   DEN_HALVE,
-
   DOGYARD,
-  DUNK_OSLO,
-
   EINBAR,
   EVENTHALLEN,
-
   FUGLEN,
   GEHØR,
-
   HAGEN,
-
   HAUSMANIA,
   HUNDRE,
-
   INDIGO,
   INGENSTEDS,
   INTERNASJONALEN,
   JAEGER,
   JOHN_DEE,
-
   KAFE_HÆRVERK,
-
   KULTURHUSET,
   KULTURKIRKEN_JAKOB,
-
   MIR,
-
   NEDPAA,
-
   NO_53,
   OSLO,
-
   OSLO_STREET_FOOD,
-
   OSTARA,
   OTOTO,
-
   PAKKHUSET,
-
   PARKTEATRET,
-
   REVIER,
   REVOLVER,
-
-  ROCKEFELLER,
-  ROCKEFELLER_LEILIGHETEN,
   ROVERSTADEN,
   SALT,
   SECRET,
   SENTRALEN,
   SKATTEN,
   SKAUGUM,
-
   STORGATA_26,
-
   TO_HUNDRE,
   TORGET,
-
   TREKANTEN,
   TREKT,
   UHORT,
-
   VILLA,
-
   VULKAN,
   YOUNGS,
 } = locations;
@@ -4335,497 +4307,12 @@ const allWeeks = [
   {
     week: 33,
     month: 'August',
-    events: [
-      {
-        startDate: '2023-08-15',
-        name: 'Loving Tuesdays: Victor Ameln',
-        location: JAEGER,
-        url: 'https://jaegeroslo.no/events/tuesday-loving-tuesdays-victor-ameln-2',
-      },
-      {
-        startDate: '2023-08-16',
-        name: 'Jaeger Mix: Aksel FU + Mike Sadeyes + Ivaylo',
-        location: JAEGER,
-        url: 'https://fb.me/e/30lD0Pki5',
-      },
-      {
-        startDate: '2023-08-16',
-        name: 'Skaugumekspressen - ALNÆS AARNSETH',
-        location: SKAUGUM,
-        url: 'https://www.instagram.com/p/Cv5HZrdNo9T/?hl=en',
-      },
-
-      {
-        startDate: '2023-08-17',
-        name: 'house/afrobeats/techno w/ BAKK & ROSA',
-        location: OSTARA,
-        url: 'https://fb.me/e/3AB8pVxfQ',
-      },
-
-      {
-        startDate: '2023-08-17',
-        name: 'OXYGIAN PRAXIDICE RELEASE PARTY',
-        location: TREKANTEN,
-        url: 'https://www.trekantenoslo.no',
-      },
-      {
-        startDate: '2023-08-17',
-        name: 'HYSJ',
-        location: OSLO_STREET_FOOD,
-        url: 'https://www.oslo-streetfood.no/event#calendar-b4c29232-5de0-4ea4-8247-ed9fba85ca3b-event-ldeexfad-1679605200-1690488000',
-      },
-      {
-        startDate: '2023-08-17',
-        name: 'Helt Texas: Normann and Ole HK',
-        location: JAEGER,
-        url: 'https://jaegeroslo.no/events/thursday-helt-texas-normann-ole-hk-46',
-      },
-      {
-        startDate: '2023-08-17',
-        name: 'TECHNO;NO CHILL',
-        location: STORGATA_26,
-        url: 'https://www.facebook.com/events/697174552245037',
-        highlight: true,
-      },
-      {
-        startDate: '2023-08-18',
-        name: 'Live organic techno w// BAKSAAS & KJETIL JERVE',
-        location: OSTARA,
-        url: 'https://fb.me/e/1b1rKOiYS',
-        highlight: true,
-      },
-      {
-        startDate: '2023-08-18',
-        name: 'KLUBB FREDAG! LINDA JENSSEN',
-        location: DATTERA_TIL_HAGEN,
-        url: 'https://fb.me/e/4N9iJJxBi',
-      },
-      {
-        startDate: '2023-08-18',
-        name: 'Hedenske Frekvenser x Internasjonalen',
-        location: INTERNASJONALEN,
-        url: 'https://fb.me/e/1uZNjf2Wo',
-      },
-      {
-        startDate: '2023-08-18',
-        name: 'Frædag: André Bratten + Jennifer Cardini (10 years of be a man you ant - live)',
-        location: JAEGER,
-        url: 'https://jaegeroslo.no/events/friday-fraedag-andre-bratten-live-be-a-man-you-ant',
-      },
-      {
-        startDate: '2023-08-18',
-        name: 'Catnip Cloud ~Frog Lake~ Album Releaseshow 🐸🌊',
-        location: BLITZ,
-        url: 'https://www.facebook.com/events/292455869862191',
-      },
-      {
-        startDate: '2023-08-18',
-        name: 'Langs Akerselva Afterparty | Skatebård & Olle Abstract',
-        location: 'Spikerverket',
-        url: 'https://fb.me/e/19MDwIfnd',
-      },
-      {
-        startDate: '2023-08-18',
-        name: 'Fredfades B2B ChewChew (DE)',
-        location: BLAA,
-        url: 'https://fb.me/e/4DeBOCOwC',
-      },
-      {
-        startDate: '2023-08-18',
-        name: 'Epiphany | Kora',
-        location: SKAUGUM,
-        url: 'https://fb.me/e/1nV3IOg0I',
-        highlight: true,
-      },
-      {
-        startDate: '2023-08-18',
-        name: 'Sous-Vide x Seaweed',
-        location: STORGATA_26,
-        url: 'https://fb.me/e/4lov75lBH',
-        highlight: true,
-      },
-      {
-        startDate: '2023-08-18',
-        name: 'Frisk // Hakeem (US) // Henrik Villard // Naboklage',
-        location: INGENSTEDS,
-        url: 'https://fb.me/e/1hb7c5Ekk',
-      },
-      {
-        startDate: '2023-08-18',
-        name: 'NEW ERA PRESENTS. LUCA AGNELLI',
-        location: TREKANTEN,
-        url: 'https://fb.me/e/Was3fe5F',
-        highlight: true,
-      },
-      {
-        startDate: '2023-08-18',
-        name: 'Gundelach - Hele natta',
-        location: VILLA,
-        url: 'https://fb.me/e/COjA3Cbr',
-        highlight: true,
-      },
-      {
-        startDate: '2023-08-19',
-        name: 'atmospheric techno w// FLORA FIELD',
-        location: OSTARA,
-        url: 'https://fb.me/e/I09GQcwD',
-      },
-      {
-        startDate: '2023-08-19',
-        name: 'First Elements pres: Birthday edition party at rooftop Revier',
-        location: REVIER,
-        url: 'https://fb.me/e/2KHJgFFWk',
-      },
-      {
-        startDate: '2023-08-19',
-        name: 'KLUBB LØRDAG: OSI303 & MIKEPH',
-        location: DATTERA_TIL_HAGEN,
-        url: 'https://fb.me/e/3M9UZvSIw',
-      },
-      {
-        startDate: '2023-08-19',
-        name: 'MELAklubb: Olle Abstract / Cél / 50/50 Street Band',
-        location: DUNK_OSLO,
-        url: 'https://www.mela.no/festival/melaklubb/olle-abstract-cel-50-50-street-band-2023',
-      },
-      {
-        startDate: '2023-08-19',
-        name: 'Nightflight: Ivaylo',
-        location: JAEGER,
-        url: 'https://jaegeroslo.no/events/saturday-nightflight-ivaylo-3',
-      },
-      {
-        startDate: '2023-08-19',
-        name: 'FORTAUSFEST',
-        location: FUGLEN,
-        url: 'https://www.facebook.com/events/265354059410135/265357026076505',
-      },
-      {
-        startDate: '2023-08-19',
-        name: 'Annette K I Bitter Babe I DJ Plead I Eivind Vullum // Himmel: Laurel Halo I RPM ',
-        location: BLAA,
-        url: 'https://fb.me/e/10wDZuMHf',
-        highlight: true,
-      },
-      {
-        startDate: '2023-08-19',
-        name: 'Dreamstates b2b Rafiki (IN) // SS: Ornella & Magnus JJ',
-        location: VILLA,
-        url: 'https://www.facebook.com/events/306694955085470',
-      },
-      {
-        startDate: '2023-08-19',
-        name: 'Streetbackboys presents Rave New World 6/6',
-        location: ROCKEFELLER,
-        url: 'https://fb.me/e/uiZG8w3E',
-        highlight: true,
-      },
-      {
-        startDate: '2023-08-19',
-        name: 'JUNGELEN // Schmooze & Brus x Klubbsafari',
-        location: INGENSTEDS,
-        url: 'https://fb.me/e/3P05ZJlt6',
-        highlight: true,
-      },
-      {
-        startDate: '2023-08-19',
-        name: 'Future Daughter - Nye Krigere (Live A/V) + DJs: Sassy009,Snelle,Spr1te,MBA+++',
-        location: TREKANTEN,
-        url: 'https://fb.me/e/14gDyFyKA',
-      },
-      {
-        startDate: '2023-08-19',
-        name: 'UNTS // STALLEN',
-        location: STORGATA_26,
-        url: 'https://fb.me/e/yvpFxpus',
-      },
-      {
-        startDate: '2023-08-19',
-        name: 'Hausmania- SAAB93, experijens dj, Misty',
-        location: HAUSMANIA,
-        url: 'https://fb.me/e/153bPPAaQ',
-        highlight: true,
-      },
-      {
-        startDate: '2023-08-20',
-        name: 'It’s BCR’s summer residency with Anders Hajem, Henrik Villard and Perkules taking over the sauna and Gården',
-        location: JAEGER,
-        url: 'https://jaegeroslo.no/events/sunday-bcr-presents-sundaze-9',
-      },
-    ],
+    events: [],
   },
   {
     week: 32,
     month: 'August',
-    events: [
-      {
-        startDate: '2023-08-08',
-        name: 'Klubbdagen Øya',
-        location: BECCO,
-        url: 'https://www.facebook.com/events/228759933353769',
-      },
-      {
-        startDate: '2023-08-08',
-        name: 'Toothfairy Label Night /Klubbdagen',
-        location: VILLA,
-        url: 'https://fb.me/e/1a59NP7p9',
-      },
-      {
-        startDate: '2023-08-08',
-        name: 'ØYA X KLUBBDAGEN | SYNK ++',
-        location: DATTERA_TIL_HAGEN,
-        url: 'https://fb.me/e/2LaEneEGp',
-      },
-      {
-        startDate: '2023-08-08',
-        name: 'KlubbØya x Loving Tuesdays x Gudrun Singer takeoever',
-        location: JAEGER,
-        url: 'https://jaegeroslo.no/events/tuesday-klubboya-x-loving-tuesdays-x-gudruns-singer-takeover',
-      },
-      {
-        startDate: '2023-08-09',
-        name: 'Øyanatt: Datarock',
-        location: INGENSTEDS,
-        url: 'https://fb.me/e/16r0DSE2k',
-      },
-      {
-        startDate: '2023-08-09',
-        name: 'Øyanatt: TeeBee + Bigup',
-        location: JAEGER,
-        url: 'https://fb.me/e/2SPbkJHRT',
-      },
-
-      {
-        startDate: '2023-08-09',
-        name: 'Øyanatt: Rulefinn + Gabriel Patås',
-        location: SKATTEN,
-        url: 'https://fb.me/e/S6hrVUze',
-      },
-      {
-        startDate: '2023-08-10',
-        name: 'Øyanatt: Lalalar',
-        location: BLAA,
-        url: 'https://fb.me/e/347v9zoHI',
-      },
-      {
-        startDate: '2023-08-10',
-        name: 'Øyanatt: The Alchemist (Dj sett) + Dj Stian Stu (Mutual Intentions)',
-        location: YOUNGS,
-        url: 'https://fb.me/e/2CvoB3vbC',
-      },
-
-      {
-        startDate: '2023-08-10',
-        name: 'Øyanatt: Vinny Villbass (DJ), Three Souls (Live), Anja Bajer (DJ)',
-        location: SKATTEN,
-        url: 'https://fb.me/e/186FnSD90',
-      },
-      {
-        startDate: '2023-08-10',
-        name: 'Cuteness Overload',
-        location: STORGATA_26,
-        url: 'https://www.instagram.com/p/CvpI_XsqzLW',
-      },
-      {
-        startDate: '2023-08-10',
-        name: 'Øyanatt: Dave Clarke (UK), Anémi +++',
-        location: JAEGER,
-        url: 'https://fb.me/e/30vkDEHMT',
-      },
-
-      {
-        startDate: '2023-08-10',
-        name: 'Øyanatt: Faux Majeure, Tia Taro & Morstaq',
-        location: TREKANTEN,
-        url: 'https://fb.me/e/1o2rsq3Dp',
-      },
-      {
-        startDate: '2023-08-10',
-        name: 'oysters & techno w// VIBEKE BRUFF',
-        location: OSTARA,
-        url: 'https://fb.me/e/3wcgPEzoU',
-      },
-      {
-        startDate: '2023-08-11',
-        name: 'Organic Techno w/ IHLE',
-        location: OSTARA,
-        url: 'https://fb.me/e/1ejfMGzqt',
-      },
-      {
-        startDate: '2023-08-11',
-        name: 'Øyanatt: X DATTERA: ESPEN IDEN & ANNETTE K B2B / DJ MELL G (JUICY GANG/DE) // Fredag 11. august',
-        location: DATTERA_TIL_HAGEN,
-        url: 'https://fb.me/e/3Pj6DnBVX',
-        highlight: true,
-      },
-
-      {
-        startDate: '2023-08-11',
-        name: 'Øyanatt: Strangefruit (DJ ), Mark Lean and The Pocket Thieves (Live), Axel Dalberg (DJ)',
-        url: 'https://fb.me/e/3caEoKOPY',
-        location: SKATTEN,
-      },
-      {
-        startDate: '2023-08-11',
-        name: 'Øyanatt: LOKOMOTIV x Frædag: Chloé Caillet + Paramida + Slindre + g-HA & Olanskii',
-        location: JAEGER,
-        url: 'https://fb.me/e/K3BVzj1X',
-        highlight: true,
-      },
-      {
-        startDate: '2023-08-11',
-        name: 'Øyanatt: TDJ (CA) + Sport7000',
-        location: TREKANTEN,
-        url: 'https://fb.me/e/17cxAV9HU',
-        highlight: true,
-      },
-
-      {
-        startDate: '2023-08-11',
-        name: 'Øyanatt: Det Gode Selskab - Roof Top #3',
-        location: ROCKEFELLER_LEILIGHETEN,
-        url: 'https://fb.me/e/3Qj91geTo',
-        highlight: true,
-      },
-
-      {
-        startDate: '2023-08-11',
-        name: 'Dj Easy Pealer',
-        location: MIR,
-        url: 'https://www.lufthavna.no/mir-events',
-      },
-      {
-        startDate: '2023-08-11',
-        name: 'Øyanatt: LA Priest (UK), Svømmebasseng, Ora The Molecule',
-        location: INGENSTEDS,
-        url: 'https://fb.me/e/4T9gnn3z7',
-      },
-      {
-        startDate: '2023-08-11',
-        name: 'Øyanatt: Ost & Kjex + Vinny Villbass',
-        location: STORGATA_26,
-        url: 'https://fb.me/e/PMmCBdbL',
-      },
-      {
-        startDate: '2023-08-11',
-        name: 'Øyanatt: SALOME (Herrensauna) & Annweiler // SS: Normann & Ole HK',
-        location: VILLA,
-        url: 'https://fb.me/e/15u10IPLC',
-        highlight: true,
-      },
-      {
-        startDate: '2023-08-11',
-        name: 'Øyanatt: Barker | Ismistik (Live) | Kompressorkanonen | Little Miss Lucifer',
-        location: BLAA,
-        url: 'https://fb.me/e/2C8L2aqAh',
-      },
-      {
-        startDate: '2023-08-11',
-        name: 'DJ Mezy',
-        location: HAGEN,
-        url: 'https://www.instagram.com/p/CvpI_XsqzLW',
-      },
-      {
-        startDate: '2023-08-12',
-        name: 'Of Norway',
-        location: HAGEN,
-        url: 'https://www.instagram.com/p/CvpI_XsqzLW',
-      },
-      {
-        startDate: '2023-08-12',
-        name: 'Øyanatt: Genus Of Time (SE) | Karima F | Phillip',
-        location: BLAA,
-        url: 'https://fb.me/e/2C8L2aqAh',
-      },
-      {
-        startDate: '2023-08-12',
-        name: 'Esperanto | Lara Palmer & Zepter Lion',
-        location: REVIER,
-        url: 'https://fb.me/e/FjSESGlk',
-      },
-      {
-        startDate: '2023-08-12',
-        name: 'Øyanatt: Det Gode Selskab',
-        location: 'Byens Tak',
-        url: 'https://fb.me/e/1aU6qLq1K',
-      },
-      {
-        startDate: '2023-08-12',
-        name: 'Øyanatt: Pablo Bolivar (ES) Tomas Silva // SS: Anémi & Børre)',
-        location: VILLA,
-        url: 'https://fb.me/e/1jZx2Y8Ml',
-      },
-      {
-        startDate: '2023-08-12',
-        name: 'deeptech w// OSI303 & NEGIN',
-        location: OSTARA,
-        url: 'https://fb.me/e/30Fa9PzWn',
-        highlight: true,
-      },
-
-      {
-        startDate: '2023-08-12',
-        name: 'Øyanatt: Elkka (UK), g-HA & Olanskii +++',
-        location: JAEGER,
-        url: 'https://fb.me/e/30vkDEHMT',
-      },
-      {
-        startDate: '2023-08-12',
-        name: 'Øyanatt: Audiovisual Therapy pres. Jarreau Vandal (NL), Nora Mamdu ++',
-        location: TREKANTEN,
-        url: 'https://fb.me/e/4P6IHlgiE',
-      },
-
-      {
-        startDate: '2023-08-12',
-        name: 'Øyanatt: HUSFEST#24 - Prins Thomas',
-        location: STORGATA_26,
-        url: 'https://fb.me/e/2HAvCIb8H',
-        highlight: true,
-      },
-
-      {
-        startDate: '2023-08-12',
-        name: 'Øyanatt: Olle Abstract (DJ), Arcoe (Live), Mor Efrony (DJ)',
-        location: SKATTEN,
-        url: 'https://fb.me/e/1lXD0YiZH',
-      },
-      {
-        startDate: '2023-08-12',
-        name: 'Øyanatt: Alda Vain (DK), ONLEASH (NO) + FAKETHIAS (NO)',
-        location: REVOLVER,
-        url: 'https://fb.me/e/11KnhIyP5',
-        highlight: true,
-      },
-
-      {
-        startDate: '2023-08-12',
-        name: 'Øyanatt: TootArd (SY), Soundstream (DE), Øyvind Morken +++',
-        location: INGENSTEDS,
-        url: 'https://fb.me/e/1pDcgySiq',
-        highlight: true,
-      },
-
-      {
-        startDate: '2023-08-12',
-        name: 'Øyanatt: Lindstrøm',
-        location: PARKTEATRET,
-        url: 'https://fb.me/e/1r1PT8OBV',
-      },
-      {
-        startDate: '2023-08-12',
-        name: 'Little Miss Lucifer & Nadda',
-        location: KAFE_HÆRVERK,
-        url: 'https://fb.me/e/3LursrH6F',
-        highlight: true,
-      },
-      {
-        startDate: '2023-08-12',
-        name: 'Øyanatt: JOHANNES ASTRUP (DK) / BENDIK HK / SOJU PRINCESS / NABOKLAGE / VIAGRA40K ++',
-        location: DATTERA_TIL_HAGEN,
-        url: 'https://fb.me/e/18wwaJ7hj',
-      },
-    ],
+    events: [],
   },
   {
     week: 31,
