@@ -26,9 +26,10 @@ const eventsQuery = groq`*[_type == 'event' && location->region == "oslo" && !(_
 const getData = async (weekNumber) => {
   const currentWeekN = currentWeekNumber();
   const currentYear = new Date().getFullYear();
-
+  const isLessThan3MontsAhead = weekNumber < currentWeekN + 12;
+  const isLessThan3MonthsBehind = weekNumber > currentWeekN - 12;
   const year =
-    weekNumber < currentWeekN + 8 || weekNumber > currentWeekN + 33
+    isLessThan3MontsAhead || isLessThan3MonthsBehind
       ? currentYear
       : currentYear - 1;
   const startDate = getDateOfIsoWeek(weekNumber, year);
