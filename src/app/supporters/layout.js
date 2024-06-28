@@ -1,3 +1,5 @@
+import NavBar from '@/components/layout/NavBar';
+
 export const metadata = {
   title: 'Supporters - Oslo Omvendt',
   description: 'Supporters of Oslo Omvendt',
@@ -10,10 +12,13 @@ export const metadata = {
 
 export default function Layout({ children }) {
   return (
-    <main
-      className={`min-h-screen w-full px-2 py-12 font-source-code-pro text-whitish`}
-    >
-      {children}
-    </main>
+    <>
+      <NavBar showLogo={true} lightMode={false} />
+      <main
+        className={`min-h-screen w-full px-2 pb-20 pt-40 font-source-code-pro text-whitish`}
+      >
+        {children}
+      </main>
+    </>
   );
 }

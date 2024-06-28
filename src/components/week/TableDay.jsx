@@ -3,7 +3,7 @@ import React from 'react';
 import { getWeekDay } from '@/utils';
 import EventDateBannerOutline from './EventDateBannerOutline';
 
-const TableDay = ({ date, events, photoMode, calendarMode }) => {
+const TableDay = ({ date, events, photoMode }) => {
   const weekDay = getWeekDay(date);
   const [dd, mm] = date.split('.');
   const dateWithoutYear = `${dd}.${mm}`;
@@ -19,7 +19,7 @@ const TableDay = ({ date, events, photoMode, calendarMode }) => {
         endTime.setHours(endTime.getHours() + 3);
         return (
           <div key={`${url}.${i}`}>
-            <div className='relative my-2 flex text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl'>
+            <div className='relative my-2 flex text-sm sm:text-sm md:text-base lg:text-lg xl:text-xl'>
               <a
                 className={`${location}-analytics flex grow font-source-sans transition duration-200 hover:text-primaryDark`}
                 id={`${name}-analytics`} // For google analytics

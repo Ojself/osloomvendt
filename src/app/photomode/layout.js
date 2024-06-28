@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Test - Oslo Omvendt',
-  description: 'Test page for Oslo Omvendt',
+  title: 'Photomode - Oslo Omvendt',
+  description: 'Photomode for Oslo Omvendt',
 };
 
 export default function Layout({ children }) {

@@ -1,3 +1,5 @@
+import NavBar from '@/components/layout/NavBar';
+
 export const metadata = {
   title: 'Musikkfest 2024 highlights  - Oslo Omvendt',
   description: 'Musikkfest 2024 highlights - Oslo Omvendt',
@@ -10,10 +12,13 @@ export const metadata = {
 
 export default function Layout({ children }) {
   return (
-    <main
-      className={`min-h-screen bg-blackish py-12 font-source-code-pro text-whitish`}
-    >
-      {children}
-    </main>
+    <>
+      <NavBar showLogo={true} lightMode={false} />
+      <main
+        className={`min-h-screen bg-blackish pb-20 pt-40 font-source-code-pro text-whitish`}
+      >
+        {children}
+      </main>
+    </>
   );
 }

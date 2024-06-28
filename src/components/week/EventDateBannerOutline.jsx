@@ -8,11 +8,11 @@ const addEmoji = (date) => {
   };
   return emojis[date] ? ` ${emojis[date]}` : '';
 };
-const EventDateBannerOutline = ({ weekday, date }) => {
+const EventDateBannerOutline = ({ weekday, date, bg = 'bg-blackish' }) => {
   const formattedDate = `${weekday},${date}${addEmoji(date)}`;
   return (
     <div
-      className={`sticky top-0 z-40 mt-6 flex border-b-2 border-b-primary bg-blackish py-2 pl-4 font-source-code-pro text-lg font-bold text-primary sm:text-xl md:text-2xl lg:text-3xl`}
+      className={`${bg} sticky top-0 z-40 mt-6 flex border-b-2 border-b-primary  py-2 pl-4 font-source-code-pro text-lg font-bold text-primary sm:text-xl md:text-2xl lg:text-3xl`}
     >
       <time>{formattedDate}</time>
     </div>

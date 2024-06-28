@@ -1,3 +1,5 @@
+import NavBar from '@/components/layout/NavBar';
+
 export async function generateMetadata({ params }) {
   const week = params.week;
 
@@ -17,11 +19,11 @@ export async function generateMetadata({ params }) {
 
 export default function Layout({ children }) {
   return (
-    <main
-      id='main-content'
-      className='min-h-screen w-full px-2  py-12 font-source-sans text-whitish'
-    >
-      {children}
-    </main>
+    <>
+      <NavBar showLogo={false} lightMode={false} />
+      <main className='min-h-screen  w-full px-2 pb-20 pt-40 font-source-sans text-whitish'>
+        {children}
+      </main>
+    </>
   );
 }

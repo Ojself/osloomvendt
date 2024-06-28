@@ -29,7 +29,6 @@ export default function RootLayout({ children }) {
         className={`${anton.variable} ${source_code_pro.variable} ${source_sans.variable} relative w-full bg-blackish `}
       >
         <Providers>
-          <NavBar />
           {children}
           <Footer />
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />

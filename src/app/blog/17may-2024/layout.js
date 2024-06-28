@@ -1,3 +1,5 @@
+import NavBar from '@/components/layout/NavBar';
+
 export const metadata = {
   title: '17. mai-program - Oslo Omvendt',
   description: 'Årets 17. mai-program!',
@@ -10,8 +12,11 @@ export const metadata = {
 
 export default function Layout({ children }) {
   return (
-    <main className={`flex min-h-screen flex-col items-center bg-[#DAE9F7]`}>
-      {children}
-    </main>
+    <>
+      <NavBar showLogo={true} lightMode={false} />
+      <main className={`flex min-h-screen flex-col items-center bg-[#DAE9F7]`}>
+        {children}
+      </main>
+    </>
   );
 }

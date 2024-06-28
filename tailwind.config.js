@@ -31,15 +31,16 @@ module.exports = {
       colors: {
         linkGray: '#2B3235',
         vippsOrange: '#FF5B24',
-
+        // rgba(155,108,255,0)
         primary: '#9B6CFF',
         primaryLight: '#A57AFF',
         primaryDark: '#8B61E5',
 
+        //rgba(134, 255, 107,0)
         secondary: '#86FF6B',
         secondaryLight: '#92ff79',
         secondaryDark: '#78e560',
-
+        // rgb(255, 155, 108)
         tertiary: '#ff9b6c',
         tertiaryDark: '#e58b61',
         tertiaryLight: '#ffa57a',

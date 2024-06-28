@@ -108,7 +108,7 @@ const SuggestClient = ({ data }) => {
 
   return (
     <Container>
-      <h1 className='text-xl font-bold'>Suggest your event</h1>
+      <h1 className='text-xl font-bold md:text-2xl'>Suggest your event</h1>
       <form className='mt-2 flex flex-col  font-source-code-pro'>
         <div className='flex w-full flex-col justify-between md:flex-row '>
           <div className='mr-0 flex w-full flex-col md:mr-2'>
@@ -208,7 +208,7 @@ const SuggestClient = ({ data }) => {
           </div>
           <p className='h-4 text-error'>{error}</p>
           <p className='h-4 text-secondary'>{successMessage}</p>
-          <p className='mt-5 text-xs'>
+          <p className='mt-2 text-xs'>
             After suggesting, please allow 2-3 hours for your event to appear on
             our website.
           </p>

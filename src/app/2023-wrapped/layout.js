@@ -1,3 +1,5 @@
+import NavBar from '@/components/layout/NavBar';
+
 export const metadata = {
   title: '2023 Wrapped - Oslo Omvendt',
   description: '2023 wrapped by Oslo Omvendt',
@@ -10,8 +12,11 @@ export const metadata = {
 
 export default function Layout({ children }) {
   return (
-    <main className='flex min-h-screen w-full bg-gray-200 px-2 text-whitish'>
-      {children}
-    </main>
+    <>
+      <NavBar showLogo={true} lightMode={true} />
+      <main className='flex min-h-screen w-full bg-gray-200 px-2 pb-20 pt-40 text-whitish'>
+        {children}
+      </main>
+    </>
   );
 }

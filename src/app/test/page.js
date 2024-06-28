@@ -1,6 +1,8 @@
 'use client';
 import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
 import { useAppSelector } from '@/lib/redux/hooks';
+import { redirect } from 'next/navigation';
+
 import React from 'react';
 
 const answers = [
@@ -23,7 +25,7 @@ const Test = () => {
   const products = useAppSelector((state) => state.products);
   const cart = useAppSelector((state) => state.cart);
   if (process.env.NODE_ENV !== 'development') {
-    return null;
+    redirect('/');
   }
   const logReduxState = () => {
     console.log('state: \n', { products, cart });

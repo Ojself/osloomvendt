@@ -1,4 +1,4 @@
-import HeroLink from '@/components/HeroLink';
+import NavBar from '@/components/layout/NavBar';
 
 export const metadata = {
   title: 'Oslo Omvendt',
@@ -10,12 +10,13 @@ export const metadata = {
   },
 };
 
-export default function Home() {
+export default function Layout({ children }) {
   return (
-    <main className='h-[93vh]'>
-      <div className='flex h-full flex-col items-center justify-center overflow-hidden bg-blackish'>
-        <HeroLink />
-      </div>
-    </main>
+    <>
+      <NavBar showLogo={false} lightMode={false} />
+      <main className='h-screen w-full px-2 pb-20 pt-40 font-source-sans text-whitish'>
+        {children}
+      </main>
+    </>
   );
 }

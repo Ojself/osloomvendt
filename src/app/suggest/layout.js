@@ -1,3 +1,5 @@
+import NavBar from '@/components/layout/NavBar';
+
 export const metadata = {
   title: 'Oslo Omvendt - Suggest an event',
   description:
@@ -12,10 +14,13 @@ export const metadata = {
 
 export default function Layout({ children }) {
   return (
-    <main
-      className={`flex min-h-screen w-full px-2 py-12 font-source-sans text-whitish`}
-    >
-      {children}
-    </main>
+    <>
+      <NavBar showLogo={true} lightMode={false} />
+      <main
+        className={`flex min-h-screen w-full px-2 pb-20 pt-40  font-source-sans text-whitish`}
+      >
+        {children}
+      </main>
+    </>
   );
 }

@@ -13,7 +13,7 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <main
-      className={`min-h-screen w-full px-2 py-12 font-source-code-pro text-whitish`}
+      className={`min-h-screen w-full px-2 pb-20 pt-40 font-source-code-pro text-whitish`}
     >
       {children}
     </main>

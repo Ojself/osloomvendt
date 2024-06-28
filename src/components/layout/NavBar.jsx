@@ -1,37 +1,31 @@
 'use client';
 import MenuDropdown from './MenuDropdown';
-import { usePathname } from 'next/navigation';
 
 import LinkedBanner from './LinkedBanner';
 import NavBarCart from './NavBarCart';
+import Image from 'next/image';
+import Link from 'next/link';
 
-const NavBar = () => {
-  const pathname = usePathname();
-
-  const shouldShowLogo = [
-    '/privacy',
-    '/terms-of-sale',
-    '/shop',
-    '/packing-list',
-    '/supporters',
-    '/faq',
-    '/suggest',
-    '/blog',
-  ].some((url) => pathname.includes(url));
-
-  const lightMode = ['/links', '/2023-wrapped', 'faq'].some((url) =>
-    pathname.includes(url)
-  );
-
+const NavBar = ({ lightMode, showLogo, minified }) => {
   return (
     <nav
       className={`${
         lightMode ? 'bg-gray-200' : `bg-transparent`
-      } flex h-[6vh] max-h-[80px] w-full items-center justify-between md:h-[7vh]`}
+      } absolute flex w-full items-center justify-between`}
     >
-      {shouldShowLogo ? (
+      {showLogo && minified ? (
+        <Link href='/'>
+          <Image
+            className='ml-2 cursor-pointer rounded-full duration-200 hover:opacity-80'
+            src={lightMode ? '/imgs/OO_logo.jpg' : '/imgs/OO_logo_reverted.jpg'}
+            alt="Oslo Omvendt's logo"
+            height={50}
+            width={50}
+          />
+        </Link>
+      ) : showLogo ? (
         <div
-          className={`flex items-center justify-center ${lightMode ? 'bg-gray-200' : 'bg-whitish'}`}
+          className={`flex items-center justify-center  ${lightMode ? 'bg-gray-200' : 'bg-whitish'}`}
         >
           <LinkedBanner bg={lightMode ? 'bg-gray-200' : ''} />
         </div>

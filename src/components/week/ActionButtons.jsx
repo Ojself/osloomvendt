@@ -50,7 +50,7 @@ const ActionButtons = ({
           return (
             <React.Fragment key={`${location}-${i}`}>
               <ActionButton
-                className={`${styling} m-2 p-2 text-sm font-thin md:px-4 md:py-2 md:text-base`}
+                className={`${styling} m-1.5 p-1.5 text-sm font-extralight md:px-4 md:py-2 md:text-base`}
                 onClick={() => {
                   if (filteredLocations.includes(location)) {
                     setFilteredLocations(
