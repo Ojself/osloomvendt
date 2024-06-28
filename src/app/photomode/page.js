@@ -8,6 +8,7 @@ import events from '@/data/events';
 import EventDateBannerOutline from '@/components/week/EventDateBannerOutline';
 import LinkedBanner from '@/components/layout/LinkedBanner';
 import Image from 'next/image';
+import { redirect } from 'next/navigation';
 
 const threeLinearStyle = {
   background: `linear-gradient(127deg, rgba(255, 155, 108,.3), rgba(255, 155, 108,0) 70.71%), linear-gradient(336deg, rgba(134, 255, 107,.4), rgba(134, 255, 107,0)  70.71%), linear-gradient(217deg, rgba(155,108,255,.8), rgba(155,108,255,0) 70.71%) `,
@@ -31,6 +32,9 @@ const eventsQuery = groq`*[_type == 'event' && location->region == "oslo" && !(_
 
 const getData = async (weekNumber) => {
   const currentYear = new Date().getFullYear();
+  if (process.env.NODE_ENV !== 'development') {
+    redirect('/');
+  }
 
   const startDate = getDateOfIsoWeek(weekNumber, currentYear);
   const endDate = getDateOfIsoWeek(weekNumber, currentYear, true);
