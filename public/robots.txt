@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.osloomvendt.no
+
+# Sitemaps
+Sitemap: https://www.osloomvendt.no/sitemap.xml

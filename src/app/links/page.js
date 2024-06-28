@@ -46,10 +46,7 @@ const links = [
     href: SOCIALS.instagram,
     children: <>Instagram</>,
   },
-  {
-    href: '/blog/17may-2024',
-    children: <>🇳🇴 17. mai-program</>,
-  },
+
   {
     href: SOCIALS.paypal,
     children: (
@@ -57,6 +54,10 @@ const links = [
         <span className='mr-1 text-lg'>🙏</span> PayPal
       </>
     ),
+  },
+  {
+    href: '/blog/17may-2024',
+    children: <>🇳🇴 17. mai-program</>,
   },
   {
     href: '/blog/musikkfest-2024',
