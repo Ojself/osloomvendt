@@ -15,7 +15,7 @@ export default function Layout({ children }) {
     <>
       <NavBar showLogo={true} lightMode={true} />
       <main
-        className={`min-h-screen w-full bg-gray-200 px-2 pb-20 pt-40 font-source-code-pro text-blackish`}
+        className={`min-h-screen w-full bg-gray-200 px-2 pb-20 pt-32 font-source-code-pro  text-blackish md:pt-40`}
       >
         {children}
       </main>
