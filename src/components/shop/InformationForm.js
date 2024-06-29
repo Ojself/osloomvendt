@@ -76,7 +76,7 @@ const InformationForm = ({
             type='text'
             className='rounded bg-whitish py-2 pl-2 text-blackish placeholder-slate-500'
             id='streetAddress'
-            placeholder={'Street adpdress'}
+            placeholder={'Street address'}
             {...register('streetAddress', {
               required: { value: true, message: 'Field is required' },
             })}
