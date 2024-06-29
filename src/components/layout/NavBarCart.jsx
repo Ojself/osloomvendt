@@ -37,7 +37,7 @@ const NavBarCart = () => {
     <div>
       <Link className='relative flex' href='/shop/cart'>
         <div
-          className='text-md absolute bottom-5 left-6 z-10 rounded-sm bg-shopred px-2 font-semibold text-whitish
+          className='absolute bottom-4 left-5 z-10 rounded-sm bg-shopred px-2 text-sm font-semibold text-whitish md:bottom-5 md:left-6 md:text-base
             '
         >
           {cartNumber}
@@ -45,7 +45,7 @@ const NavBarCart = () => {
         <FiShoppingCart
           className={`${
             shouldBounce ? 'animate-bounce' : ''
-          } mr-4 text-4xl text-primary hover:text-primaryLight`}
+          } mr-4 text-2xl text-primary hover:text-primaryLight md:text-4xl`}
         />
       </Link>
     </div>

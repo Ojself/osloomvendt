@@ -9,7 +9,6 @@ export const metadata = {
     images: 'https://i.imgur.com/rO9yY4J.png',
   },
 };
-
 export default function Layout({ children }) {
   return (
     <>

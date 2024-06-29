@@ -46,7 +46,7 @@ const MenuDropdown = () => {
               <div className='flex items-center'>
                 <p className={`uppercase text-primary`}>Menu</p>
                 <RxCross1
-                  className={`h-10 w-10 text-primary hover:text-primaryLight md:h-12 md:w-12`}
+                  className={`h-8 w-8 text-primary hover:text-primaryLight md:h-12 md:w-12`}
                   aria-hidden='true'
                 />
               </div>
@@ -54,7 +54,7 @@ const MenuDropdown = () => {
               <div className='flex items-center'>
                 <p className={`uppercase text-primary`}>Menu</p>
                 <AiOutlineMenu
-                  className={`h-10 w-10 text-primary hover:text-primaryLight md:h-12 md:w-12 `}
+                  className={`h-8 w-8 text-primary hover:text-primaryLight md:h-12 md:w-12 `}
                   aria-hidden='true'
                 />
               </div>

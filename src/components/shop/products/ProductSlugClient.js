@@ -140,6 +140,9 @@ const ProductSlugClient = ({ product }) => {
             disabled={selectedQuantity.value === 0}
             onClick={(e) => {
               e.preventDefault();
+              // scroll to top smoothly
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+
               handleAddToCart();
             }}
             className={` w-48 rounded-sm bg-primary px-2 py-1 text-center text-sm text-whitish  transition duration-300 hover:bg-primaryLight md:px-4 md:py-2 md:text-base`}

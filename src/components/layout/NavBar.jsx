@@ -7,13 +7,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const NavBar = ({ lightMode, showLogo, minified }) => {
+  const isMobileView = typeof window !== 'undefined' && window.innerWidth < 768;
+  const renderMinifiedVersion = isMobileView || minified;
+
   return (
     <nav
       className={`${
         lightMode ? 'bg-gray-200' : `bg-transparent`
       } absolute flex w-full items-center justify-between`}
     >
-      {showLogo && minified ? (
+      {showLogo && renderMinifiedVersion ? (
         <Link href='/'>
           <Image
             className='ml-2 cursor-pointer rounded-full duration-200 hover:opacity-80'

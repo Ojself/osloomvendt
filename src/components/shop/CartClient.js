@@ -54,9 +54,9 @@ const CartClient = ({ products }) => {
   }
 
   return (
-    <Container className=''>
+    <Container>
       <div className='relative mb-6'>
-        <h1 className='mb-12 text-2xl font-bold sm:text-3xl md:text-5xl'>
+        <h1 className='mb-12 text-3xl font-bold sm:text-4xl md:text-5xl'>
           CART
         </h1>
       </div>
@@ -77,7 +77,7 @@ const CartClient = ({ products }) => {
           </div>
         </div>
         <hr className='mb-10 border-whitish opacity-25' />
-        <div className='flex flex-col'>
+        <div className='flex flex-col '>
           {cart.items.map((cartItem) => {
             const { productId, size, quantity } = cartItem;
             const product = getProductById(productId);

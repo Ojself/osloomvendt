@@ -41,7 +41,7 @@ const CartProductPreview = ({
           fill={true}
         />
       </div>
-      <div className='flex w-8/12 flex-col md:w-5/12'>
+      <div className='flex w-9/12 flex-col md:w-5/12'>
         <div className='font-bold'>{title}</div>
         <div>Size: {size}</div>
       </div>
@@ -63,7 +63,7 @@ const CartProductPreview = ({
         />
       </div>
       <div className='hidden md:flex md:w-2/12'>{productPrice}kr</div>
-      <div className='w-2/12 md:w-1/12'>
+      <div className='flex w-1/12 '>
         <button
           className='text-xl text-yellow-400 hover:text-yellow-500'
           onClick={() => handleRemoveItem(_id, size)}
