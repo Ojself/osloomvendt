@@ -47,6 +47,7 @@ const InformationForm = ({
         <div className='mb-4 flex flex-col'>
           <label htmlFor='email'>E-mail address</label>
           <input
+            autoComplete='email'
             type='text'
             className='rounded bg-whitish py-2 pl-2 text-blackish placeholder-slate-500'
             id='email'
@@ -60,6 +61,7 @@ const InformationForm = ({
         <div className='mb-4 flex flex-col'>
           <label htmlFor='name'>Full name</label>
           <input
+            autoCapitalize='name'
             type='text'
             className='rounded bg-whitish py-2 pl-2 text-blackish placeholder-slate-500'
             id='name'
@@ -74,6 +76,7 @@ const InformationForm = ({
           <label htmlFor='streetAddress'>Street address</label>
           <input
             type='text'
+            autoComplete='street-address'
             className='rounded bg-whitish py-2 pl-2 text-blackish placeholder-slate-500'
             id='streetAddress'
             placeholder={'Street address'}
@@ -89,6 +92,7 @@ const InformationForm = ({
             type='text'
             className='rounded bg-whitish py-2 pl-2 text-blackish placeholder-slate-500'
             id='city'
+            autoComplete='address-level2'
             placeholder='City'
             {...register('city', {
               required: { value: true, message: 'Field is required' },
@@ -147,6 +151,7 @@ const InformationForm = ({
               <input
                 type='text'
                 style={{ height: '38px' }}
+                autoComplete='address-level1'
                 className='w-full rounded bg-whitish py-2 pl-2 text-blackish placeholder-slate-500'
                 id='county'
                 placeholder={'State'}
@@ -162,6 +167,7 @@ const InformationForm = ({
             <input
               style={{ height: '38px' }}
               type='text'
+              autoComplete='postal-code'
               className='rounded bg-whitish pl-2 text-blackish placeholder-slate-500'
               id='zipCode'
               placeholder={'Zip code'}
@@ -176,6 +182,7 @@ const InformationForm = ({
           <label htmlFor='mobile'>Phone number</label>
           <input
             type='number'
+            autoComplete='tel'
             className='rounded bg-whitish py-2 pl-2 text-blackish placeholder-slate-500'
             id='mobile'
             onScroll={(e) => e.preventDefault()}
