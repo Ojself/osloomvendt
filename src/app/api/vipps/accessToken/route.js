@@ -15,7 +15,10 @@ export async function POST() {
 
   try {
     const response = await axios(config);
-    return NextResponse.json({ ...response.data });
+    return NextResponse.json({
+      ...response.data,
+      customMessage: 'custom message',
+    });
   } catch (err) {
     console.error(err);
     return NextResponse.json({
