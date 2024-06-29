@@ -65,7 +65,7 @@ const CartProductPreview = ({
       <div className='hidden md:flex md:w-2/12'>{productPrice}kr</div>
       <div className='flex w-1/12 '>
         <button
-          className='text-xl text-yellow-400 hover:text-yellow-500'
+          className='text-xl text-yellow-400 hover:text-yellow-500 md:text-2xl'
           onClick={() => handleRemoveItem(_id, size)}
         >
           <CiCircleRemove />

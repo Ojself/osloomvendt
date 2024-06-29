@@ -21,10 +21,12 @@ export const progresses = {
 const CheckoutClient = () => {
   const onInformationFormSubmit = () => {
     setCheckoutProgress(progresses.SHIPPING);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const onShippingFormSubmit = () => {
     setCheckoutProgress(progresses.PAYMENT);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
   const {
     register,

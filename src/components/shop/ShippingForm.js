@@ -24,7 +24,7 @@ const ShippingForm = ({
           htmlFor='posten'
         >
           <input {...register('shipping')} type='radio' value='posten' />
-          <div className='ml-2 flex flex-1 justify-between'>
+          <div className='ml-2 flex flex-1 justify-between text-sm md:text-base'>
             <p>Posten (standard mail)</p>
             <p>Free (for now)</p>
           </div>
