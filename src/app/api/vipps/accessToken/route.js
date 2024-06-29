@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 export async function POST() {
   const config = {
-    method: 'post',
+    method: 'POST',
     maxBodyLength: Infinity,
     url: `${process.env.VIPPS_BASE_URL}/accesstoken/get`,
     headers: {
@@ -17,7 +17,6 @@ export async function POST() {
     const response = await axios(config);
     return NextResponse.json({
       ...response.data,
-      customMessage: 'custom message',
     });
   } catch (err) {
     console.error(err);
