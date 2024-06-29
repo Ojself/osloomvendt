@@ -24,7 +24,3 @@ export async function POST() {
     });
   }
 }
-
-export async function GET(request) {
-  return NextResponse.json({ message: 'Method not allowed!' });
-}
