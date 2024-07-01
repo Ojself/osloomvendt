@@ -19,11 +19,11 @@ const NavBar = ({ lightMode, showLogo, minified }) => {
       {showLogo && renderMinifiedVersion ? (
         <Link href='/'>
           <Image
-            className='ml-2 cursor-pointer rounded-full duration-200 hover:opacity-80'
+            className='ml-2 mt-1 cursor-pointer rounded-full duration-200 hover:opacity-80'
             src={lightMode ? '/imgs/OO_logo.jpg' : '/imgs/OO_logo_reverted.jpg'}
             alt="Oslo Omvendt's logo"
-            height={50}
-            width={50}
+            height={45}
+            width={45}
           />
         </Link>
       ) : showLogo ? (
