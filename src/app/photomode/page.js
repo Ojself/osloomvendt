@@ -5,10 +5,12 @@ import groq from 'groq';
 import { sanityFetch } from '@/lib/sanity/sanityClient';
 import { getDateOfIsoWeek, getWeekDay } from '@/utils';
 import events from '@/data/events';
-import EventDateBannerOutline from '@/components/week/EventDateBannerOutline';
+
 import LinkedBanner from '@/components/layout/LinkedBanner';
-import Image from 'next/image';
+
 import { redirect } from 'next/navigation';
+import Header1 from '@/components/layout/typograhpy/Header1';
+import Header2 from '@/components/layout/typograhpy/Header2';
 
 const threeLinearStyle = {
   background: `linear-gradient(127deg, rgba(255, 155, 108,.3), rgba(255, 155, 108,0) 70.71%), linear-gradient(336deg, rgba(134, 255, 107,.4), rgba(134, 255, 107,0)  70.71%), linear-gradient(217deg, rgba(155,108,255,.8), rgba(155,108,255,0) 70.71%) `,
@@ -70,9 +72,22 @@ const Photomode = async () => {
   const allDatesShort = Array.from(
     new Set(events.map((e) => e.startDate.toLocaleDateString('nb-NO')))
   );
+  const firstEventThatStartsOnSaturday = events.find(
+    (event) => event.startDate.getDay() === 6
+  );
+
+  const monthName = firstEventThatStartsOnSaturday
+    ? firstEventThatStartsOnSaturday?.startDate.toLocaleDateString('en-US', {
+        month: 'long',
+      })
+    : events[0].startDate.toLocaleDateString('en-US', {
+        month: 'long',
+      });
   return (
     <div className='flex flex-col items-center justify-center'>
-      <div style={middleBlobStyle} className='h-[950px] w-[950px] p-8'>
+      <div style={middleBlobStyle} className='h-[950px] w-[950px] p-6'>
+        <Header1 className='uppercase' text={monthName} />
+        <Header2 text={`[UKE ${weekNumber}]`} />
         {allDatesShort.map((eventDate) => {
           const weekDay = getWeekDay(eventDate);
           const [dd, mm] = eventDate.split('.');
@@ -106,7 +121,9 @@ const Photomode = async () => {
                         </time>
 
                         <div className='ml-4 w-2/3 py-1'>
-                          <h3 className='w-fit '>{name}</h3>
+                          <h3 contentEditable className='w-fit '>
+                            {name}
+                          </h3>
                         </div>
                         <div className='absolute right-1 top-1/2 -translate-y-1/2  md:right-3 '>
                           <h3 className='rounded bg-whitish px-1 italic text-blackish md:px-2'>
