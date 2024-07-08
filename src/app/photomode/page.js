@@ -17,8 +17,7 @@ const threeLinearStyle = {
 };
 const middleBlobStyle = {
   backgroundImage:
-    'linear-gradient(to right, black, rgba(155,108,255,0.2) 50%, black 800px)',
-
+    'linear-gradient(to right, black, rgba(134, 255, 107,0.3) 50%, black 800px)',
   backgroundPosition: '50% 100%',
   backgroundRepeat: 'no-repeat',
 };
@@ -104,7 +103,7 @@ const Photomode = async () => {
               id={dateWithoutYear}
             >
               <div
-                className={`sticky top-0 z-40 mt-6 flex border-b-2 border-b-primary bg-transparent  py-2 pl-4 font-source-code-pro text-lg font-bold text-primaryLight sm:text-xl md:text-2xl lg:text-3xl`}
+                className={`sticky top-0 z-40 mt-6 flex border-b-2 border-b-secondary bg-transparent  py-2 pl-4 font-source-code-pro text-lg font-bold text-secondaryLight sm:text-xl md:text-2xl lg:text-3xl`}
               >
                 <time>{`${weekDay},${dateWithoutYear}`}</time>
               </div>
@@ -121,7 +120,11 @@ const Photomode = async () => {
                         </time>
 
                         <div className='ml-4 w-2/3 py-1'>
-                          <h3 contentEditable className='w-fit '>
+                          <h3
+                            contentEditable
+                            suppressContentEditableWarning={true}
+                            className='w-fit '
+                          >
                             {name}
                           </h3>
                         </div>
