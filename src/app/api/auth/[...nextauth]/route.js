@@ -28,7 +28,7 @@ export const authOptions = {
       return token;
     },
     async redirect({ url, baseUrl }) {
-      return baseUrl;
+      return 'https://www.osloomvendt.no';
     },
     async session({ session, token, user }) {
       // console.log("session callback", { session, token, user });
