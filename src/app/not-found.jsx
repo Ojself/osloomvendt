@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function FourOhFour() {
   return (
     <>
-      <NavBar showLogo={true} />
+      <NavBar showLogo={false} />
       <main className='relative h-screen font-source-code-pro'>
         <Image
           src='/imgs/t_viking.gif'

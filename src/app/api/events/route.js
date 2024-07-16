@@ -1,8 +1,9 @@
 import NextCors from 'nextjs-cors';
 import groq from 'groq';
-import { getDateOfIsoWeek } from '../../utils';
+
 import { sanityFetch } from '@/lib/sanity/sanityClient';
 import { NextResponse } from 'next/server';
+import { getDateOfIsoWeek } from '@/utils';
 
 const apikeys = [
   {
@@ -20,14 +21,18 @@ const eventsQuery = groq`*[_type == 'event' && !(_id in path("drafts.**")) && st
   }
 `;
 
-export async function GET(request) {
-  const { week, apikey } = req.query;
+export async function GET(request, res) {
+  const searchParams = request.nextUrl.searchParams;
 
-  await NextCors(req, res, {
+  const week = searchParams.get('week');
+  const apikey = searchParams.get('apikey');
+
+  /* await NextCors(request, res, {
     methods: ['GET', 'HEAD'],
     origin: '*',
     optionsSuccessStatus: 200,
   });
+   */
   if (!week) {
     return NextResponse.json(
       { message: 'Missing week number' },
