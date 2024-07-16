@@ -14,7 +14,7 @@ export const authOptions = {
       },
     }),
   ],
-  /* callbacks: {
+  callbacks: {
     async jwt({ token, user, session }) {
       // console.log("jwt callback", {token, user, session});
       // pass in user id and user type to token
@@ -26,6 +26,9 @@ export const authOptions = {
         };
       }
       return token;
+    },
+    async redirect({ url, baseUrl }) {
+      return baseUrl;
     },
     async session({ session, token, user }) {
       // console.log("session callback", { session, token, user });
@@ -47,7 +50,7 @@ export const authOptions = {
       // If session doesn't exist, return unchanged session
       return session;
     },
-  }, */
+  },
   secret: process.env.NEXTAUTH_SECRET,
 
   session: {
