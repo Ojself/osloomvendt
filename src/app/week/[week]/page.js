@@ -14,7 +14,7 @@ export function generateStaticParams() {
   }));
 }
 
-const eventsQuery = groq`*[_type == 'event' && location->region == "oslo" && !(_id in path("drafts.**")) && startDate >= $weekStartIsoDate && startDate < $weekEndIsoDate ] | order(startDate asc){
+const eventsQuery = groq`*[_type == 'event' && !(_id in path("drafts.**")) && startDate >= $weekStartIsoDate && startDate < $weekEndIsoDate ] | order(startDate asc){
     name,
     startDate,
     "location": location->name,

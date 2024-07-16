@@ -17,7 +17,7 @@ const threeLinearStyle = {
 };
 const middleBlobStyle = {
   backgroundImage:
-    'linear-gradient(to right, black, rgba(134, 255, 107,0.3) 50%, black 800px)',
+    'linear-gradient(to right, black, rgba(255, 155, 108,0.4) 50%, black 800px)',
   backgroundPosition: '50% 100%',
   backgroundRepeat: 'no-repeat',
 };
@@ -103,7 +103,7 @@ const Photomode = async () => {
               id={dateWithoutYear}
             >
               <div
-                className={`sticky top-0 z-40 mt-6 flex border-b-2 border-b-secondary bg-transparent  py-2 pl-4 font-source-code-pro text-lg font-bold text-secondaryLight sm:text-xl md:text-2xl lg:text-3xl`}
+                className={`sticky top-0 z-40 mt-6 flex border-b-2 border-b-tertiary bg-transparent  py-2 pl-4 font-source-code-pro text-lg font-bold text-tertiaryLight sm:text-xl md:text-2xl lg:text-3xl`}
               >
                 <time>{`${weekDay},${dateWithoutYear}`}</time>
               </div>
@@ -119,17 +119,20 @@ const Photomode = async () => {
                           {dateWithoutYear}
                         </time>
 
-                        <div className='ml-4 w-2/3 py-1'>
+                        <div className='ml-4 py-1'>
                           <h3
                             contentEditable
                             suppressContentEditableWarning={true}
-                            className='w-fit '
                           >
                             {name}
                           </h3>
                         </div>
                         <div className='absolute right-1 top-1/2 -translate-y-1/2  md:right-3 '>
-                          <h3 className='rounded bg-whitish px-1 italic text-blackish md:px-2'>
+                          <h3
+                            contentEditable
+                            suppressContentEditableWarning={true}
+                            className='rounded bg-whitish px-1 italic text-blackish md:px-2'
+                          >
                             {location}
                           </h3>
                         </div>
