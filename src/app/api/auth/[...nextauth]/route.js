@@ -8,6 +8,7 @@ export const authOptions = {
     InstagramProvider({
       clientId: process.env.INSTAGRAM_CLIENT_ID,
       clientSecret: process.env.INSTAGRAM_CLIENT_SECRET,
+      redirect_uri: 'https://www.osloomvendt.no',
 
       /* authorization: {
         params: {
