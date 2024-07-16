@@ -4,8 +4,8 @@ import { useAppSelector } from '@/lib/redux/hooks';
 
 import { signIn, useSession } from 'next-auth/react';
 
-import React, { useEffect } from 'react';
-import { useRouter } from 'next/router';
+import React, { useLayoutEffect } from 'react';
+
 import { redirect } from 'next/navigation';
 
 const answers = [
@@ -30,7 +30,7 @@ const Test = ({ searchParams }) => {
   const products = useAppSelector((state) => state.products);
   const cart = useAppSelector((state) => state.cart);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (process.env.NODE_ENV !== 'development' && testParam !== 'true') {
       redirect('/');
     }
@@ -72,7 +72,7 @@ const Test = ({ searchParams }) => {
               onClick={() =>
                 signIn('instagram', {
                   callbackUrl: 'https://osloomvendt.no',
-                  redirect_uri: 'https://osloomvendt.no/faq',
+                  redirect_uri: 'https://osloomvendt.no',
                 })
               }
               className='rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 px-4 py-2 font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:from-purple-500 hover:via-pink-600 hover:to-red-600'
