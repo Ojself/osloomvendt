@@ -71,8 +71,8 @@ const Test = ({ searchParams }) => {
             <button
               onClick={() =>
                 signIn('instagram', {
-                  callbackUrl: 'https://osloomvendt.no',
-                  redirect_uri: 'https://osloomvendt.no',
+                  callbackUrl: 'https://www.osloomvendt.no/',
+                  redirect_uri: 'https://www.osloomvendt.no/',
                 })
               }
               className='rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 px-4 py-2 font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:from-purple-500 hover:via-pink-600 hover:to-red-600'
