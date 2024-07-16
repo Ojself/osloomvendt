@@ -8,7 +8,7 @@ export const authOptions = {
     InstagramProvider({
       clientId: process.env.INSTAGRAM_CLIENT_ID,
       clientSecret: process.env.INSTAGRAM_CLIENT_SECRET,
-      allowDangerousEmailAccountLinking: true,
+
       /* authorization: {
         params: {
           scope: 'user_profile,user_media',
@@ -57,4 +57,5 @@ export const authOptions = {
   },
   debug: process.env.NODE_ENV === 'development',
 };
-export default NextAuth(authOptions);
+export const handler = NextAuth(authOptions);
+export { handler as GET, handler as POST };
