@@ -12,9 +12,7 @@ const NavBar = ({ lightMode, showLogo, minified }) => {
 
   return (
     <nav
-      className={`${
-        lightMode ? 'bg-gray-200' : `bg-transparent`
-      } absolute flex w-full items-center justify-between`}
+      className={`absolute flex w-full items-center justify-between bg-transparent`}
     >
       {showLogo && renderMinifiedVersion ? (
         <Link href='/'>

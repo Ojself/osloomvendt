@@ -13,7 +13,7 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <>
-      <NavBar showLogo={false} lightMode={false} />
+      <NavBar showLogo={false} />
       <main className='h-screen w-full px-2 pb-20 pt-32 font-source-sans  text-whitish md:pt-40'>
         {children}
       </main>

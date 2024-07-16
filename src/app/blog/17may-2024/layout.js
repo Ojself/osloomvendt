@@ -13,7 +13,7 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <>
-      <NavBar showLogo={true} lightMode={false} />
+      <NavBar showLogo={true} />
       <main className={`flex min-h-screen flex-col items-center bg-[#DAE9F7]`}>
         {children}
       </main>
