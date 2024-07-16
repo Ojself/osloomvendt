@@ -10,7 +10,7 @@ export const authOptions = {
       clientSecret: process.env.INSTAGRAM_CLIENT_SECRET,
 
       params: {
-        redirect_uri: 'https://www.osloomvendt.no',
+        redirect_uri: 'https://www.osloomvendt.no/a',
       },
     }),
   ],
@@ -28,7 +28,7 @@ export const authOptions = {
       return token;
     },
     async redirect({ url, baseUrl }) {
-      return 'https://www.osloomvendt.no';
+      return 'https://www.osloomvendt.no/auth';
     },
     async session({ session, token, user }) {
       // console.log("session callback", { session, token, user });
