@@ -1,9 +1,12 @@
 'use client';
 import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
 import { useAppSelector } from '@/lib/redux/hooks';
-import { redirect } from 'next/navigation';
 
-import React from 'react';
+import { signIn, useSession } from 'next-auth/react';
+
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { redirect } from 'next/navigation';
 
 const answers = [
   'Monument !',
@@ -21,15 +24,21 @@ const answers = [
   'Monument',
 ];
 
-const Test = () => {
+const Test = ({ searchParams }) => {
+  const testParam = searchParams?.test;
+  const { data: session } = useSession();
   const products = useAppSelector((state) => state.products);
   const cart = useAppSelector((state) => state.cart);
-  if (process.env.NODE_ENV !== 'development') {
-    redirect('/');
-  }
+
+  useEffect(() => {
+    if (process.env.NODE_ENV !== 'development' && testParam !== 'true') {
+      redirect('/');
+    }
+  }, [testParam]);
   const logReduxState = () => {
     console.log('state: \n', { products, cart });
   };
+
   return (
     <>
       <div className='flex flex-col items-center'>
@@ -38,7 +47,7 @@ const Test = () => {
           Log state
         </button>
       </div>
-      <hr />
+      <hr className='my-10' />
       <div className='flex w-full flex-row flex-wrap '>
         {answers.map((a) => (
           <IgQuestionAnswer
@@ -47,6 +56,26 @@ const Test = () => {
             a={a}
           />
         ))}
+      </div>
+      <hr className='my-10' />
+      <div className='flex flex-col items-center'>
+        <p>Auth</p>
+        {session ? (
+          <>
+            Signed in as {session.user.email} <br />
+            <button onClick={() => signOut()}>Sign out Instagram</button>
+          </>
+        ) : (
+          <>
+            Not signed in <br />
+            <button
+              onClick={() => signIn('instagram')}
+              className='rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 px-4 py-2 font-semibold text-white shadow-lg transition duration-300 ease-in-out hover:from-purple-500 hover:via-pink-600 hover:to-red-600'
+            >
+              Sign in instagram
+            </button>
+          </>
+        )}
       </div>
     </>
   );

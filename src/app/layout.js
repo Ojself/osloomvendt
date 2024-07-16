@@ -3,7 +3,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 import Providers from './Providers';
 import Footer from '@/components/layout/Footer';
-import NavBar from '@/components/layout/NavBar';
+import { getServerSession } from 'next-auth';
 
 const anton = Anton({
   subsets: ['latin'],
@@ -22,13 +22,14 @@ const source_sans = Source_Sans_3({
   variable: '--font-source-sans',
 });
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const session = await getServerSession();
   return (
     <html lang='en'>
       <body
         className={`${anton.variable} ${source_code_pro.variable} ${source_sans.variable} relative w-full bg-blackish `}
       >
-        <Providers>
+        <Providers session={session}>
           {children}
           <Footer />
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
