@@ -1,4 +1,3 @@
-import NextCors from 'nextjs-cors';
 import groq from 'groq';
 
 import { sanityFetch } from '@/lib/sanity/sanityClient';
@@ -27,12 +26,6 @@ export async function GET(request, res) {
   const week = searchParams.get('week');
   const apikey = searchParams.get('apikey');
 
-  /* await NextCors(request, res, {
-    methods: ['GET', 'HEAD'],
-    origin: '*',
-    optionsSuccessStatus: 200,
-  });
-   */
   if (!week) {
     return NextResponse.json(
       { message: 'Missing week number' },
@@ -44,7 +37,7 @@ export async function GET(request, res) {
     return NextResponse.json(
       {
         message:
-          'Missing or invalid API key \n get your free API key by contacting hei@osloomvendt.no',
+          'Missing or invalid API key. Get your free API key by contacting hei@osloomvendt.no',
       },
       { status: 400 }
     );

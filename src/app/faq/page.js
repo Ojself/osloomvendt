@@ -5,6 +5,27 @@ import { SOCIALS } from '@/utils/consts';
 import ApiKeyLink from '@/components/faq/ApiKeyLink';
 import Container from '@/components/layout/Container';
 
+const mockResponse = {
+  status: 200,
+  data: {
+    events: [
+      {
+        name: 'Some Event name',
+        startDate: new Date(Date.now()),
+        location: 'Venue name',
+        url: 'https://www.osloomvendt.no',
+      },
+      {
+        name: 'Some Other Event name',
+        startDate: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7),
+        location: 'Another Venue name',
+        url: 'https://www.osloomvendt.no',
+      },
+      '... more events',
+    ],
+  },
+};
+
 const FAQ = () => {
   return (
     <Container>
@@ -65,6 +86,12 @@ const FAQ = () => {
           to get your free api key and simply do a GET request to the following
           URL: <ApiKeyLink />
         </p>
+        <div className='rounded-lg bg-black p-4 text-white'>
+          <h1 className='text-sm'>
+            API Response <span className='text-green-500'>(200)</span>
+          </h1>
+          <pre>{JSON.stringify(mockResponse, null, 2)}</pre>
+        </div>
         <h2 className='mb-4 mt-6 text-lg font-bold sm:text-xl md:text-3xl'>
           <span>Q</span>: How can I support the event guide?
         </h2>
