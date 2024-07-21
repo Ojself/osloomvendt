@@ -13,13 +13,13 @@ const mockResponse = {
         name: 'Some Event name',
         startDate: new Date(Date.now()),
         location: 'Venue name',
-        url: 'https://www.osloomvendt.no',
+        url: 'https://www.example.com',
       },
       {
         name: 'Some Other Event name',
         startDate: new Date(Date.now() + 1000 * 60 * 60 * 24 * 7),
         location: 'Another Venue name',
-        url: 'https://www.osloomvendt.no',
+        url: 'https://www.example.com',
       },
       '... more events',
     ],
@@ -83,7 +83,7 @@ const FAQ = () => {
               <span>com</span>
             </>
           </a>{' '}
-          to get your free api key and simply do a GET request to the following
+          to get your free API  key and simply do a GET request to the following
           URL: <ApiKeyLink />
         </p>
         <div className='rounded-lg bg-black p-4 text-white'>
