@@ -100,7 +100,7 @@ export default async function sitemap() {
   const weeks = Array.from({ length: 52 }).map((n, i) => {
     const isSameAsWeek = i + 1 === currentWeekN;
     const isWithinTwoWeeks =
-      i + 1 > currentWeekN - 2 && i + 1 < currentWeekN + 2;
+      i + 1 >= currentWeekN - 2 && i + 1 <= currentWeekN + 2;
     return {
       url: `https://osloomvendt.no/week/${i + 1}`,
       lastModified: new Date(),
