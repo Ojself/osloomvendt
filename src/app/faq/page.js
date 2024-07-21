@@ -87,6 +87,7 @@ const FAQ = () => {
           URL: <ApiKeyLink />
         </p>
         <div className='rounded-lg bg-black p-4 text-white'>
+          <h1 className='text-sm text-tertiary'>GET</h1>
           <h1 className='text-sm'>
             API Response <span className='text-green-500'>(200)</span>
           </h1>
