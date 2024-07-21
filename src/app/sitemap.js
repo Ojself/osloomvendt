@@ -62,6 +62,28 @@ export default async function sitemap() {
       priority: 0.65,
     },
   ];
+
+  const products = [
+    {
+      url: 'oslo-omvendt-t-shirt-black',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: 'oslo-omvendt-hoodie-black',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: 'oslo-omvendt-choker',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.81,
+    },
+  ];
+
   const currentWeekN = currentWeekNumber();
   const weeks = Array.from({ length: 52 }).map((n, i) => {
     const isSameAsWeek = i + 1 === currentWeekN;
@@ -80,5 +102,5 @@ export default async function sitemap() {
     };
   });
 
-  return [...links, ...weeks];
+  return [...links, ...products, ...weeks];
 }
