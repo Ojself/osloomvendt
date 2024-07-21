@@ -65,19 +65,19 @@ export default async function sitemap() {
 
   const products = [
     {
-      url: 'oslo-omvendt-t-shirt-black',
+      url: 'https://www.osloomvendt.no/shop/oslo-omvendt-t-shirt-black',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.85,
     },
     {
-      url: 'oslo-omvendt-hoodie-black',
+      url: 'https://www.osloomvendt.no/shop/oslo-omvendt-hoodie-black',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.85,
     },
     {
-      url: 'oslo-omvendt-choker',
+      url: 'https://www.osloomvendt.no/shop/oslo-omvendt-choker',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.81,
