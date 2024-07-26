@@ -13,11 +13,11 @@ import Header1 from '@/components/layout/typograhpy/Header1';
 import Header2 from '@/components/layout/typograhpy/Header2';
 
 const threeLinearStyle = {
-  background: `linear-gradient(127deg, rgba(255, 155, 108,.3), rgba(255, 155, 108,0) 70.71%), linear-gradient(336deg, rgba(134, 255, 107,.4), rgba(134, 255, 107,0)  70.71%), linear-gradient(217deg, rgba(155,108,255,.8), rgba(155,108,255,0) 70.71%) `,
+  background: `linear-gradient(127deg, rgba(255, 229, 108,.3), rgba(255, 229, 108,0) 70.71%), linear-gradient(336deg, rgba(134, 255, 107,.4), rgba(134, 255, 107,0)  70.71%), linear-gradient(217deg, rgba(155,108,255,.8), rgba(155,108,255,0) 70.71%) `,
 };
 const middleBlobStyle = {
   backgroundImage:
-    'linear-gradient(to right, black, rgba(255, 155, 108,0.4) 50%, black 800px)',
+    'linear-gradient(to right, black, rgba(255, 229, 108,0.4) 50%, black 800px)',
   backgroundPosition: '50% 100%',
   backgroundRepeat: 'no-repeat',
 };
@@ -103,7 +103,7 @@ const Photomode = async () => {
               id={dateWithoutYear}
             >
               <div
-                className={`sticky top-0 z-40 mt-6 flex border-b-2 border-b-tertiary bg-transparent  py-2 pl-4 font-source-code-pro text-lg font-bold text-tertiaryLight sm:text-xl md:text-2xl lg:text-3xl`}
+                className={`sticky top-0 z-40 mt-6 flex border-b-2 border-b-[#ffe56c] bg-transparent  py-2 pl-4 font-source-code-pro text-lg font-bold text-[#ffe56c] sm:text-xl md:text-2xl lg:text-3xl`}
               >
                 <time>{`${weekDay},${dateWithoutYear}`}</time>
               </div>
@@ -115,10 +115,6 @@ const Photomode = async () => {
                   <div key={`${url}.${i}`}>
                     <div className='relative my-2 flex text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl'>
                       <div className={`flex grow font-source-sans `}>
-                        <time className='my-auto ml-1  md:ml-2'>
-                          {dateWithoutYear}
-                        </time>
-
                         <div className='ml-4 py-1'>
                           <h3
                             contentEditable
