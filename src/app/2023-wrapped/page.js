@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
-import { NextSeo } from 'next-seo';
+
 import Container from '@/components/layout/Container';
 import Header1 from '@/components/layout/typograhpy/Header1';
 
@@ -35,19 +35,6 @@ const photos = [
 const Wrapped2023 = () => {
   return (
     <>
-      <NextSeo
-        title={`2023 Wrapped - Oslo Omvendt`}
-        description={'2023 in a snapshot!'}
-        canonical={`https://osloomvendt.no/2023-wrapped`}
-        openGraph={{
-          title: `2023 Wrapped - Oslo Omvendt`,
-          description: '2023 in a snapshot!',
-          url: `https://osloomvendt.no/2023-wrapped`,
-          locale: 'en-US',
-          siteName: 'Oslo Omvendt',
-        }}
-      />
-
       <Container>
         <div className='mb-2 mt-8'>
           <Link href='/week'>
