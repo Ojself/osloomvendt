@@ -15,7 +15,6 @@
     "@next/third-parties": "^14.2.3",
     "@paypal/react-paypal-js": "^8.3.0",
     "@reduxjs/toolkit": "^2.2.3",
-    "@sendgrid/mail": "^8.1.2",
     "axios": "^1.6.8",
     "current-week-number": "^1.0.7",
     "eslint-config-prettier": "^9.1.0",
