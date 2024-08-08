@@ -1,4 +1,4 @@
-import { revalidatePath } from 'next/cache';
+import { revalidatePath, revalidateTag } from 'next/cache';
 import { NextResponse } from 'next/server';
 import { parseBody } from 'next-sanity/webhook';
 import currentWeekNumber from 'current-week-number';
