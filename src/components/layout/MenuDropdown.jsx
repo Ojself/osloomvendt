@@ -3,7 +3,8 @@ import { Menu, Transition } from '@headlessui/react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { RxCross1 } from 'react-icons/rx';
 import currentWeekNumber from 'current-week-number';
-import { useRouter } from 'next-nprogress-bar';
+import Link from 'next/link';
+import { twMerge } from 'tailwind-merge';
 
 const MenuDropdown = () => {
   const navs = [
@@ -28,8 +29,6 @@ const MenuDropdown = () => {
     },
     { href: '/2023-wrapped', label: 'WRAPPED 2023' },
   ];
-
-  const router = useRouter();
 
   return (
     <Menu
@@ -79,14 +78,15 @@ const MenuDropdown = () => {
                   return (
                     <Menu.Item key={href}>
                       {({ active }) => (
-                        <a
-                          onClick={() => router.push(href)}
-                          className={`${
+                        <Link
+                          href={href}
+                          className={twMerge(
+                            'group flex w-full cursor-pointer items-center rounded-md px-2 py-2 text-base uppercase ',
                             active ? `bg-primary text-whitish` : `text-primary`
-                          } group flex w-full cursor-pointer items-center rounded-md px-2 py-2 text-base uppercase`}
+                          )}
                         >
                           {label}
-                        </a>
+                        </Link>
                       )}
                     </Menu.Item>
                   );
