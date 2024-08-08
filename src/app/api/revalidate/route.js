@@ -13,17 +13,22 @@ export async function POST(req) {
         status: 401,
       });
     }
-    return new Response(JSON.stringify({ message: body }), { status: 400 });
-
-    if (!body?.startDate) {
-      const message = 'Bad Request';
-      return new Response(JSON.stringify({ message, body }), { status: 400 });
+    if (body._type === 'event') {
+      if (!body?.startDate) {
+        const message = 'Bad Request';
+        return new Response(JSON.stringify({ message, body }), { status: 400 });
+      }
+      const staleRoute = `/week/${currentWeekNumber(body.startDate)}`;
+      revalidatePath(staleRoute);
+      const message = `Updated route: ${staleRoute}`;
+      return NextResponse.json({ body, message });
     }
-
-    const staleRoute = `/week/${currentWeekNumber(body.startDate)}`;
-    revalidatePath(staleRoute);
-    const message = `Updated route: ${staleRoute}`;
-    return NextResponse.json({ body, message });
+    if (body._type === 'product') {
+      const staleTag = `product`;
+      revalidateTag('product');
+      const message = `Updated tag: ${staleTag}`;
+      return NextResponse.json({ body, message });
+    }
   } catch (err) {
     console.error(err);
     return new Response(err.message, { status: 500 });
