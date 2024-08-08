@@ -86,9 +86,10 @@ const VippsWrapper = ({
     <button
       style={{ background: '#FF5B24' }}
       disabled={loading}
-      className={`mt-2 h-full w-full md:mt-0 md:w-48 lg:w-52 ${
+      className={twmerge(
+        'mt-2 h-full w-full py-4 text-base md:mt-0 md:w-48 lg:w-52 ',
         loading ? 'text-gray-500' : 'text-white'
-      }text-base py-4`}
+      )}
       onClick={handleCreatePayment}
     >
       {loading ? (

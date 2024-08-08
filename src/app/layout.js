@@ -4,6 +4,7 @@ import './globals.css';
 import Providers from './Providers';
 import Footer from '@/components/layout/Footer';
 import { getServerSession } from 'next-auth';
+import { twMerge } from 'tailwind-merge';
 
 const anton = Anton({
   subsets: ['latin'],
@@ -27,7 +28,12 @@ export default async function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body
-        className={`${anton.variable} ${source_code_pro.variable} ${source_sans.variable} relative w-full bg-blackish `}
+        className={twMerge(
+          anton.variable,
+          source_code_pro.variable,
+          source_sans.variable,
+          'relative w-full bg-blackish'
+        )}
       >
         <Providers session={session}>
           {children}

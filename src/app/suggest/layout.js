@@ -17,7 +17,7 @@ export default function Layout({ children }) {
     <>
       <NavBar showLogo={true} />
       <main
-        className={`flex min-h-screen w-full px-2 pb-20 pt-32 font-source-sans   text-whitish md:pt-40`}
+        className={`flex min-h-screen w-full px-2 pb-20 pt-32 font-source-sans text-whitish md:pt-40`}
       >
         {children}
       </main>

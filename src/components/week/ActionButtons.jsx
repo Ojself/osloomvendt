@@ -1,5 +1,6 @@
 import React from 'react';
 import ActionButton from './ActionButton';
+import { twMerge } from 'tailwind-merge';
 
 export const getLocationButtonStyling = (active) =>
   active
@@ -50,7 +51,10 @@ const ActionButtons = ({
           return (
             <React.Fragment key={`${location}-${i}`}>
               <ActionButton
-                className={`${styling} text-sm font-extralight md:text-base`}
+                className={twMerge(
+                  styling,
+                  'text-sm font-extralight md:text-base'
+                )}
                 onClick={() => {
                   if (filteredLocations.includes(location)) {
                     setFilteredLocations(

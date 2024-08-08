@@ -22,7 +22,7 @@ export async function getData() {
 
 const Shop = async () => {
   const data = await getData();
-  console.log(data);
+
   return <ShopClient products={data} />;
 };
 

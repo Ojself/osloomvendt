@@ -1,12 +1,11 @@
 'use client';
+
 import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
 import { useAppSelector } from '@/lib/redux/hooks';
-
 import { signIn, useSession } from 'next-auth/react';
-
-import React, { useLayoutEffect } from 'react';
-
+import React from 'react';
 import { redirect } from 'next/navigation';
+import Embed from '@/components/embed/Embed';
 
 const answers = [
   'Monument !',
@@ -24,17 +23,14 @@ const answers = [
   'Monument',
 ];
 
-const Test = ({ searchParams }) => {
-  const testParam = searchParams?.test;
+const Test = () => {
   const { data: session } = useSession();
   const products = useAppSelector((state) => state.products);
   const cart = useAppSelector((state) => state.cart);
 
-  useLayoutEffect(() => {
-    if (process.env.NODE_ENV !== 'development' && testParam !== 'true') {
-      redirect('/');
-    }
-  }, [testParam]);
+  if (process.env.NODE_ENV !== 'development') {
+    redirect('/');
+  }
   const logReduxState = () => {
     console.log('state: \n', { products, cart });
   };
@@ -76,6 +72,18 @@ const Test = ({ searchParams }) => {
             </button>
           </>
         )}
+      </div>
+      <hr className='my-10' />
+      <div className='flex flex-col items-center'>
+        <p>React Player</p>
+        <div className='w-[600px] max-w-full p-4'>
+          <Embed
+            embed={{
+              url: 'https://soundcloud.com/sofa-beats-1/sofacast-18-nico-tober?si=a28a70f8ef5e4d66a2ef0194151a6347&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing',
+              title: 'String',
+            }}
+          />
+        </div>
       </div>
     </>
   );

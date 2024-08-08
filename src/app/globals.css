@@ -15,3 +15,43 @@
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
+
+input[type='range'].react-player-range {
+  @apply w-full max-w-none appearance-none border-0 bg-transparent active:cursor-ew-resize;
+}
+
+/***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type='range'].react-player-range::-webkit-slider-runnable-track {
+  @apply h-[1.5em] w-full cursor-ew-resize rounded-lg bg-[linear-gradient(90deg,_rgba(255,255,255,1)_0%,_rgba(255,255,255,1)_var(--progress),transparent_var(--progress))];
+}
+
+/******** Firefox ********/
+input[type='range'].react-player-range::-moz-range-track {
+  @apply h-[1.5em] w-full bg-[linear-gradient(90deg,_rgba(255,255,255,1)_0%,_rgba(255,255,255,1)_var(--progress),transparent_var(--progress))];
+}
+/* Center thumb formulae */
+/* margin-top = (track height in pixels / 2) - (thumb height in pixels /2) */
+input[type='range'].react-player-range::-webkit-slider-thumb {
+  @apply mt-0 size-[1.5em] appearance-none bg-transparent;
+}
+
+input[type='range'].react-player-range::-moz-range-thumb {
+  @apply mt-0 size-[1.5em] appearance-none bg-transparent;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

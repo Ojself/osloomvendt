@@ -11,6 +11,7 @@ import ShippingForm from './ShippingForm';
 import PaymentForm from './PaymentForm';
 import Container from '../layout/Container';
 import Header1 from '../layout/typograhpy/Header1';
+import { twMerge } from 'tailwind-merge';
 
 export const progresses = {
   INFORMATION: 'Information',
@@ -132,7 +133,7 @@ const CheckoutClient = () => {
                   key={progress}
                   disabled={!isClickable()}
                   onClick={() => setCheckoutProgress(progress)}
-                  className={`mr-4 ${activeTextColor} ${hoverEffect}`}
+                  className={twMerge(activeTextColor, hoverEffect, 'mr-4')}
                 >
                   {progress}
                   {isNotLast && <span className='text-slate-50'> {'>'} </span>}
