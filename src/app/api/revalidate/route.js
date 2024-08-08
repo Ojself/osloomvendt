@@ -13,6 +13,7 @@ export async function POST(req) {
         status: 401,
       });
     }
+    return new Response(JSON.stringify({ message: body }), { status: 400 });
 
     if (!body?.startDate) {
       const message = 'Bad Request';

@@ -3,7 +3,7 @@ import groq from 'groq';
 import Link from 'next/link';
 
 import ProductSlugClient from '@/components/shop/products/ProductSlugClient';
-import { client } from '@/lib/sanity/sanityClient';
+import { client, sanityFetch } from '@/lib/sanity/sanityClient';
 import JsonLDProduct from '@/components/jsonld/JsonLDProduct';
 
 const productsQuery = groq`*[_type == 'product' && slug.current == $paramsProduct] {
@@ -19,11 +19,21 @@ const productsQuery = groq`*[_type == 'product' && slug.current == $paramsProduc
 const pathsQuery = groq`*[_type == 'product' && defined(slug.current)][].slug.current`;
 
 export async function generateStaticParams() {
-  const products = await client.fetch(pathsQuery);
-  return products.map((product) => ({ product: product }));
+  const tags = ['product'];
+  const products = await sanityFetch({
+    query: pathsQuery,
+    tags,
+  });
+
+  return products.map((product) => ({ product }));
 }
 const getData = async (paramsProduct) => {
-  const products = await client.fetch(productsQuery, { paramsProduct });
+  const tags = ['product'];
+  const products = await sanityFetch({
+    query: productsQuery,
+    params: { paramsProduct },
+    tags,
+  });
   return products[0];
 };
 
