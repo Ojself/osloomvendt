@@ -14,6 +14,7 @@ export default function FourOhFour() {
           id='fourohfour'
           alt="404 - You're lost!"
           layout='fill'
+          unoptimized={true}
           objectFit='cover'
           priority={true}
           className=' bg-cover opacity-40'

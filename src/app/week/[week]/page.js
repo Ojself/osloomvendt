@@ -1,4 +1,4 @@
-import React, { cache } from 'react';
+import React from 'react';
 import currentWeekNumber from 'current-week-number';
 import groq from 'groq';
 
@@ -23,7 +23,7 @@ export function generateStaticParams() {
   }));
 }
 
-const getData = cache(async (weekNumber) => {
+const getData = async (weekNumber) => {
   const currentWeekN = currentWeekNumber();
   const currentYear = new Date().getFullYear();
 
@@ -60,7 +60,7 @@ const getData = cache(async (weekNumber) => {
     }));
 
   return allEvents;
-});
+};
 
 export async function generateMetadata({ params }) {
   const week = params.week;
@@ -69,7 +69,8 @@ export async function generateMetadata({ params }) {
     (a, b) => b.highlight - a.highlight
   );
 
-  const title = `Week ${week} - Oslo Omvendt`;
+  const weekString = `Week ${week}`;
+  const title = `${weekString} - Oslo Omvendt`;
   const eventsSummary = events
     .map((event) => {
       const { name } = event;
@@ -91,6 +92,15 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: title,
       description: description,
+      /* images: [
+        {
+          url: `/api/op?week=${weekString}&range=${rangeDateAsString}`,
+          width: 1200,
+          height: 630,
+          alt: rangeDateAsString,
+          type: 'image/png',
+        },
+      ], */
       images: 'https://i.imgur.com/rO9yY4J.png',
     },
   };
