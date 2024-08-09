@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import { BsFacebook, BsInstagram, BsPaypal, BsThreads } from 'react-icons/bs';
 import { FaPatreon } from 'react-icons/fa';

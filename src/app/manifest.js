@@ -2,7 +2,8 @@ export default function manifest() {
   return {
     name: 'Oslo Omvendt',
     short_name: 'OO',
-    description: `The Ultimate Guide to Oslo's Clubs and Raves`,
+    description:
+      "All you need to know about Oslo's clubs and raves. See you at the rail!",
     start_url: './',
     display: 'standalone',
     background_color: '#0f0a19',

@@ -23,7 +23,7 @@ const ProductPreview = ({ product }) => {
       };
     })
     .filter((img) => !!img);
-
+  const href = `/shop/products/${slug.current}`;
   return (
     <li
       className='flex h-full flex-col items-center justify-between hover:text-primary '
@@ -33,7 +33,7 @@ const ProductPreview = ({ product }) => {
         <ImageGallery
           onClick={(e) => {
             e.preventDefault();
-            router.push(`/shop/products/${slug.current}`);
+            router.push(href);
           }}
           showThumbnails={false}
           showNav={true}
@@ -45,7 +45,7 @@ const ProductPreview = ({ product }) => {
         />
       </div>
       <div className='mt-2 '>
-        <Link href={`/shop/products/${slug.current}`}>
+        <Link href={href}>
           <p className='font-source-code-pro text-xl duration-200 '>{title} </p>
         </Link>
       </div>

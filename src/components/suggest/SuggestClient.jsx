@@ -233,7 +233,7 @@ const SuggestClient = ({ data }) => {
               {MONTHS[dateMonthString]}
             </h2>
             <h3 className='mb-12 text-3xl md:text-4xl lg:text-5xl'>
-              [UKE {isNaN(currentWeek) ? 'x' : currentWeek}]
+              [WEEK {isNaN(currentWeek) ? 'x' : currentWeek}]
             </h3>
           </div>
           <div className='flex'>

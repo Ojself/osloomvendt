@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { cache } from 'react';
 import currentWeekNumber from 'current-week-number';
 import groq from 'groq';
 
@@ -7,12 +7,6 @@ import { getDateOfIsoWeek } from '@/utils';
 import events from '@/data/events';
 import EmptyWeekPage from '@/components/week/EmptyWeekPage';
 import WeekClient from '@/components/week/WeekClient';
-
-export function generateStaticParams() {
-  return Array.from({ length: 52 }).map((n, i) => ({
-    week: (i + 1).toString(),
-  }));
-}
 
 const eventsQuery = groq`*[_type == 'event' && !(_id in path("drafts.**")) && startDate >= $weekStartIsoDate && startDate < $weekEndIsoDate ] | order(startDate asc){
     name,
@@ -23,7 +17,13 @@ const eventsQuery = groq`*[_type == 'event' && !(_id in path("drafts.**")) && st
   }
 `;
 
-const getData = async (weekNumber) => {
+export function generateStaticParams() {
+  return Array.from({ length: 52 }).map((n, i) => ({
+    week: (i + 1).toString(),
+  }));
+}
+
+const getData = cache(async (weekNumber) => {
   const currentWeekN = currentWeekNumber();
   const currentYear = new Date().getFullYear();
 
@@ -60,7 +60,41 @@ const getData = async (weekNumber) => {
     }));
 
   return allEvents;
-};
+});
+
+export async function generateMetadata({ params }) {
+  const week = params.week;
+  const weekNumber = parseInt(params.week, 10);
+  const events = (await getData(weekNumber)).sort(
+    (a, b) => b.highlight - a.highlight
+  );
+
+  const title = `Week ${week} - Oslo Omvendt`;
+  const eventsSummary = events
+    .map((event) => {
+      const { name } = event;
+      const shortenName = name.length > 23 ? name.slice(0, 23) + '..' : name;
+      return `${shortenName}`;
+    })
+    .slice(0, 5)
+    .join(' • ');
+  const firstDate = events[0].startDate;
+  const lastDate = events[events.length - 1].startDate;
+  const rangeDateAsString = `${firstDate.toLocaleDateString('en-US', {
+    month: 'long',
+  })} ${firstDate.getDate()} - ${lastDate.getDate()}`;
+  const description = `${rangeDateAsString}: ${eventsSummary}`;
+
+  return {
+    title: title,
+    description: description,
+    openGraph: {
+      title: title,
+      description: description,
+      images: 'https://i.imgur.com/rO9yY4J.png',
+    },
+  };
+}
 
 const Week = async ({ params }) => {
   const weekNumber = parseInt(params.week, 10);

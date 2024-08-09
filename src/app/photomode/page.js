@@ -87,7 +87,7 @@ const Photomode = async () => {
     <div className='flex flex-col items-center justify-center'>
       <div style={middleBlobStyle} className='h-[1000px] w-[1000px] p-6'>
         <Header1 className='uppercase' text={monthName} />
-        <Header2 text={`[UKE ${weekNumber}]`} />
+        <Header2 text={`[WEEK ${weekNumber}]`} />
         {allDatesShort.map((eventDate) => {
           const weekDay = getWeekDay(eventDate);
           const [dd, mm] = eventDate.split('.');

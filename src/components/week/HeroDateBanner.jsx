@@ -29,7 +29,7 @@ export const HeroDateBanner = ({ events, weekNumber }) => {
           </span>
         )}
       </div>
-      <Header2 text={`[UKE ${weekNumber}]`} />
+      <Header2 text={`[WEEK ${weekNumber}]`} />
     </div>
   );
 };

@@ -2,10 +2,12 @@ import NavBar from '@/components/layout/NavBar';
 
 export const metadata = {
   title: 'Oslo Omvendt',
-  description: "The Ultimate Guide to Oslo's Clubs and Raves",
+  description:
+    "All you need to know about Oslo's clubs and raves. See you at the rail!",
   openGraph: {
     title: 'Oslo Omvendt',
-    description: "The Ultimate Guide to Oslo's Clubs and Raves",
+    description:
+      "All you need to know about Oslo's clubs and raves. See you at the rail!",
     images: 'https://i.imgur.com/rO9yY4J.png',
   },
 };
