@@ -1,7 +1,14 @@
 import { ImageResponse } from 'next/og';
+export const runtime = 'edge';
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
+
+  const anton = fetch(new URL('./Anton-Regular.ttf', import.meta.url)).then(
+    (res) => res.arrayBuffer()
+  );
+
+  const antonData = await anton;
 
   return await new ImageResponse(
     (
@@ -18,8 +25,9 @@ export async function GET(request) {
       >
         <p
           style={{
-            fontSize: '72',
-            color: 'purple',
+            fontSize: '112px',
+
+            color: '#A57AFF',
           }}
         >
           {searchParams.get('week')}
@@ -28,12 +36,12 @@ export async function GET(request) {
         <h1
           style={{
             color: 'rgb(15, 10, 25)',
-
+            fontFamily: 'Anton',
             display: 'flex',
             justifyContent: 'center',
             width: '100%',
             background: 'white',
-            fontSize: '132px',
+            fontSize: '232px',
             fontWeight: 'bold',
           }}
         >
@@ -41,8 +49,8 @@ export async function GET(request) {
         </h1>
         <p
           style={{
-            fontSize: '72',
-            color: 'purple',
+            fontSize: '112px',
+            color: '#A57AFF',
           }}
         >
           {searchParams.get('range')}
@@ -50,8 +58,15 @@ export async function GET(request) {
       </div>
     ),
     {
-      width: 1200,
-      height: 630,
+      width: 1920,
+      height: 1080,
+      fonts: [
+        {
+          name: 'Anton',
+          data: antonData,
+          style: 'normal',
+        },
+      ],
     }
   );
 }

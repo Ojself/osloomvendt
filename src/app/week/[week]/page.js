@@ -92,16 +92,14 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: title,
       description: description,
-      /* images: [
+      images: [
         {
-          url: `/api/op?week=${weekString}&range=${rangeDateAsString}`,
-          width: 1200,
-          height: 630,
+          url: `/api/op?week=${weekString.toUpperCase()}&range=${rangeDateAsString}`,
           alt: rangeDateAsString,
           type: 'image/png',
         },
-      ], */
-      images: 'https://i.imgur.com/rO9yY4J.png',
+      ],
+      //images: 'https://i.imgur.com/rO9yY4J.png',
     },
   };
 }
