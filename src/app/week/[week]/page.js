@@ -94,7 +94,7 @@ export async function generateMetadata({ params }) {
       description: description,
       images: [
         {
-          url: `/api/op?week=${weekString.toUpperCase()}&range=${rangeDateAsString}`,
+          url: `/api/og?week=${weekString.toUpperCase()}&range=${rangeDateAsString}`,
           alt: rangeDateAsString,
           type: 'image/png',
         },
