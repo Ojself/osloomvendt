@@ -3,11 +3,11 @@ import NavBar from '@/components/layout/NavBar';
 export const metadata = {
   title: 'Oslo Omvendt',
   description:
-    "All you need to know about Oslo's clubs and raves. See you at the rail!",
+    "All you need to know about Oslo's clubs and raves. See you at the rails!",
   openGraph: {
     title: 'Oslo Omvendt',
     description:
-      "All you need to know about Oslo's clubs and raves. See you at the rail!",
+      "All you need to know about Oslo's clubs and raves. See you at the rails!",
     images: 'https://i.imgur.com/rO9yY4J.png',
   },
 };

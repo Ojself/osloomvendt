@@ -3,7 +3,7 @@ export default function manifest() {
     name: 'Oslo Omvendt',
     short_name: 'OO',
     description:
-      "All you need to know about Oslo's clubs and raves. See you at the rail!",
+      "All you need to know about Oslo's clubs and raves. See you at the rails!",
     start_url: './',
     display: 'standalone',
     background_color: '#0f0a19',
