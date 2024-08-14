@@ -82,7 +82,7 @@ export async function generateMetadata({ params }) {
   const firstDate = events[0].startDate;
   const lastDate = events[events.length - 1].startDate;
   const rangeDateAsString = `${firstDate.toLocaleDateString('en-US', {
-    month: 'long',
+    month: 'short',
   })} ${firstDate.getDate()} - ${lastDate.getDate()}`;
   const description = `${rangeDateAsString}: ${eventsSummary}`;
 

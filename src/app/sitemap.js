@@ -110,7 +110,7 @@ export default async function sitemap() {
         : isWithinTwoWeeks
           ? 'weekly'
           : 'monthly',
-      priority: isSameAsWeek ? 0.98 : isWithinTwoWeeks ? 0.8 : 0.7,
+      priority: isSameAsWeek ? 0.98 : isWithinTwoWeeks ? 0.91 : 0.71,
     };
   });
 
