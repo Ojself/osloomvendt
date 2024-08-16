@@ -13,7 +13,7 @@ export async function POST(req) {
         status: 401,
       });
     }
-    return NextResponse.json({ body });
+
     if (body._type === 'event') {
       if (!body?.startDate) {
         const message = 'Bad Request';
@@ -25,6 +25,7 @@ export async function POST(req) {
       return NextResponse.json({ body, message });
     }
     if (body._type === 'product') {
+      return NextResponse.json({ body });
       const staleTag = `product`;
       revalidateTag('product');
       const message = `Updated tag: ${staleTag}`;
