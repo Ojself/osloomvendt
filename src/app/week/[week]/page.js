@@ -47,9 +47,9 @@ const getData = async (weekNumber) => {
     params: eventParams,
     tags,
   });
-
   const weekEvents = events.find((e) => e.week === weekNumber);
-  weekEvents.events?.sort(
+
+  weekEvents.events.sort(
     (a, b) => new Date(a.startDate) - new Date(b.startDate)
   );
   const allEvents = [...weekEvents.events, ...sanityEvents]
@@ -79,8 +79,8 @@ export async function generateMetadata({ params }) {
     })
     .slice(0, 5)
     .join(' • ');
-  const firstDate = events[0].startDate;
-  const lastDate = events[events.length - 1].startDate;
+  const firstDate = events[0]?.startDate;
+  const lastDate = events[events.length - 1]?.startDate;
   const rangeDateAsString = `${firstDate.toLocaleDateString('en-US', {
     month: 'short',
   })} ${firstDate.getDate()} - ${lastDate.getDate()}`;
