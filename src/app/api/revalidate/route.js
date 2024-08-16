@@ -25,12 +25,13 @@ export async function POST(req) {
       return NextResponse.json({ body, message });
     }
     if (body._type === 'product') {
-      return NextResponse.json({ body });
       const staleTag = `product`;
       revalidateTag('product');
       const message = `Updated tag: ${staleTag}`;
       return NextResponse.json({ body, message });
     }
+    const message = 'Invalid type';
+    return new Response(JSON.stringify({ message, body }), { status: 400 });
   } catch (err) {
     console.error(err);
     return new Response(err.message, { status: 500 });
