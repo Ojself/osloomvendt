@@ -18,15 +18,6 @@ export async function POST(req) {
         const message = 'Bad Request';
         return new Response(JSON.stringify({ message, body }), { status: 400 });
       }
-      return new Response(
-        JSON.stringify({
-          body,
-          message: currentWeekNumber(body?.startDate || ''),
-        }),
-        {
-          status: 401,
-        }
-      );
       const staleRoute = `/week/${currentWeekNumber(body.startDate)}`;
       revalidatePath(staleRoute);
       const message = `Updated route: ${staleRoute}`;
