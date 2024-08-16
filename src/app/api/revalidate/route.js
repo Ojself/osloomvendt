@@ -6,9 +6,7 @@ import currentWeekNumber from 'current-week-number';
 export async function POST(req) {
   try {
     const { isValidSignature, body } = await parseBody(req, 'nina-kraviz');
-    return new Response(JSON.stringify({ body }), {
-      status: 401,
-    });
+
     if (!isValidSignature) {
       const message = 'Invalid signature';
       return new Response(JSON.stringify({ message, isValidSignature, body }), {
@@ -20,6 +18,15 @@ export async function POST(req) {
         const message = 'Bad Request';
         return new Response(JSON.stringify({ message, body }), { status: 400 });
       }
+      return new Response(
+        JSON.stringify({
+          body,
+          message: currentWeekNumber(body?.startDate || ''),
+        }),
+        {
+          status: 401,
+        }
+      );
       const staleRoute = `/week/${currentWeekNumber(body.startDate)}`;
       revalidatePath(staleRoute);
       const message = `Updated route: ${staleRoute}`;
