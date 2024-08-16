@@ -4,6 +4,7 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import crypto from 'crypto';
 import { generateNewCartId } from '@/lib/redux/cart.slice';
 import { useAppDispatch } from '@/lib/redux/hooks';
+import { twMerge } from 'tailwind-merge';
 
 const VippsWrapper = ({
   redirectToPage,
@@ -86,7 +87,7 @@ const VippsWrapper = ({
     <button
       style={{ background: '#FF5B24' }}
       disabled={loading}
-      className={twmerge(
+      className={twMerge(
         'mt-2 h-full w-full py-4 text-base md:mt-0 md:w-48 lg:w-52 ',
         loading ? 'text-gray-500' : 'text-white'
       )}
