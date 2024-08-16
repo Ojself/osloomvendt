@@ -44,7 +44,7 @@ const VippsWrapper = ({
     }
     setLoading(true);
     try {
-      await axios.post('/api/order', {
+      const payload = {
         reference: cart.metadata.cartId,
         amount: totalPrice,
         paymentType: 'VIPPS',
@@ -57,7 +57,9 @@ const VippsWrapper = ({
         }),
         /* customer information */
         ...customer,
-      });
+      };
+
+      await axios.post('/api/order', payload);
 
       const articleTitles = cart.items
         .map((item) => `${item.productTitle} ${item.size || ''}`)
