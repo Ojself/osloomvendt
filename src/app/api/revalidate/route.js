@@ -6,7 +6,9 @@ import currentWeekNumber from 'current-week-number';
 export async function POST(req) {
   try {
     const { isValidSignature, body } = await parseBody(req, 'nina-kraviz');
-
+    return new Response(JSON.stringify({ body }), {
+      status: 401,
+    });
     if (!isValidSignature) {
       const message = 'Invalid signature';
       return new Response(JSON.stringify({ message, isValidSignature, body }), {
