@@ -13,6 +13,7 @@ export async function POST(req) {
         status: 401,
       });
     }
+    return NextResponse.json({ body });
     if (body._type === 'event') {
       if (!body?.startDate) {
         const message = 'Bad Request';
