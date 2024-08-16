@@ -8,7 +8,7 @@ import { emptyCart } from '@/lib/redux/cart.slice';
 import { useAppDispatch, useAppSelector } from '@/lib/redux/hooks';
 import groq from 'groq';
 
-import { client } from '@/lib/sanity/sanityClient';
+import { sanityFetch } from '@/lib/sanity/sanityClient';
 import { anonymizeEmail } from '@/utils';
 import VippsOrder from './VippsOrder';
 
@@ -22,7 +22,11 @@ const query = groq`*[_type == 'order' && reference == $reference ] {
 
 const getSanityOrder = async (reference) => {
   try {
-    const orders = await client.fetch(query, { reference });
+    const orders = await sanityFetch({
+      query: query,
+      params: reference,
+      tags: ['order'],
+    });
 
     const anonymizedOrders = orders.map((order) => {
       order.email = anonymizeEmail(order.email);

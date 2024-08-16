@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { client } from '@/lib/sanity/sanityClient';
+import { sanityFetch } from '@/lib/sanity/sanityClient';
 import groq from 'groq';
 import SuggestClient from '@/components/suggest/SuggestClient';
 
@@ -10,8 +10,12 @@ const locationQuery = groq`
 }
 `;
 const getData = async () => {
-  const response = await client.fetch(locationQuery);
-  return response;
+  const locations = await sanityFetch({
+    query: locationQuery,
+    tags: ['location'],
+  });
+
+  return locations;
 };
 
 const Suggest = async () => {

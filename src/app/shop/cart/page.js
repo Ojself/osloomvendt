@@ -1,6 +1,6 @@
 import React from 'react';
 import groq from 'groq';
-import { client } from '@/lib/sanity/sanityClient';
+import { sanityFetch } from '@/lib/sanity/sanityClient';
 import CartClient from '@/components/shop/CartClient';
 
 const query = groq`*[_type == 'product'] | order(order asc) {
@@ -14,7 +14,11 @@ const query = groq`*[_type == 'product'] | order(order asc) {
                   additionalFreight
                }`;
 const getData = async () => {
-  const products = await client.fetch(query);
+  const products = await sanityFetch({
+    query: query,
+    tags: ['product'],
+  });
+
   return products;
 };
 
