@@ -83,7 +83,7 @@ const FAQ = () => {
               <span>com</span>
             </>
           </a>{' '}
-          to get your free API  key and simply do a GET request to the following
+          to get your free API key and simply do a GET request to the following
           URL: <ApiKeyLink />
         </p>
         <div className='rounded-lg bg-black p-4 text-white'>

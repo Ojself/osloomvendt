@@ -1,4 +1,4 @@
-import { client } from '@/lib/sanity/sanityClient';
+import { client, sanityFetch } from '@/lib/sanity/sanityClient';
 import { NextResponse } from 'next/server';
 
 const referenceQuery = `*[_type == 'order' && $reference == reference ]`;
@@ -10,7 +10,11 @@ export async function GET(request) {
   const params = { reference: referenceFromParams };
 
   try {
-    const sanityOrder = await client.fetch(referenceQuery, params);
+    const sanityOrder = await sanityFetch({
+      query: referenceQuery,
+      params,
+    });
+
     return NextResponse.json({ success: true, response: sanityOrder });
   } catch (e) {
     console.error('ORDER.js', e);

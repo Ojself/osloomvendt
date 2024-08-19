@@ -8,7 +8,7 @@ const EmptyCart = () => {
     <Container>
       <div className='relative'>
         <Link
-          className='hover:text-shopred absolute -top-6 left-0 transition duration-200'
+          className='absolute -top-6 left-0 transition duration-200 hover:text-shopred'
           href='/shop'
         >
           {'<'} Back

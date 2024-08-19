@@ -61,7 +61,7 @@ const VippsWrapper = ({
 
       await axios.post('/api/order', payload);
 
-      const articleTitles = cart.items
+      /* const articleTitles = cart.items
         .map((item) => `${item.productTitle} ${item.size || ''}`)
         .join(', ');
       const vippsRes = await axios.post('/api/vipps/create-payment', {
@@ -77,7 +77,7 @@ const VippsWrapper = ({
       });
 
       // openInNewTab(vippsRes.data.redirectUrl);
-      redirectToPage(vippsRes.data.redirectUrl);
+      redirectToPage(vippsRes.data.redirectUrl); */
       setLoading(false);
     } catch (e) {
       setLoading(false);
