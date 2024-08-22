@@ -1,18 +1,22 @@
 'use client';
 import React from 'react';
-import { getWeekDay } from '@/utils';
+import { getWeekDay, drunkAnimation } from '@/utils';
 import EventDateBannerOutline from './EventDateBannerOutline';
+import { motion } from 'framer-motion';
 
-const TableDay = ({ date, events, photoMode }) => {
+const TableDay = ({ date, events, isNight = false }) => {
   const weekDay = getWeekDay(date);
   const [dd, mm] = date.split('.');
   const dateWithoutYear = `${dd}.${mm}`;
 
   return (
     <section className='font-source-sans font-bold' id={dateWithoutYear}>
-      {!photoMode && (
-        <EventDateBannerOutline weekday={weekDay} date={dateWithoutYear} />
-      )}
+      <EventDateBannerOutline
+        isNight={isNight}
+        weekday={weekDay}
+        date={dateWithoutYear}
+      />
+
       {events.map((event, i) => {
         const { startDate, name, location, url } = event;
         const endTime = new Date(startDate);
@@ -27,18 +31,26 @@ const TableDay = ({ date, events, photoMode }) => {
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                {photoMode && (
+                {/* {photoMode && (
                   <time className='my-auto ml-1  md:ml-2'>
                     {dateWithoutYear}
                   </time>
-                )}
+                )} */}
                 <div className='ml-4 w-2/3 py-1'>
-                  <h3 className='w-fit '>{name}</h3>
+                  <motion.h3
+                    animate={drunkAnimation(isNight)}
+                    className='w-fit '
+                  >
+                    {name}
+                  </motion.h3>
                 </div>
                 <div className='absolute right-1 top-1/2 -translate-y-1/2  md:right-3 '>
-                  <h3 className='rounded bg-whitish px-1 italic text-blackish md:px-2'>
+                  <motion.h3
+                    animate={drunkAnimation(isNight)}
+                    className='rounded bg-whitish px-1 italic text-blackish md:px-2'
+                  >
                     {location}
-                  </h3>
+                  </motion.h3>
                 </div>
               </a>
             </div>

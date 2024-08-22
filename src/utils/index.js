@@ -8,6 +8,25 @@ export const ignoreUnwantedKeysForNumberInput = (e) => {
   }
 };
 
+export const drunkAnimation = (shouldAnimate) => {
+  return shouldAnimate
+    ? {
+        x: Array.from({ length: 5 }).map(
+          (_) => Math.floor(Math.random() * 8) - 4
+        ),
+        y: Array.from({ length: 5 }).map(
+          (_) => Math.floor(Math.random() * 8) - 4
+        ),
+        filter: ['hue-rotate(0)', 'hue-rotate(360)'],
+        transition: {
+          duration: 10,
+          repeat: Infinity,
+          repeatType: 'mirror',
+        },
+      }
+    : {};
+};
+
 export const anonymizeEmail = (email) => {
   const [username, domain] = email.split('@');
   const usernameLength = username.length;

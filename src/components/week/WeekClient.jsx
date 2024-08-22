@@ -10,7 +10,6 @@ import NavigationArrows from './NavigationArrows';
 import ActionButtons from './ActionButtons';
 
 const WeekClient = ({ events, weekNumber }) => {
-  const [photoMode, setPhotoMode] = useState(false);
   const [highlightMode, setHighlightMode] = useState(false);
   const [filteredLocations, setFilteredLocations] = useState([]);
   /* const [calendarMode, setCalendarMode] = useLocalStorage(
@@ -27,13 +26,11 @@ const WeekClient = ({ events, weekNumber }) => {
 
   const onKeyDown = (e) => {
     const { code } = e;
-    if (code === 'KeyP') setPhotoMode((photoMode) => !photoMode);
     if (code === 'KeyH') setHighlightMode((highlightMode) => !highlightMode);
     if (code === 'ArrowLeft') router.push(previousWeekHref);
     if (code === 'ArrowRight') router.push(nextWeekHref);
 
     if (code === 'ArrowLeft' || code === 'ArrowRight') {
-      setPhotoMode(false);
       setHighlightMode(false);
       setFilteredLocations([]);
     }
@@ -44,7 +41,6 @@ const WeekClient = ({ events, weekNumber }) => {
     return () => {
       document.removeEventListener('keydown', onKeyDown);
       setFilteredLocations([]);
-      setPhotoMode(false);
       setHighlightMode(false);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -53,25 +49,27 @@ const WeekClient = ({ events, weekNumber }) => {
   const allDatesShort = Array.from(
     new Set(events.map((e) => e.startDate.toLocaleDateString('nb-NO')))
   );
+  const nowHour = new Date().getHours();
+  const isNight = nowHour > 0 && nowHour < 4;
 
   return (
     <Container>
       <HeroDateBanner events={events} weekNumber={weekNumber} />
-      {!photoMode && (
-        <>
-          <NavigationArrows
-            nextWeekHref={nextWeekHref}
-            previousWeekHref={previousWeekHref}
-          />
-          <ActionButtons
-            events={events}
-            setHighlightMode={setHighlightMode}
-            highlightMode={highlightMode}
-            filteredLocations={filteredLocations}
-            setFilteredLocations={setFilteredLocations}
-          />
-        </>
-      )}
+
+      <>
+        <NavigationArrows
+          nextWeekHref={nextWeekHref}
+          previousWeekHref={previousWeekHref}
+        />
+        <ActionButtons
+          events={events}
+          setHighlightMode={setHighlightMode}
+          highlightMode={highlightMode}
+          filteredLocations={filteredLocations}
+          setFilteredLocations={setFilteredLocations}
+          isNight={isNight}
+        />
+      </>
 
       <div>
         {allDatesShort.map((eventDate, i) => {
@@ -95,8 +93,11 @@ const WeekClient = ({ events, weekNumber }) => {
                 key={`${eventDate}-${i}`}
                 date={eventDate}
                 calendarMode={calendarMode}
-                events={filteredEvents}
-                photoMode={photoMode}
+                events={filteredEvents.sort((a, b) =>
+                  a.name.localeCompare(b.name)
+                )}
+                isNight={isNight}
+                index={i}
               />
             )
           );

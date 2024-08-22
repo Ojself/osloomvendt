@@ -23,6 +23,7 @@ const ActionButtons = ({
   highlightMode,
   filteredLocations,
   setFilteredLocations,
+  isNight = false,
 }) => {
   const highlightEventsExist = events.some((event) => event.highlight);
 
@@ -51,6 +52,7 @@ const ActionButtons = ({
           return (
             <React.Fragment key={`${location}-${i}`}>
               <ActionButton
+                isNight={isNight}
                 className={twMerge(
                   styling,
                   'text-sm font-extralight md:text-base'

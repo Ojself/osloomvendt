@@ -1,9 +1,12 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge';
+import { motion } from 'framer-motion';
+import { drunkAnimation } from '@/utils';
 
-const ActionButton = ({ onClick, className, children }) => {
+const ActionButton = ({ onClick, className, children, isNight = false }) => {
   return (
-    <button
+    <motion.button
+      animate={drunkAnimation(isNight)}
       onClick={onClick}
       className={twMerge(
         className,
@@ -11,7 +14,7 @@ const ActionButton = ({ onClick, className, children }) => {
       )}
     >
       {children}
-    </button>
+    </motion.button>
   );
 };
 
