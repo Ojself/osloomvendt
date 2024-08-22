@@ -50,7 +50,7 @@ const WeekClient = ({ events, weekNumber }) => {
     new Set(events.map((e) => e.startDate.toLocaleDateString('nb-NO')))
   );
   const nowHour = new Date().getHours();
-  const isNight = nowHour > 0 && nowHour < 4;
+  const isNight = nowHour >= 0 && nowHour <= 4;
 
   return (
     <Container>
@@ -73,10 +73,11 @@ const WeekClient = ({ events, weekNumber }) => {
 
       <div>
         {allDatesShort.map((eventDate, i) => {
-          let filteredEvents = events.filter(
-            (e) => e.startDate.toLocaleDateString('nb-NO') === eventDate
-          );
-          //            .sort((a, b) => a.name.localeCompare(b.name));
+          let filteredEvents = events
+            .filter(
+              (e) => e.startDate.toLocaleDateString('nb-NO') === eventDate
+            )
+            .sort((a, b) => a.name.localeCompare(b.name));
 
           if (filteredLocations.length > 0) {
             filteredEvents = filteredEvents.filter((event) =>
@@ -93,9 +94,7 @@ const WeekClient = ({ events, weekNumber }) => {
                 key={`${eventDate}-${i}`}
                 date={eventDate}
                 calendarMode={calendarMode}
-                events={filteredEvents.sort((a, b) =>
-                  a.name.localeCompare(b.name)
-                )}
+                events={filteredEvents}
                 isNight={isNight}
                 index={i}
               />
