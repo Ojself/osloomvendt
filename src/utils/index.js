@@ -17,7 +17,10 @@ export const drunkAnimation = (shouldAnimate) => {
         y: Array.from({ length: 5 }).map(
           (_) => Math.floor(Math.random() * 8) - 4
         ),
-        filter: ['hue-rotate(0)', 'hue-rotate(360)'],
+        filter: [
+          `hue-rotate(${Math.floor(Math.random() * 10)}deg)`,
+          `hue-rotate(${Math.floor(Math.random() * 15)}deg)`,
+        ],
         transition: {
           duration: 10,
           repeat: Infinity,
