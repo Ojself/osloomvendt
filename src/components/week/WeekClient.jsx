@@ -8,15 +8,11 @@ import Container from '../layout/Container';
 import { HeroDateBanner } from './HeroDateBanner';
 import NavigationArrows from './NavigationArrows';
 import ActionButtons from './ActionButtons';
+import currentWeekNumber from 'current-week-number';
 
-const WeekClient = ({ events, weekNumber }) => {
+const WeekClient = ({ events, weekNumber = currentWeekNumber() }) => {
   const [highlightMode, setHighlightMode] = useState(false);
   const [filteredLocations, setFilteredLocations] = useState([]);
-  /* const [calendarMode, setCalendarMode] = useLocalStorage(
-    'calendarMode',
-    false
-  ); */
-  const [calendarMode, setCalendarMode] = useState(false);
 
   const router = useRouter();
 
@@ -29,7 +25,6 @@ const WeekClient = ({ events, weekNumber }) => {
     if (code === 'KeyH') setHighlightMode((highlightMode) => !highlightMode);
     if (code === 'ArrowLeft') router.push(previousWeekHref);
     if (code === 'ArrowRight') router.push(nextWeekHref);
-
     if (code === 'ArrowLeft' || code === 'ArrowRight') {
       setHighlightMode(false);
       setFilteredLocations([]);
@@ -93,7 +88,6 @@ const WeekClient = ({ events, weekNumber }) => {
               <TableDay
                 key={`${eventDate}-${i}`}
                 date={eventDate}
-                calendarMode={calendarMode}
                 events={filteredEvents}
                 isNight={isNight}
                 index={i}
