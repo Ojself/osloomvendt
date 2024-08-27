@@ -7,7 +7,7 @@ const Supporters = () => {
   return (
     <Container>
       <div className='mb-6'>
-        <h1 className='mb-24 text-2xl font-bold sm:text-3xl md:text-5xl'>
+        <h1 className='mb-16 text-3xl font-bold sm:text-4xl md:text-6xl'>
           Thank you!
         </h1>
         <p className='my-6 text-base sm:text-lg md:text-xl'>
@@ -33,8 +33,8 @@ const Supporters = () => {
           .
         </p>
       </div>
-      <section className='mb-24 mt-16'>
-        <h2 className='mb-4 text-xl font-bold sm:text-2xl md:text-4xl'>
+      <section className='mb-24 mt-20'>
+        <h2 className='mb-4 text-2xl font-bold sm:text-3xl md:text-5xl'>
           <span>✨</span> Premium Sponsor
           <span className='ml-1 text-sm font-thin'>NOK 890/month</span>
         </h2>
@@ -43,7 +43,7 @@ const Supporters = () => {
         </ul>
       </section>
       <section className='mb-24'>
-        <h2 className='mb-4 text-xl font-bold sm:text-2xl md:text-4xl'>
+        <h2 className='mb-4 text-2xl font-bold sm:text-3xl md:text-5xl'>
           <span>🖤</span> Top Supporter
           <span className='ml-1 text-sm font-thin'>NOK 399/month</span>
         </h2>
@@ -69,7 +69,7 @@ const Supporters = () => {
         </ul>
       </section>
       <section className='mb-24'>
-        <h2 className='mb-4 text-xl font-bold sm:text-2xl md:text-4xl'>
+        <h2 className='mb-4 text-2xl font-bold sm:text-3xl md:text-5xl'>
           <span>💃</span> Supporter
           <span className='ml-1 text-sm font-thin'>NOK 89/month</span>
         </h2>
@@ -86,7 +86,7 @@ const Supporters = () => {
         </ul>
       </section>
       <section className='mb-24'>
-        <h2 className='mb-4 text-xl font-bold sm:text-2xl md:text-4xl'>
+        <h2 className='mb-4 text-2xl font-bold sm:text-3xl md:text-5xl'>
           <span>🫶</span> Supporter
           <span className='ml-1 text-sm font-thin'>NOK 39/month</span>
         </h2>
@@ -103,7 +103,7 @@ const Supporters = () => {
         </ul>
       </section>
       <section className='mb-20'>
-        <h2 className='mb-4 text-xl font-bold sm:text-2xl md:text-4xl'>
+        <h2 className='mb-4 text-2xl font-bold sm:text-3xl md:text-5xl'>
           <span>☄️</span> Previous supporters
         </h2>
         <p className='mb-4 text-sm'>

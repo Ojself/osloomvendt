@@ -36,11 +36,11 @@ export async function generateMetadata({ params }) {
 
   return {
     metadataBase: new URL('https://www.osloomvendt.no'),
-    title: title,
-    description: description,
+    title,
+    description,
     openGraph: {
-      title: title,
-      description: description,
+      title,
+      description,
       images: [
         {
           url: `/api/og?week=${weekString.toUpperCase()}&range=${rangeDateAsString}`,
@@ -52,8 +52,8 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary_large_image', // 'summary_large_image' is typically used for sharing articles or pages with a big image preview
-      title: title,
-      description: description,
+      title,
+      description,
       images: {
         url: 'https://i.imgur.com/rO9yY4J.png',
         alt: 'Oslo Omvendt Logo',

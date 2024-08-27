@@ -106,10 +106,10 @@ export default async function sitemap() {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       changeFrequency: isSameAsWeek
-        ? 'daily'
+        ? 'hourly'
         : isWithinTwoWeeks
-          ? 'weekly'
-          : 'monthly',
+          ? 'daily'
+          : 'weekly',
       priority: isSameAsWeek ? 0.98 : isWithinTwoWeeks ? 0.91 : 0.71,
     };
   });
