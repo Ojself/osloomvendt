@@ -54,7 +54,7 @@ const links = [
       </>
     ),
   },
-  {
+  /* {
     href: '/blog/17may-2024',
     children: <>🇳🇴 17. mai-program</>,
   },
@@ -65,7 +65,7 @@ const links = [
   {
     href: '/blog/norwegian-summer-festival-guide-2024',
     children: <>Festival Guide 2024</>,
-  },
+  }, */
   {
     href: '/2023-wrapped',
     children: <>2023 WRAPPED</>,
