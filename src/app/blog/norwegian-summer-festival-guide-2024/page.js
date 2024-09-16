@@ -276,7 +276,7 @@ const articles = [
     location: 'Nesodden, Akershus',
     imageSrcs: [
       { original: '/imgs/festivalguide/summerbeat/crowd.jpg' },
-      { original: '/imgs/festivalguide/summerbeat/hero.png' },
+      { original: '/imgs/festivalguide/summerbeat/hero.jpeg' },
       { original: '/imgs/festivalguide/summerbeat/tent.jpg' },
     ],
     imageCreds: (
@@ -303,8 +303,8 @@ const articles = [
     date: '17th - 19th October',
     location: 'Tromsø, Troms',
     imageSrcs: [
-      { original: '/imgs/festivalguide/insomnia/date.png' },
-      { original: '/imgs/festivalguide/insomnia/logo.png' },
+      { original: '/imgs/festivalguide/insomnia/date.jpeg' },
+      { original: '/imgs/festivalguide/insomnia/logo.jpeg' },
     ],
     imageCreds: (
       <a

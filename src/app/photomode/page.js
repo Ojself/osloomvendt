@@ -13,12 +13,12 @@ import Header1 from '@/components/layout/typograhpy/Header1';
 import Header2 from '@/components/layout/typograhpy/Header2';
 
 const threeLinearStyle = {
-  background: `linear-gradient(127deg, rgba(255, 153, 51,.3), rgba(255, 153, 51,0) 70.71%), linear-gradient(336deg, rgba(255, 153, 51,.4), rgba(255, 153, 51,0)  70.71%), linear-gradient(217deg, rgba(155,108,255,.8), rgba(155,108,255,0) 70.71%) `,
+  background: `linear-gradient(127deg, rgba(0, 255, 0,.3), rgba(0, 255, 0,0) 70.71%), linear-gradient(336deg, rgba(0, 255, 0,.4), rgba(0, 255, 0,0)  70.71%), linear-gradient(217deg, rgba(155,108,255,.8), rgba(155,108,255,0) 70.71%) `,
 };
 
 const middleBlobStyle = {
   backgroundImage:
-    'linear-gradient(to right, black, rgba(255, 153, 51,0.4) 50%, black 800px)',
+    'linear-gradient(to right, black, rgba(0, 255, 0,0.4) 50%, black 800px)',
   backgroundPosition: '50% 100%',
   backgroundRepeat: 'no-repeat',
 };
@@ -104,7 +104,7 @@ const Photomode = async () => {
               id={dateWithoutYear}
             >
               <div
-                className={`sticky top-0 z-40 mt-6 flex border-b-2 border-b-[#ff9933] bg-transparent  py-2 pl-4 font-source-code-pro text-lg font-bold text-[#ff9933] sm:text-xl md:text-2xl lg:text-3xl`}
+                className={`sticky top-0 z-40 mt-6 flex border-b-2 border-b-[#00FF00] bg-transparent  py-2 pl-4 font-source-code-pro text-lg font-bold text-[#00FF00] sm:text-xl md:text-2xl lg:text-3xl`}
               >
                 <time>{`${weekDay},${dateWithoutYear}`}</time>
               </div>
