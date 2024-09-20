@@ -1,6 +1,7 @@
 import React from 'react';
 import Header1 from '../layout/typograhpy/Header1';
 import Header2 from '../layout/typograhpy/Header2';
+import Header3 from '../layout/typograhpy/Header3';
 
 export const HeroDateBanner = ({ events, weekNumber }) => {
   const firstEventThatStartsOnSaturday = events.find(
@@ -22,14 +23,14 @@ export const HeroDateBanner = ({ events, weekNumber }) => {
   return (
     <div className='flex flex-col font-bold'>
       <div className='flex'>
-        <Header1 className='uppercase' text={monthName} />
+        <Header2 className='uppercase' text={monthName} />
         {!userIsViewingCurrentYear && (
           <span className='text-sm font-bold text-orange-400'>
             {yearOfFirstEvent}
           </span>
         )}
       </div>
-      <Header2 text={`[WEEK ${weekNumber}]`} />
+      <Header3 text={`[WEEK ${weekNumber}]`} />
     </div>
   );
 };

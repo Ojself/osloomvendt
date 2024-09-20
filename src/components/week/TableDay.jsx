@@ -37,20 +37,20 @@ const TableDay = ({ date, events, isNight = false }) => {
                   </time>
                 )} */}
                 <div className='ml-4 w-2/3 py-1'>
-                  <motion.h3
+                  <motion.p
                     animate={drunkAnimation(isNight)}
                     className='w-fit '
                   >
                     {name}
-                  </motion.h3>
+                  </motion.p>
                 </div>
                 <div className='absolute right-1 top-1/2 -translate-y-1/2  md:right-3 '>
-                  <motion.h3
+                  <motion.p
                     animate={drunkAnimation(isNight)}
                     className='rounded bg-whitish px-1 italic text-blackish md:px-2'
                   >
                     {location}
-                  </motion.h3>
+                  </motion.p>
                 </div>
               </a>
             </div>
