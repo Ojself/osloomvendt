@@ -2,7 +2,7 @@ import { Anton, Source_Code_Pro, Source_Sans_3 } from 'next/font/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 import Providers from './Providers';
-import Footer from '@/components/layout/Footer';
+
 import { getServerSession } from 'next-auth';
 import { twMerge } from 'tailwind-merge';
 
@@ -37,7 +37,7 @@ export default async function RootLayout({ children }) {
       >
         <Providers session={session}>
           {children}
-          <Footer />
+
           <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
         </Providers>
       </body>

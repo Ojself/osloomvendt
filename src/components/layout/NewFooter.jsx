@@ -1,18 +1,8 @@
 'use client';
 import react, { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
-const pagesWhereNavIsVisible = [
-  '/faq',
-  '/week/',
-  '/supporters',
-  '/suggest',
-  '/shop',
-  '/blog',
-];
-const Footer = () => {
-  const pathname = usePathname();
+const NewFooter = () => {
   const [horsePositionX, setHorsePositionX] = useState(5);
   const handleClick = () => {
     setInterval(() => {
@@ -21,17 +11,14 @@ const Footer = () => {
     }, 80);
   };
   const rotation = horsePositionX % 15;
-  const shouldShowFooter = pagesWhereNavIsVisible.some((page) =>
-    pathname.includes(page)
-  );
 
   return (
     <div
-      className={`${
-        shouldShowFooter ? '' : 'hidden'
-      }  absolute -bottom-20 flex h-10 w-full justify-center  pt-10`}
+      className={
+        'absolute -bottom-20 flex h-20 w-full flex-col items-center justify-center bg-black'
+      }
     >
-      <footer className='m-auto flex w-full max-w-[900px] justify-between bg-linkGray px-6 py-2 font-source-code-pro text-whitish'>
+      <footer className='flex w-full max-w-[900px] justify-between  px-6 py-2 font-source-code-pro text-whitish'>
         <Link href='/privacy'>
           <p className='text-sm hover:underline'>Privacy</p>
         </Link>
@@ -53,4 +40,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default NewFooter;

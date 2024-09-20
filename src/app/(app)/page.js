@@ -7,9 +7,10 @@ export default async function Home() {
 
   return (
     <>
-      <div className='flex h-screen flex-col items-center justify-center overflow-hidden bg-blackish'>
+      <div className='flex h-screen flex-col items-center justify-center'>
         <HeroLink />
       </div>
+
       <WeekClient events={events} />
     </>
   );

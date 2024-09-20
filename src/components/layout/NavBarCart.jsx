@@ -45,7 +45,7 @@ const NavBarCart = () => {
         <FiShoppingCart
           className={`${
             shouldBounce ? 'animate-bounce' : ''
-          } mr-4 text-2xl text-primary hover:text-primaryLight md:text-4xl`}
+          } mr-4 text-2xl text-primaryDark hover:text-primary md:text-4xl`}
         />
       </Link>
     </div>

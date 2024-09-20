@@ -1,4 +1,5 @@
 import NavBar from '@/components/layout/NavBar';
+import NewFooter from '@/components/layout/NewFooter';
 
 export const metadata = {
   title: 'Shop - Oslo Omvendt',
@@ -21,6 +22,7 @@ export default function Layout({ children }) {
       >
         {children}
       </main>
+      <NewFooter />
     </>
   );
 }

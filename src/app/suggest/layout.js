@@ -1,4 +1,5 @@
 import NavBar from '@/components/layout/NavBar';
+import NewFooter from '@/components/layout/NewFooter';
 
 export const metadata = {
   title: 'Oslo Omvendt - Suggest an event',
@@ -21,6 +22,7 @@ export default function Layout({ children }) {
       >
         {children}
       </main>
+      <NewFooter />
     </>
   );
 }

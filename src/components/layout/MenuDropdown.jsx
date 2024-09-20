@@ -45,7 +45,7 @@ const MenuDropdown = () => {
               <div className='flex items-center'>
                 <p className={`uppercase text-primary`}>Menu</p>
                 <RxCross1
-                  className={`h-8 w-8 text-primary hover:text-primaryLight md:h-12 md:w-12`}
+                  className={`h-8 w-8 text-primaryDark hover:text-primary md:h-12 md:w-12`}
                   aria-hidden='true'
                 />
               </div>
@@ -53,7 +53,7 @@ const MenuDropdown = () => {
               <div className='flex items-center'>
                 <p className={`uppercase text-primary`}>Menu</p>
                 <AiOutlineMenu
-                  className={`h-8 w-8 text-primary hover:text-primaryLight md:h-12 md:w-12 `}
+                  className={`h-8 w-8 text-primaryDark hover:text-primary md:h-12 md:w-12 `}
                   aria-hidden='true'
                 />
               </div>
@@ -82,7 +82,9 @@ const MenuDropdown = () => {
                           href={href}
                           className={twMerge(
                             'group flex w-full cursor-pointer items-center rounded-md px-2 py-2 text-base uppercase ',
-                            active ? `bg-primary text-whitish` : `text-primary`
+                            active
+                              ? `bg-primaryDark text-whitish`
+                              : `text-primaryDark`
                           )}
                         >
                           {label}
