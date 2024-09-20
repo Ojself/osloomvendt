@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  overscroll-behavior: none;
+  overflow-x: hidden;
+}
+
 .fade-bottom-blog {
   --mask: linear-gradient(
       to bottom,
