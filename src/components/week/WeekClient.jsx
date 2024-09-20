@@ -72,7 +72,7 @@ const WeekClient = ({ events, weekNumber = currentWeekNumber() }) => {
             .filter(
               (e) => e.startDate.toLocaleDateString('nb-NO') === eventDate
             )
-            .sort((a, b) => a.name.localeCompare(b.name));
+            .sort((a, b) => a.name.localeCompare(b.name, 'nb-NO'));
 
           if (filteredLocations.length > 0) {
             filteredEvents = filteredEvents.filter((event) =>

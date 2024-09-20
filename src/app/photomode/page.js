@@ -96,7 +96,7 @@ const Photomode = async () => {
             .filter(
               (e) => e.startDate.toLocaleDateString('nb-NO') === eventDate
             )
-            .sort((a, b) => a.name.localeCompare(b.name));
+            .sort((a, b) => a.name.localeCompare(b.name, 'nb-NO'));
           return (
             <section
               key={eventDate}
