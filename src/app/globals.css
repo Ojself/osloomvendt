@@ -67,4 +67,18 @@ input[type='range'].react-player-range::-moz-range-thumb {
     radial-gradient(at 38% 19%, #0f0a19 0px, transparent 50%),
     radial-gradient(at 65% 23%, #8b61e5 0px, transparent 50%),
     radial-gradient(at 7% 90%, #8b61e5 0px, transparent 50%);
+
+  background-image:
+    -webkit-radial-gradient(at 94% 88%, #0f0a19 0px, transparent 50%),
+    -webkit-radial-gradient(at 27% 73%, #0f0a19 0px, transparent 50%),
+    -webkit-radial-gradient(at 38% 19%, #0f0a19 0px, transparent 50%),
+    -webkit-radial-gradient(at 65% 23%, #8b61e5 0px, transparent 50%),
+    -webkit-radial-gradient(at 7% 90%, #8b61e5 0px, transparent 50%);
+
+  background-image:
+    -moz-radial-gradient(at 94% 88%, #0f0a19 0px, transparent 50%),
+    -moz-radial-gradient(at 27% 73%, #0f0a19 0px, transparent 50%),
+    -moz-radial-gradient(at 38% 19%, #0f0a19 0px, transparent 50%),
+    -moz-radial-gradient(at 65% 23%, #8b61e5 0px, transparent 50%),
+    -moz-radial-gradient(at 7% 90%, #8b61e5 0px, transparent 50%);
 }
