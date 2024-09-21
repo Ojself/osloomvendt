@@ -15,7 +15,7 @@ const NewFooter = () => {
   return (
     <div
       className={
-        'absolute -bottom-20 flex h-20 w-full flex-col items-center justify-center bg-black'
+        'absolute -bottom-20 flex h-20 w-full flex-col items-center justify-center  bg-black'
       }
     >
       <footer className='flex w-full max-w-[900px] justify-between  px-6 py-2 font-source-code-pro text-whitish'>

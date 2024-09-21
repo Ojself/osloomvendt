@@ -25,7 +25,7 @@ export default function Layout({ children }) {
   return (
     <>
       <NavBar showLogo={false} />
-      <main className='radial-layout min-h-screen w-full  bg-blackish  bg-cover bg-fixed  bg-center  bg-no-repeat px-2 pb-20 font-source-sans text-whitish '>
+      <main className='radial-layout min-h-screen w-full  bg-blackish  bg-fixed  bg-center  bg-no-repeat px-2 pb-20 font-source-sans text-whitish '>
         {children}
       </main>
     </>

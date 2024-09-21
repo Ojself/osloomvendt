@@ -62,6 +62,7 @@ input[type='range'].react-player-range::-moz-range-thumb {
 }
 
 .radial-layout {
+  background-size: 100vw 100vh;
   background-image: radial-gradient(at 94% 88%, #0f0a19 0px, transparent 50%),
     radial-gradient(at 27% 73%, #0f0a19 0px, transparent 50%),
     radial-gradient(at 38% 19%, #0f0a19 0px, transparent 50%),
