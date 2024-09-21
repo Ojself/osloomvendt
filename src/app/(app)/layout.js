@@ -1,5 +1,4 @@
 import NavBar from '@/components/layout/NavBar';
-import './style.css';
 
 export const metadata = {
   metadataBase: new URL('https://www.osloomvendt.no'),

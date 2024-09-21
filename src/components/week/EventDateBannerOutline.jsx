@@ -17,7 +17,7 @@ const EventDateBannerOutline = ({ weekday, date, isNight }) => {
       className={`sticky top-0 z-40 mt-6 flex border-b-2 border-b-primary stroke-white stroke-2  py-2 pl-4 font-source-code-pro text-lg font-bold text-primary sm:text-xl md:text-2xl lg:text-3xl`}
     >
       <motion.time
-        className='rounded-lg px-2'
+        className=' flex rounded-lg px-2'
         style={{
           backdropFilter: 'blur(30px)',
           backgroundColor: 'rgba(0, 0, 0, 0.6)',
