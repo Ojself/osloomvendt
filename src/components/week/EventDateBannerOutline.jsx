@@ -13,20 +13,23 @@ const addEmoji = (date) => {
 const EventDateBannerOutline = ({ weekday, date, isNight }) => {
   const formattedDate = `${weekday} ${date}${addEmoji(date)}`;
   return (
-    <div
-      className={`sticky top-0 z-40 mt-6 flex border-b-2 border-b-primary stroke-white stroke-2  py-2 pl-4 font-source-code-pro text-lg font-bold text-primary sm:text-xl md:text-2xl lg:text-3xl`}
-    >
-      <motion.time
-        className=' flex rounded-lg px-2'
-        style={{
-          backdropFilter: 'blur(30px)',
-          backgroundColor: 'rgba(0, 0, 0, 0.6)',
-        }}
-        animate={drunkAnimation(isNight)}
+    <>
+      <div
+        className={`sticky top-0  z-10 mt-6 flex flex-col  stroke-white stroke-2  py-2  font-source-code-pro text-lg font-bold text-primary sm:text-xl md:text-2xl lg:text-3xl`}
       >
-        {formattedDate}
-      </motion.time>
-    </div>
+        <motion.time
+          className='flex w-fit rounded-lg px-4'
+          style={{
+            backdropFilter: 'blur(30px)',
+            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+          }}
+          animate={drunkAnimation(isNight)}
+        >
+          {formattedDate}
+        </motion.time>
+      </div>
+      <hr className='border border-primary' />
+    </>
   );
 };
 
