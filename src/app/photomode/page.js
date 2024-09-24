@@ -13,14 +13,15 @@ import Header1 from '@/components/layout/typograhpy/Header1';
 import Header2 from '@/components/layout/typograhpy/Header2';
 
 const threeLinearStyle = {
-  background: `linear-gradient(127deg, rgba(255, 68, 51,.3), rgba(255, 68, 51,0) 70.71%), linear-gradient(336deg, rgba(255, 68, 51,.4), rgba(255, 68, 51,0)  70.71%), linear-gradient(217deg, rgba(155,108,255,.8), rgba(155,108,255,0) 70.71%) `,
+  background: `linear-gradient(127deg, rgba(0,0,0,.3), rgba(0,0,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,0,.4), rgba(0,0,0,0)  70.71%), linear-gradient(217deg, rgba(155,108,255,.8), rgba(155,108,255,0) 70.71%) `,
 };
 
 const middleBlobStyle = {
-  backgroundImage:
-    'linear-gradient(to right, black, rgba(255, 68, 51,0.4) 50%, black 800px)',
-  backgroundPosition: '50% 100%',
-  backgroundRepeat: 'no-repeat',
+  backgroundColor: '#0F0A19',
+  //backgroundImage:
+  //'linear-gradient(to right, black, rgba(0,0,0,0.4) 50%, black 800px)',
+  //backgroundPosition: '50% 100%',
+  //backgroundRepeat: 'no-repeat',
 };
 
 const eventsQuery = groq`*[_type == 'event' && location->region == "oslo" && !(_id in path("drafts.**")) && startDate >= $weekStartIsoDate && startDate < $weekEndIsoDate && highlight == true] | order(startDate asc){
@@ -84,7 +85,7 @@ const Photomode = async () => {
         month: 'long',
       });
   return (
-    <div className='flex flex-col items-center justify-center'>
+    <div className='flex flex-col items-center justify-center text-[#F9FAFC]'>
       <div style={middleBlobStyle} className='h-[1000px] w-[1000px] p-6'>
         <Header1 className='uppercase' text={monthName} />
         <Header2 text={`[WEEK ${weekNumber}]`} />
@@ -104,7 +105,7 @@ const Photomode = async () => {
               id={dateWithoutYear}
             >
               <div
-                className={`sticky top-0 z-40 mt-6 flex border-b-2 border-b-[#FF4433] bg-transparent  py-2 pl-4 font-source-code-pro text-lg font-bold text-[#FF4433] sm:text-xl md:text-2xl lg:text-3xl`}
+                className={`sticky top-0 z-40 mt-6 flex border-b-2 border-b-[#FFF] bg-transparent  py-2 pl-4 font-source-code-pro text-lg font-bold  sm:text-xl md:text-2xl lg:text-3xl`}
               >
                 <time>{`${weekDay},${dateWithoutYear}`}</time>
               </div>
