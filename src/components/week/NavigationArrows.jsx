@@ -12,11 +12,11 @@ const NavigationArrows = ({ previousWeekHref, nextWeekHref }) => {
     <div className='mt-4 flex w-32 justify-between uppercase md:w-40'>
       <Link className={twMerge(linkStyle, 'pl-1')} href={previousWeekHref}>
         <AiOutlineArrowLeft className={iconStyle} />
-        <p className={pStyle}>Prev</p>
+        <p className={pStyle}>Prev week</p>
       </Link>
       <Link className={twMerge(linkStyle, 'pr-1')} href={nextWeekHref}>
         <AiOutlineArrowRight className='cursor-pointer text-base md:text-xl' />
-        <p className={pStyle}>Next</p>
+        <p className={pStyle}>Next week</p>
       </Link>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import Header1 from '../layout/typograhpy/Header1';
+
 import Header2 from '../layout/typograhpy/Header2';
 import Header3 from '../layout/typograhpy/Header3';
 

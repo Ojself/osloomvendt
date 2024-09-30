@@ -19,6 +19,29 @@ export async function generateMetadata({ params }) {
 
   const weekString = `Week ${week}`;
   const title = `${weekString} - Oslo Omvendt`;
+
+  if (!events || events.length === 0) {
+    return {
+      metadataBase: new URL('https://www.osloomvendt.no'),
+      title,
+      description: "No events this week, but we're still here!",
+      openGraph: {
+        title,
+        description: "No events this week, but we're still here!",
+        images: 'https://i.imgur.com/rO9yY4J.png',
+      },
+      twitter: {
+        card: 'summary_large_image', // 'summary_large_image' is typically used for sharing articles or pages with a big image preview
+        title,
+        description: "No events this week, but we're still here!",
+        images: {
+          url: 'https://i.imgur.com/rO9yY4J.png',
+          alt: 'Oslo Omvendt Logo',
+        },
+        creator: '@OsloOmvendt', // Replace with your Twitter handle
+      },
+    };
+  }
   const eventsSummary = events
     .map((event) => {
       const { name } = event;

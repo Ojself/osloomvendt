@@ -15,10 +15,10 @@ const WeekClient = ({ events, weekNumber = currentWeekNumber() }) => {
   const [filteredLocations, setFilteredLocations] = useState([]);
 
   const router = useRouter();
-
-  const previousWeekHref =
-    weekNumber === 1 ? `/week/52` : `/week/${weekNumber - 1}`;
-  const nextWeekHref = weekNumber >= 52 ? `/week/1` : `/week/${weekNumber + 1}`;
+  const previousWeekNumber = weekNumber === 1 ? 52 : weekNumber - 1;
+  const nextWeekNumber = weekNumber >= 52 ? 1 : weekNumber + 1;
+  const previousWeekHref = `/week/${previousWeekNumber}`;
+  const nextWeekHref = `/week/${nextWeekNumber}`;
 
   const onKeyDown = (e) => {
     const { code } = e;
