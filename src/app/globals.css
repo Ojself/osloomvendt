@@ -62,11 +62,42 @@ input[type='range'].react-player-range::-moz-range-thumb {
 }
 
 .radial-background {
-  background-image: radial-gradient(at 94% 88%, #0f0a19 0px, transparent 50%),
-    radial-gradient(at 27% 73%, #0f0a19 0px, transparent 50%),
-    radial-gradient(at 38% 19%, #0f0a19 0px, transparent 50%),
-    radial-gradient(at 65% 23%, #8b61e5 0px, transparent 50%),
-    radial-gradient(at 7% 90%, #8b61e5 0px, transparent 50%);
+  --pos1-x: 94%;
+  --pos1-y: 88%;
+  --pos2-x: 27%;
+  --pos2-y: 73%;
+  --pos3-x: 38%;
+  --pos3-y: 19%;
+  --pos4-x: 65%;
+  --pos4-y: 23%;
+  --pos5-x: 7%;
+  --pos5-y: 90%;
+
+  background-image: radial-gradient(
+      at var(--pos1-x) var(--pos1-y),
+      #0f0a19 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at var(--pos2-x) var(--pos2-y),
+      #0f0a19 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at var(--pos3-x) var(--pos3-y),
+      #0f0a19 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at var(--pos4-x) var(--pos4-y),
+      #8b61e5 0px,
+      transparent 50%
+    ),
+    radial-gradient(
+      at var(--pos5-x) var(--pos5-y),
+      #8b61e5 0px,
+      transparent 50%
+    );
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;

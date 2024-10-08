@@ -1,4 +1,13 @@
+import { sanityFetch } from '@/lib/sanity/sanityClient';
 import currentWeekNumber from 'current-week-number';
+const paramsQuery = `
+*[_type == "event"]{
+  _id,
+  startDate,
+  _updatedAt
+}
+`;
+
 export default async function sitemap() {
   const links = [
     {
@@ -95,24 +104,43 @@ export default async function sitemap() {
       priority: 0.81,
     },
   ];
+  const allEvents = await sanityFetch({ query: paramsQuery });
 
   const currentWeekN = currentWeekNumber();
-  const weeks = Array.from({ length: 52 }).map((n, i) => {
-    const isSameAsWeek = i + 1 === currentWeekN;
+  const currentYearN = new Date().getFullYear();
+
+  // Generate dynamic event URLs based on their startDate
+  const eventUrls = allEvents.map((event) => {
+    const startDate = new Date(event.startDate);
+    const year = startDate.getUTCFullYear(); // Extract the year from the startDate
+    const weekNumber = currentWeekNumber(startDate); // Get the week number for the startDate
+
+    const isSameAsWeek = weekNumber === currentWeekN && year === currentYearN;
     const isWithinTwoWeeks =
-      i + 1 >= currentWeekN - 2 && i + 1 <= currentWeekN + 2;
+      weekNumber >= currentWeekN - 2 &&
+      weekNumber <= currentWeekN + 2 &&
+      year === currentYearN;
+
     return {
-      url: `https://www.osloomvendt.no/week/${i + 1}`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
+      url: `https://www.osloomvendt.no/d/${year}/${weekNumber}`,
+      lastModified: event._updatedAt.slice(0, 10),
       changeFrequency: isSameAsWeek
-        ? 'hourly'
+        ? 'daily'
         : isWithinTwoWeeks
-          ? 'daily'
-          : 'weekly',
-      priority: isSameAsWeek ? 0.98 : isWithinTwoWeeks ? 0.91 : 0.71,
+          ? 'weekly'
+          : 'monthly',
+      priority: isSameAsWeek ? 0.97 : isWithinTwoWeeks ? 0.91 : 0.71,
     };
   });
+  // if duplicated urls, remove them
+  const uniqueUrls = new Set();
+  const filteredEventUrls = eventUrls.filter((eventUrl) => {
+    if (uniqueUrls.has(eventUrl.url)) {
+      return false;
+    }
+    uniqueUrls.add(eventUrl.url);
+    return true;
+  });
 
-  return [...links, ...products, ...weeks];
+  return [...links, ...products, ...filteredEventUrls];
 }

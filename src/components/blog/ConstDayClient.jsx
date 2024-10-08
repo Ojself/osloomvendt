@@ -42,7 +42,7 @@ const ConstDayClient = ({ events }) => {
         <h1 className='w-full whitespace-nowrap text-center font-anton text-5xl font-bold text-[#EA463C] sm:text-7xl md:text-8xl lg:text-9xl '>
           17. MAI I OSLO
         </h1>
-        <Link className='mb-10 px-1' href='/week/20'>
+        <Link className='mb-10 px-1' href='/d/2024/20'>
           <p className='text-center font-source-code-pro text-black hover:underline'>
             Missing something? See all 41 events{' '}
             <span className='underline'> here </span>

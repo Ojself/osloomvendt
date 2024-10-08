@@ -5,7 +5,8 @@ import currentWeekNumber from 'current-week-number';
 
 const HeroLink = () => {
   const currentWeekNumberString = currentWeekNumber().toString();
-  const currentEventUrl = `/week/${currentWeekNumberString}`;
+  const currentYear = new Date().getFullYear();
+  const currentEventUrl = `/d/${currentYear}/${currentWeekNumberString}`;
   return (
     <Link className='w-full' href={currentEventUrl}>
       <div

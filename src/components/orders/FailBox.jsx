@@ -21,7 +21,7 @@ const FailBox = () => {
           </p>
         </div>
         <div className='mt-4 w-fit self-center rounded-lg border border-primary hover:border-primaryLight hover:bg-gray-200'>
-          <Link href='/week'>
+          <Link href='/'>
             <p className='px-4 py-2'>Take me back to the events!</p>
           </Link>
         </div>

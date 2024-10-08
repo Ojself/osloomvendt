@@ -10,10 +10,14 @@ const pStyle = 'text-xs text-whitish';
 const NavigationArrows = ({ previousWeekHref, nextWeekHref }) => {
   return (
     <div className='mt-4 flex w-32 justify-between uppercase md:w-40'>
-      <Link className={twMerge(linkStyle, 'pl-1')} href={previousWeekHref}>
-        <AiOutlineArrowLeft className={iconStyle} />
-        <p className={pStyle}>Prev week</p>
-      </Link>
+      {previousWeekHref ? (
+        <Link className={twMerge(linkStyle, 'pl-1')} href={previousWeekHref}>
+          <AiOutlineArrowLeft className={iconStyle} />
+          <p className={pStyle}>Prev week</p>
+        </Link>
+      ) : (
+        <div className='w-8'></div>
+      )}
       <Link className={twMerge(linkStyle, 'pr-1')} href={nextWeekHref}>
         <AiOutlineArrowRight className='cursor-pointer text-base md:text-xl' />
         <p className={pStyle}>Next week</p>

@@ -37,7 +37,7 @@ const Wrapped2023 = () => {
     <>
       <Container>
         <div className='mb-2 mt-8'>
-          <Link href='/week'>
+          <Link href='/'>
             <button className='ml-2 w-full border py-2 text-left font-source-code-pro text-primary hover:underline md:w-52'>
               <AiOutlineArrowLeft className='mr-1 inline' />
               Back to events

@@ -1,9 +1,8 @@
-import currentWeekNumber from 'current-week-number';
 import groq from 'groq';
 
 import { sanityFetch } from '@/lib/sanity/sanityClient';
 import { getDateOfIsoWeek } from '@/utils';
-import events from '@/data/events';
+import currentWeekNumber from 'current-week-number';
 
 const eventsQuery = groq`*[_type == 'event' && !(_id in path("drafts.**")) && startDate >= $weekStartIsoDate && startDate < $weekEndIsoDate ] | order(startDate asc){
     name,
@@ -14,19 +13,13 @@ const eventsQuery = groq`*[_type == 'event' && !(_id in path("drafts.**")) && st
   }
 `;
 
-const getEvents = async (weekNumber = currentWeekNumber()) => {
-  const currentWeekN = currentWeekNumber();
-  const currentYear = new Date().getFullYear();
+const getEvents = async (
+  weekNumber = currentWeekNumber(),
+  yearNumber = new Date().getFullYear()
+) => {
+  const startDate = getDateOfIsoWeek(weekNumber, yearNumber);
+  const endDate = getDateOfIsoWeek(weekNumber, yearNumber, true);
 
-  const isLessThan3MontsAhead = weekNumber < currentWeekN + 12;
-  const isLessThan3MonthsBehind = weekNumber > currentWeekN - 12;
-  const year =
-    isLessThan3MontsAhead || isLessThan3MonthsBehind
-      ? currentYear
-      : currentYear - 1;
-
-  const startDate = getDateOfIsoWeek(weekNumber, year);
-  const endDate = getDateOfIsoWeek(weekNumber, year, true);
   const eventParams = {
     weekStartIsoDate: startDate.toISOString().split('T')[0], // Format as YYYY-MM-DD
     weekEndIsoDate: endDate.toISOString().split('T')[0], // Format as YYYY-MM-DD
@@ -38,12 +31,8 @@ const getEvents = async (weekNumber = currentWeekNumber()) => {
     params: eventParams,
     tags,
   });
-  const weekEvents = events.find((e) => e.week === weekNumber);
 
-  weekEvents.events.sort(
-    (a, b) => new Date(a.startDate) - new Date(b.startDate)
-  );
-  const allEvents = [...weekEvents.events, ...sanityEvents]
+  const allEvents = [...sanityEvents]
     .filter((event) => event)
     .map((event) => ({
       ...event,

@@ -1,12 +1,16 @@
 import Link from 'next/link';
 import React from 'react';
 import Container from '../layout/Container';
-import NavigationArrows from './NavigationArrows';
 
-const EmptyWeekPage = () => {
+const EmptyWeekPage = ({ yearNumber, weekNumber }) => {
+  const href =
+    weekNumber === 52
+      ? `/d/${yearNumber - 1}/${1}`
+      : `/d/${yearNumber}/${weekNumber - 1}`;
+
   return (
     <Container>
-      <Link className='flex flex-col items-center justify-center' href='/'>
+      <Link className='flex flex-col items-center justify-center' href={href}>
         <p className='cursor-pointer text-xl text-whitish'>
           no events for this week.. yet!
         </p>

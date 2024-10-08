@@ -60,9 +60,6 @@ export const addNDayToEvent = (startDate, i) => {
 };
 
 export function getDateOfIsoWeek(week, year, returnEndOfWeek = false) {
-  week = parseFloat(week);
-  year = parseFloat(year);
-
   if (week < 1 || week > 53) {
     throw new RangeError('ISO 8601 weeks are numbered from 1 to 53');
   } else if (!Number.isInteger(week)) {

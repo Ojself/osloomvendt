@@ -18,7 +18,7 @@ const links = [
   },
 
   {
-    href: `/week/${currentWeekNumber()}`,
+    href: `/d/${new Date().getFullYear()}/${currentWeekNumber()}`,
     children: <>Week {currentWeekNumber()} events</>,
   },
   {

@@ -7,9 +7,10 @@ import Link from 'next/link';
 import { twMerge } from 'tailwind-merge';
 
 const MenuDropdown = () => {
+  const currentYear = new Date().getFullYear();
   const navs = [
     {
-      href: `/week/${currentWeekNumber()}`,
+      href: `/d/${currentYear}/${currentWeekNumber()}`,
       label: `Week ${currentWeekNumber()} events`,
     },
 

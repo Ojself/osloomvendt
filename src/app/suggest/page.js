@@ -7,6 +7,7 @@ import SuggestClient from '@/components/suggest/SuggestClient';
 const locationQuery = groq`
 *[_type == 'location' && !(_id in path("drafts.**")) && hiddenFromUserSelection != true] | order(name) {
   name,
+  _id
 }
 `;
 const getData = async () => {

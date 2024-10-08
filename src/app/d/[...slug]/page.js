@@ -3,17 +3,49 @@ import React from 'react';
 import EmptyWeekPage from '@/components/week/EmptyWeekPage';
 import WeekClient from '@/components/week/WeekClient';
 import getEvents from '@/utils/getEvents';
+import { sanityFetch } from '@/lib/sanity/sanityClient';
+import currentWeekNumber from 'current-week-number';
 
-export function generateStaticParams() {
-  return Array.from({ length: 52 }).map((_, i) => ({
-    week: (i + 1).toString(),
-  }));
+const paramsQuery = `
+*[_type == "event"]{
+  _id,
+  startDate
+}
+`;
+
+export async function generateStaticParams() {
+  // Fetch events from Sanity
+  const events = await sanityFetch({ query: paramsQuery });
+
+  // Create a Set to track unique year/weekNumber combinations
+  const uniqueParams = new Set();
+
+  // Loop through the events and extract the year and weekNumber
+  events.forEach((event) => {
+    if (event.startDate) {
+      const startDate = new Date(event.startDate);
+
+      const year = startDate.getFullYear();
+      const weekNumber = currentWeekNumber(startDate);
+      uniqueParams.add(`${year}/${weekNumber}`);
+    }
+  });
+
+  // Convert the Set into an array of objects with the desired params
+  return Array.from(uniqueParams).map((param) => {
+    const [year, weekNumber] = param.split('/');
+    return {
+      slug: [year, weekNumber],
+    };
+  });
 }
 
 export async function generateMetadata({ params }) {
-  const week = params.week;
-  const weekNumber = parseInt(params.week, 10);
-  const events = (await getEvents(weekNumber)).sort(
+  const [year, week] = solveParams(params.slug);
+
+  const weekNumber = parseInt(week, 10);
+  const yearNumber = parseInt(year, 10);
+  const events = (await getEvents(weekNumber, yearNumber)).sort(
     (a, b) => b.highlight - a.highlight
   );
 
@@ -86,15 +118,43 @@ export async function generateMetadata({ params }) {
   };
 }
 
+const solveParams = (slug) => {
+  // No date provded
+  if (slug.length === 0) {
+    return [new Date().getFullYear(), currentWeekNumber()];
+  }
+  // Only year or weekN provided
+  if (slug.length === 1) {
+    // only year provided
+    if (slug[0].length === 4) {
+      return [slug[0], currentWeekNumber()];
+    }
+    // only weekN provided
+    return [new Date().getFullYear(), slug[0]];
+  }
+  // Both year and weekN provided
+  const [year, week] = slug;
+  return [year, week];
+};
+
 const Week = async ({ params }) => {
-  const weekNumber = parseInt(params.week, 10);
-  const events = await getEvents(weekNumber);
+  const [year, week] = solveParams(params.slug);
+  const yearNumber = parseInt(year, 10);
+  const weekNumber = parseInt(week, 10);
+
+  const events = await getEvents(weekNumber, yearNumber);
 
   if (!events || events.length === 0) {
-    return <EmptyWeekPage />;
+    return <EmptyWeekPage weekNumber={weekNumber} yearNumber={yearNumber} />;
   }
 
-  return <WeekClient events={events} weekNumber={weekNumber} />;
+  return (
+    <WeekClient
+      events={events}
+      weekNumber={weekNumber}
+      yearNumber={yearNumber}
+    />
+  );
 };
 
 export default Week;

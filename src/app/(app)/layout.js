@@ -1,3 +1,4 @@
+import RadialBackground from '@/components/RadialBackground';
 import NavBar from '@/components/layout/NavBar';
 
 export const metadata = {
@@ -25,7 +26,7 @@ export default function Layout({ children }) {
   return (
     <>
       <NavBar showLogo={false} />
-      <div className='radial-background'></div>
+      <RadialBackground />
       <main className='min-h-screen w-full  px-2 pb-20 font-source-sans text-whitish '>
         {children}
       </main>

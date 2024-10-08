@@ -35,7 +35,7 @@ const SuggestClient = ({ data }) => {
     const text = `{ \\n 'startDate': '${startDate.toLocaleDateString(
       'en-US'
     )}', \\n 'name': '${name}', \\n 'location': '${
-      location.value
+      location.label
     }', \\n 'url': '${url}', \\n }, \\n message: ${message} \\n `;
 
     try {
@@ -81,7 +81,7 @@ const SuggestClient = ({ data }) => {
   const eventToBeSuggested = {
     startDate: startDate,
     name: name || 'Amelie Lens',
-    location: location.value || 'Ekebergsletta',
+    location: location.label || 'Ekebergsletta',
     url: url || 'https://www.instagram.com/osloomvendt',
   };
 

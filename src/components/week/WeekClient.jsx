@@ -10,15 +10,29 @@ import NavigationArrows from './NavigationArrows';
 import ActionButtons from './ActionButtons';
 import currentWeekNumber from 'current-week-number';
 
-const WeekClient = ({ events, weekNumber = currentWeekNumber() }) => {
+const WeekClient = ({
+  events,
+  weekNumber = currentWeekNumber(),
+  yearNumber = new Date().getFullYear(),
+}) => {
   const [highlightMode, setHighlightMode] = useState(false);
   const [filteredLocations, setFilteredLocations] = useState([]);
 
   const router = useRouter();
-  const previousWeekNumber = weekNumber === 1 ? 52 : weekNumber - 1;
-  const nextWeekNumber = weekNumber >= 52 ? 1 : weekNumber + 1;
-  const previousWeekHref = `/week/${previousWeekNumber}`;
-  const nextWeekHref = `/week/${nextWeekNumber}`;
+  const previousDate =
+    weekNumber === 1
+      ? `${yearNumber - 1}/52`
+      : `${yearNumber}/${weekNumber - 1}`;
+
+  const nextDate =
+    weekNumber === 52
+      ? `${yearNumber + 1}/1`
+      : `${yearNumber}/${weekNumber + 1}`;
+
+  const noEarlierWeeks = yearNumber === 2022 && weekNumber === 8;
+
+  const previousWeekHref = noEarlierWeeks ? '/d/2022/8' : `/d/${previousDate}`;
+  const nextWeekHref = `/d/${nextDate}`;
 
   const onKeyDown = (e) => {
     const { code } = e;
