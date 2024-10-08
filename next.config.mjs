@@ -8,7 +8,7 @@ const nextConfig = {
     const currentEventUrl = `/d/${currentYear}/${currentWeekNumber()}`;
     return [
       {
-        source: '/week',
+        source: '/week(.*)',
         destination: currentEventUrl,
         permanent: true,
       },
