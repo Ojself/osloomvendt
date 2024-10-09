@@ -20,10 +20,11 @@ const eventsQuery = groq`*[_type == 'event' && !(_id in path("drafts.**")) && st
   }
 `;
 
-export async function GET(request, res) {
+export async function GET(request) {
   const searchParams = request.nextUrl.searchParams;
 
   const week = searchParams.get('week');
+  const year = searchParams.get('year');
   const apikey = searchParams.get('apikey');
 
   if (!week) {
@@ -43,10 +44,10 @@ export async function GET(request, res) {
     );
   }
 
-  const year = new Date().getFullYear(); // Assuming you want the current year
+  const yearNumber = parseInt(year, 10);
   const weekNumber = parseInt(week, 10);
-  const startDate = getDateOfIsoWeek(weekNumber, year);
-  const endDate = getDateOfIsoWeek(weekNumber, year, true);
+  const startDate = getDateOfIsoWeek(weekNumber, yearNumber);
+  const endDate = getDateOfIsoWeek(weekNumber, yearNumber, true);
 
   const eventParams = {
     weekStartIsoDate: startDate.toISOString().split('T')[0], // Format as YYYY-MM-DD

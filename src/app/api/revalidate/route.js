@@ -20,6 +20,7 @@ export async function POST(req) {
         return new Response(JSON.stringify({ message, body }), { status: 400 });
       }
       const currentYear = new Date().getFullYear();
+      /* TODO!? */
       const staleRoute = `/d/${currentYear}/${currentWeekNumber(body.startDate)}`;
       revalidatePath(staleRoute);
       const message = `Updated route: ${staleRoute}`;
