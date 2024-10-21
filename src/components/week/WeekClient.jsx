@@ -16,6 +16,8 @@ const WeekClient = ({
   yearNumber = new Date().getFullYear(),
 }) => {
   const [highlightMode, setHighlightMode] = useState(false);
+  const [specialEventMode, setSpecialEventMode] = useState(null);
+
   const [filteredLocations, setFilteredLocations] = useState([]);
 
   const router = useRouter();
@@ -36,12 +38,16 @@ const WeekClient = ({
 
   const onKeyDown = (e) => {
     const { code } = e;
-    if (code === 'KeyH') setHighlightMode((highlightMode) => !highlightMode);
+    if (code === 'KeyH') {
+      setHighlightMode((highlightMode) => !highlightMode);
+      setSpecialEventMode(null);
+    }
     if (code === 'ArrowLeft') router.push(previousWeekHref);
     if (code === 'ArrowRight') router.push(nextWeekHref);
     if (code === 'ArrowLeft' || code === 'ArrowRight') {
-      setHighlightMode(false);
       setFilteredLocations([]);
+      setHighlightMode(false);
+      setSpecialEventMode(null);
     }
   };
 
@@ -77,6 +83,8 @@ const WeekClient = ({
           filteredLocations={filteredLocations}
           setFilteredLocations={setFilteredLocations}
           isNight={isNight}
+          specialEventMode={specialEventMode}
+          setSpecialEventMode={setSpecialEventMode}
         />
       </>
 
@@ -95,6 +103,13 @@ const WeekClient = ({
           }
           if (highlightMode) {
             filteredEvents = filteredEvents.filter((event) => event.highlight);
+          }
+          if (specialEventMode) {
+            filteredEvents = filteredEvents.filter(
+              (event) =>
+                event.specialEvent &&
+                event.specialEvent.name === specialEventMode
+            );
           }
 
           return (

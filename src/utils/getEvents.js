@@ -8,6 +8,10 @@ const eventsQuery = groq`*[_type == 'event' && !(_id in path("drafts.**")) && st
     name,
     startDate,
     "location": location->name,
+    "specialEvent": specialEvent->{
+      name,
+      color
+    },
     url,
     highlight
   }
@@ -32,7 +36,7 @@ const getEvents = async (
     tags,
   });
 
-  const allEvents = [...sanityEvents]
+  const allEvents = sanityEvents
     .filter((event) => event)
     .map((event) => ({
       ...event,
