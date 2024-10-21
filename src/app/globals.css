@@ -21,6 +21,12 @@
   mask: var(--mask);
 }
 
+.image-gallery-left-nav:hover .image-gallery-svg:hover,
+.image-gallery-right-nav:hover .image-gallery-svg:hover,
+.image-gallery-icon:hover {
+  color: #9b6cff;
+}
+
 input[type='range'].react-player-range {
   @apply w-full max-w-none appearance-none border-0 bg-transparent active:cursor-ew-resize;
 }

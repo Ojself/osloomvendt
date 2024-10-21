@@ -25,9 +25,9 @@ const Providers = ({ children, session }) => {
             options={{ showSpinner: false }}
             shallowRouting
           />
-        </PersistGate>
 
-        {children}
+          {children}
+        </PersistGate>
       </Provider>
     </SessionProvider>
   );

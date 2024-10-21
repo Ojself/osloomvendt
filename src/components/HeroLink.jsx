@@ -13,7 +13,7 @@ const HeroLink = () => {
         className={`mb-10 flex h-32 w-full items-center  text-whitish transition duration-300 ease-in-out hover:bg-whitish hover:text-blackish sm:h-36 md:h-40 lg:h-64 `}
       >
         <h1 className='w-full select-none whitespace-nowrap text-center font-anton text-6xl sm:text-8xl md:text-9xl lg:text-10xl'>
-          OSLO OMVENDT
+          🎃SLO 🎃MVENDT
         </h1>
       </div>
     </Link>
