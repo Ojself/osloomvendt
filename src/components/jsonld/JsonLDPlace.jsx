@@ -30,7 +30,7 @@ const JsonLDPlace = ({ location }) => {
     image: imageUrl ? imageUrl.toString() : undefined,
     address: addressJsonLd,
   };
-  /7console.log({ jsonLd });
+  //console.log({ jsonLd });
 
   return (
     <script
