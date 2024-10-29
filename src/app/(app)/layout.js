@@ -1,5 +1,6 @@
 import RadialBackground from '@/components/RadialBackground';
 import NavBar from '@/components/layout/NavBar';
+import NewFooter from '@/components/layout/NewFooter';
 
 export const metadata = {
   metadataBase: new URL('https://www.osloomvendt.no'),
@@ -30,6 +31,7 @@ export default function Layout({ children }) {
       <main className='min-h-screen w-full  px-2 pb-20 font-source-sans text-whitish '>
         {children}
       </main>
+      <NewFooter />
     </>
   );
 }

@@ -10,7 +10,6 @@ export default async function Home() {
       <div className='flex h-screen flex-col items-center justify-center'>
         <HeroLink />
       </div>
-
       <WeekClient events={events} />
     </>
   );

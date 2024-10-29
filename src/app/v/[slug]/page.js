@@ -1,6 +1,5 @@
 import JsonLDPlace from '@/components/jsonld/JsonLDPlace';
 import getLocationBySlug from '@/utils/getLocationBySlug';
-import React from 'react';
 
 const Venue = async ({ params }) => {
   const { slug } = params;
