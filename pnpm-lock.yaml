@@ -20,6 +20,9 @@ importers:
       '@reduxjs/toolkit':
         specifier: ^2.2.3
         version: 2.3.0(react-redux@9.1.2(@types/react@18.3.11)(react@18.3.1)(redux@5.0.1))(react@18.3.1)
+      '@sanity/image-url':
+        specifier: ^1.0.2
+        version: 1.0.2
       axios:
         specifier: ^1.6.8
         version: 1.7.7
@@ -49,7 +52,7 @@ importers:
         version: 2.3.14
       next-sanity:
         specifier: ^8.5.0
-        version: 8.5.5(@sanity/client@6.22.1)(@sanity/icons@2.11.8(react@18.3.1))(@sanity/types@3.61.0)(@sanity/ui@2.8.9(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.1.4(@babel/core@7.25.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(sanity@3.61.0(@types/node@22.7.5)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
+        version: 8.5.5(@sanity/client@6.22.1)(@sanity/icons@3.4.0(react@18.3.1))(@sanity/types@3.61.0)(@sanity/ui@2.8.9(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.1.4(@babel/core@7.25.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(sanity@3.61.0(@types/node@22.7.5)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
       next-sanity-image:
         specifier: ^6.1.1
         version: 6.1.1(@sanity/client@6.22.1)(next@14.1.4(@babel/core@7.25.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
@@ -1348,12 +1351,6 @@ packages:
 
   '@sanity/generate-help-url@3.0.0':
     resolution: {integrity: sha512-wtMYcV5GIDIhVyF/jjmdwq1GdlK07dRL40XMns73VbrFI7FteRltxv48bhYVZPcLkRXb0SHjpDS/icj9/yzbVA==}
-
-  '@sanity/icons@2.11.8':
-    resolution: {integrity: sha512-C4ViXtk6eyiNTQ5OmxpfmcK6Jw+LLTi9zg9XBUD15DzC4xTHaGW9SVfUa43YtPGs3WC3M0t0K59r0GDjh52HIg==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      react: ^18
 
   '@sanity/icons@3.4.0':
     resolution: {integrity: sha512-X8BMM68w3y5cuCLpPwV7jGhVNGgAL/FA3UI6JaRCsyVOahA6aBOeKdjFs5MHtKi8cmrKwq1a98h/HbrK56kszA==}
@@ -6520,10 +6517,6 @@ snapshots:
 
   '@sanity/generate-help-url@3.0.0': {}
 
-  '@sanity/icons@2.11.8(react@18.3.1)':
-    dependencies:
-      react: 18.3.1
-
   '@sanity/icons@3.4.0(react@18.3.1)':
     dependencies:
       react: 18.3.1
@@ -7934,7 +7927,7 @@ snapshots:
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
       eslint-import-resolver-typescript: 3.6.3(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint@8.57.1)
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
       eslint-plugin-jsx-a11y: 6.10.0(eslint@8.57.1)
       eslint-plugin-react: 7.37.1(eslint@8.57.1)
       eslint-plugin-react-hooks: 5.0.0-canary-7118f5dd7-20230705(eslint@8.57.1)
@@ -7969,7 +7962,7 @@ snapshots:
       is-bun-module: 1.2.1
       is-glob: 4.0.3
     optionalDependencies:
-      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
     transitivePeerDependencies:
       - '@typescript-eslint/parser'
       - eslint-import-resolver-node
@@ -7987,7 +7980,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1):
+  eslint-plugin-import@2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.31.0(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1):
     dependencies:
       '@rtsao/scc': 1.1.0
       array-includes: 3.1.8
@@ -9137,11 +9130,11 @@ snapshots:
       next: 14.1.4(@babel/core@7.25.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       react: 18.3.1
 
-  next-sanity@8.5.5(@sanity/client@6.22.1)(@sanity/icons@2.11.8(react@18.3.1))(@sanity/types@3.61.0)(@sanity/ui@2.8.9(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.1.4(@babel/core@7.25.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(sanity@3.61.0(@types/node@22.7.5)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
+  next-sanity@8.5.5(@sanity/client@6.22.1)(@sanity/icons@3.4.0(react@18.3.1))(@sanity/types@3.61.0)(@sanity/ui@2.8.9(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(next@14.1.4(@babel/core@7.25.8)(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)(sanity@3.61.0(@types/node@22.7.5)(@types/react@18.3.11)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)))(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)):
     dependencies:
       '@portabletext/react': 3.1.0(react@18.3.1)
       '@sanity/client': 6.22.1(debug@4.3.7)
-      '@sanity/icons': 2.11.8(react@18.3.1)
+      '@sanity/icons': 3.4.0(react@18.3.1)
       '@sanity/preview-kit': 5.0.41(@sanity/client@6.22.1)(react@18.3.1)
       '@sanity/types': 3.61.0(debug@4.3.7)
       '@sanity/ui': 2.8.9(react-dom@18.3.1(react@18.3.1))(react-is@18.3.1)(react@18.3.1)(styled-components@6.1.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1))
