@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://osloomvendt.com
+Host: https://osloomvendt.no
 
 # Sitemaps
-Sitemap: https://osloomvendt.com/sitemap.xml
+Sitemap: https://osloomvendt.no/sitemap.xml

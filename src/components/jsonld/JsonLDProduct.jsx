@@ -15,7 +15,6 @@ const JsonLDProduct = ({ product }) => {
         availability: 'https://schema.org/InStock',
         price: variant.price,
         priceCurrency: 'NOK',
-        // now + 3 months
         priceValidUntil: new Date(
           new Date().setMonth(new Date().getMonth() + 3)
         ).toISOString(),

@@ -3,8 +3,9 @@ import groq from 'groq';
 import Link from 'next/link';
 
 import ProductSlugClient from '@/components/shop/products/ProductSlugClient';
-import { sanityFetch } from '@/lib/sanity/sanityClient';
+import { sanityFetch, urlFor } from '@/lib/sanity/sanityClient';
 import JsonLDProduct from '@/components/jsonld/JsonLDProduct';
+import { OO_BRAND_IMAGE } from '@/utils/consts';
 
 const productsQuery = groq`*[_type == 'product' && slug.current == $paramsProduct] {
   _id,
@@ -21,7 +22,8 @@ const pathsQuery = groq`*[_type == 'product' && defined(slug.current)][].slug.cu
 export async function generateMetadata({ params }) {
   const product = await getData(params.product);
 
-  const { title, description } = product;
+  const { title, description, images } = product;
+  const imageUrl = urlFor(images[0]);
 
   return {
     title: title,
@@ -29,7 +31,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: title,
       description: description,
-      images: 'https://i.imgur.com/rO9yY4J.png',
+      images: imageUrl.toString() || OO_BRAND_IMAGE,
     },
   };
 }
