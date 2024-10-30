@@ -4,6 +4,11 @@ import Link from 'next/link';
 import { SOCIALS } from '@/utils/consts';
 import ApiKeyLink from '@/components/faq/ApiKeyLink';
 import Container from '@/components/layout/Container';
+import {
+  Disclosure,
+  DisclosurePanel,
+  DisclosureButton,
+} from '@headlessui/react';
 
 const mockResponse = {
   status: 200,
@@ -87,11 +92,17 @@ const FAQ = () => {
           URL: <ApiKeyLink />
         </p>
         <div className='rounded-lg bg-black p-4 text-white'>
-          <h1 className='text-sm text-tertiary'>GET</h1>
-          <h1 className='text-sm'>
-            API Response <span className='text-green-500'>(200)</span>
-          </h1>
-          <pre>{JSON.stringify(mockResponse, null, 2)}</pre>
+          <Disclosure>
+            <DisclosureButton className='py-2 text-sm'>
+              <h1 className='text-left text-sm text-tertiary'>
+                GET<span className='text-green-500'>(200)</span>
+              </h1>
+              <p className='text-xs'>Click to see result</p>
+            </DisclosureButton>
+            <DisclosurePanel className='text-gray-500'>
+              <pre>{JSON.stringify(mockResponse, null, 2)}</pre>
+            </DisclosurePanel>
+          </Disclosure>
         </div>
         <h2 className='mb-4 mt-6 text-lg font-bold sm:text-xl md:text-3xl'>
           <span>Q</span>: How can I support the event guide?
