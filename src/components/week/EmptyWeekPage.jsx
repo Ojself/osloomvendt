@@ -1,23 +1,25 @@
-import Link from 'next/link';
+"use client"
 import React from 'react';
 import Container from '../layout/Container';
+import { useRouter } from "next/navigation";
 
-const EmptyWeekPage = ({ yearNumber, weekNumber }) => {
-  const href =
-    weekNumber === 52
-      ? `/d/${yearNumber - 1}/${1}`
-      : `/d/${yearNumber}/${weekNumber - 1}`;
+
+const EmptyWeekPage = () => {
+
+  const router = useRouter()
+  
+  
 
   return (
     <Container>
-      <Link className='flex flex-col items-center justify-center' href={href}>
-        <p className='cursor-pointer text-xl text-whitish'>
+      <div  className='flex flex-col items-center justify-center text-whitish'>
+        <p className='cursor-pointer text-xl '>
           no events for this week.. yet!
         </p>
-        <p className='cursor-pointer  text-xl text-whitish underline hover:font-semibold'>
+        <button onClick={()=> router.back()} className='cursor-pointer text-xl underline hover:font-semibold'>
           Go back
-        </p>
-      </Link>
+        </button>
+      </div>
     </Container>
   );
 };

@@ -11,7 +11,7 @@ export const client = createClient({
   apiVersion: '2024-01-01',
   useCdn: true, // if you're using ISR or only static generation at build time then you can set this to `false` to guarantee no stale content
   token,
-  withCredentials: true,
+  withCredentials: false,
 });
 
 export async function sanityFetch({ query, params = {}, tags }) {
