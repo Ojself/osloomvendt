@@ -20,12 +20,10 @@ export async function POST(req) {
         return new Response(JSON.stringify({ message, body }), { status: 400 });
       }
       const {startDate} = body;
-      const year = new Date(startDate).getFullYear();
-      /* TODO!  */
+      const weekN = currentWeekNumber(startDate);
+      const year = weekN = 1 ? new Date(startDate).getFullYear() + 1 : new Date(startDate).getFullYear() ;
       const staleRoute = `/d/${year}/${currentWeekNumber(startDate)}`;
-      const staleRoute2 = `/d/${year+1}/${currentWeekNumber(startDate)}`;
       revalidatePath(staleRoute);
-      revalidatePath(staleRoute2);
       const message = `Updated route: ${staleRoute}`;
       return NextResponse.json({ body, message });
     }
