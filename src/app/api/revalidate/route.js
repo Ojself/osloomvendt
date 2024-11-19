@@ -21,7 +21,7 @@ export async function POST(req) {
       }
       const {startDate} = body;
       const weekN = currentWeekNumber(startDate);
-      const year = weekN = 1 ? new Date(startDate).getFullYear() + 1 : new Date(startDate).getFullYear() ;
+      const year = weekN === 1 ? new Date(startDate).getFullYear() + 1 : new Date(startDate).getFullYear() ;
       const staleRoute = `/d/${year}/${currentWeekNumber(startDate)}`;
       revalidatePath(staleRoute);
       const message = `Updated route: ${staleRoute}`;
