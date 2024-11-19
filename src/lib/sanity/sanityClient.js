@@ -9,7 +9,7 @@ export const client = createClient({
   projectId,
   dataset,
   apiVersion: '2024-01-01',
-  useCdn: true, // if you're using ISR or only static generation at build time then you can set this to `false` to guarantee no stale content
+  useCdn: true, 
   token,
   withCredentials: false,
 });
@@ -17,7 +17,7 @@ export const client = createClient({
 export async function sanityFetch({ query, params = {}, tags }) {
   return client.fetch(query, params, {
     next: {
-      tags, // for tag-based revalidation
+      tags, 
     },
   });
 }
