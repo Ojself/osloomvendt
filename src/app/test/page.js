@@ -1,6 +1,4 @@
 'use client';
-
-import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
 import { useAppSelector } from '@/lib/redux/hooks';
 import { signIn, useSession } from 'next-auth/react';
 import React from 'react';
@@ -43,16 +41,7 @@ const Test = () => {
           Log state
         </button>
       </div>
-      <hr className='my-10' />
-      <div className='flex w-full flex-row flex-wrap '>
-        {answers.map((a) => (
-          <IgQuestionAnswer
-            key={a}
-            q={'Which music festival are you attending this summer?'}
-            a={a}
-          />
-        ))}
-      </div>
+      
       <hr className='my-10' />
       <div className='flex flex-col items-center'>
         <p>Auth</p>

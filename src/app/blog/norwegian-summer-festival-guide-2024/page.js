@@ -5,8 +5,9 @@ import SummerFestival2024Client from '@/components/blog/SummerFestival2024Client
 import Container from '@/components/layout/Container';
 import Header1 from '@/components/layout/typograhpy/Header1';
 import Header3 from '@/components/layout/typograhpy/Header3';
-import IgQuestionAnswer from '@/components/test/IgQuestionAnswer';
+
 import festivalAnswers from '@/data/festival-2024-ig-ansers';
+import IgQuestionAnswer from "@/components/blog/IgQuestionAnswer";
 
 const articles = [
   {
