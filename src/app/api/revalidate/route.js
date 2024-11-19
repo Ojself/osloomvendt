@@ -19,9 +19,8 @@ export async function POST(req) {
         const message = 'Bad Request';
         return new Response(JSON.stringify({ message, body }), { status: 400 });
       }
-      const currentYear = new Date().getFullYear();
-      /* TODO!? */
-      const staleRoute = `/d/${currentYear}/${currentWeekNumber(body.startDate)}`;
+      const year = new Date(body.startDate).getFullYear();
+      const staleRoute = `/d/${year}/${currentWeekNumber(body.startDate)}`;
       revalidatePath(staleRoute);
       const message = `Updated route: ${staleRoute}`;
       return NextResponse.json({ body, message });
