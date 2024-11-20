@@ -1,6 +1,7 @@
 import RadialBackground from '@/components/RadialBackground';
 import NavBar from '@/components/layout/NavBar';
 import NewFooter from '@/components/layout/NewFooter';
+import { OO_BRAND_IMAGE } from "@/utils/consts";
 
 export const metadata = {
   metadataBase: new URL('https://www.osloomvendt.no'),
@@ -9,17 +10,17 @@ export const metadata = {
   openGraph: {
     title: 'Oslo Omvendt',
     description: "All you need to know about Oslo's clubs and raves.",
-    images: 'https://i.imgur.com/rO9yY4J.png',
+    images: OO_BRAND_IMAGE,
   },
   twitter: {
-    card: 'summary_large_image', // 'summary_large_image' is typically used for sharing articles or pages with a big image preview
+    card: 'summary_large_image', 
     title: 'Oslo Omvendt',
     description: "All you need to know about Oslo's clubs and raves.",
     images: {
-      url: 'https://i.imgur.com/rO9yY4J.png',
+      url: OO_BRAND_IMAGE,
       alt: 'Oslo Omvendt Logo',
     },
-    creator: '@OsloOmvendt', // Replace with your Twitter handle
+    creator: '@OsloOmvendt', 
   },
 };
 

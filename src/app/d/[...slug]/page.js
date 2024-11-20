@@ -5,6 +5,7 @@ import WeekClient from '@/components/week/WeekClient';
 import getEvents from '@/utils/getEvents';
 import { sanityFetch } from '@/lib/sanity/sanityClient';
 import currentWeekNumber from 'current-week-number';
+import { OO_BRAND_IMAGE } from "@/utils/consts";
 
 const paramsQuery = `
 *[_type == "event"]{
@@ -60,17 +61,17 @@ export async function generateMetadata({ params }) {
       openGraph: {
         title,
         description: "No events this week, but we're still here!",
-        images: 'https://i.imgur.com/rO9yY4J.png',
+        images: OO_BRAND_IMAGE,
       },
       twitter: {
-        card: 'summary_large_image', // 'summary_large_image' is typically used for sharing articles or pages with a big image preview
+        card: 'summary_large_image', 
         title,
         description: "No events this week, but we're still here!",
         images: {
-          url: 'https://i.imgur.com/rO9yY4J.png',
+          url: OO_BRAND_IMAGE,
           alt: 'Oslo Omvendt Logo',
         },
-        creator: '@OsloOmvendt', // Replace with your Twitter handle
+        creator: '@OsloOmvendt', 
       },
     };
   }
@@ -103,17 +104,16 @@ export async function generateMetadata({ params }) {
           type: 'image/png',
         },
       ],
-      //images: 'https://i.imgur.com/rO9yY4J.png',
     },
     twitter: {
-      card: 'summary_large_image', // 'summary_large_image' is typically used for sharing articles or pages with a big image preview
+      card: 'summary_large_image',
       title,
       description,
       images: {
-        url: 'https://i.imgur.com/rO9yY4J.png',
+        url: OO_BRAND_IMAGE,
         alt: 'Oslo Omvendt Logo',
       },
-      creator: '@OsloOmvendt', // Replace with your Twitter handle
+      creator: '@OsloOmvendt',
     },
   };
 }

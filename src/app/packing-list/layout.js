@@ -1,4 +1,5 @@
 import NavBar from '@/components/layout/NavBar';
+import { OO_BRAND_IMAGE } from "@/utils/consts";
 
 export const metadata = {
   title: 'Packing list - Oslo Omvendt',
@@ -8,7 +9,7 @@ export const metadata = {
     title: 'Packing list - Oslo Omvendt',
     description:
       'The official packing list for forest raves. Have a better experience by preparing correctly.',
-    images: 'https://i.imgur.com/rO9yY4J.png',
+    images: OO_BRAND_IMAGE,
   },
 };
 

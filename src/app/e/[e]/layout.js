@@ -1,3 +1,5 @@
+import { OO_BRAND_IMAGE } from "@/utils/consts";
+
 /* TODO Something more correct here */
 export const metadata = {
   title: 'Event - Oslo Omvendt',
@@ -5,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: 'Event - Oslo Omvendt',
     description: 'Event decription',
-    images: 'https://i.imgur.com/rO9yY4J.png',
+    images: OO_BRAND_IMAGE,
   },
 };
 

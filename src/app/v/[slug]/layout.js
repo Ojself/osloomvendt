@@ -1,3 +1,4 @@
+import { OO_BRAND_IMAGE } from "@/utils/consts";
 import getLocationBySlug from '@/utils/getLocationBySlug';
 
 export async function generateMetadata({ params }) {
@@ -19,13 +20,12 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${location.name} - Oslo Omvendt`,
       description: location.description || 'Venue description',
-      images: location.imageUrl || 'https://i.imgur.com/rO9yY4J.png',
+      images: location.imageUrl || OO_BRAND_IMAGE,
     },
   };
 }
 
 export default function Layout({ children }) {
-  console.log('b');
   return (
     <main className='min-h-screen px-2 font-source-code-pro'>{children}</main>
   );

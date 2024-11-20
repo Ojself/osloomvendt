@@ -1,4 +1,5 @@
 import NavBar from '@/components/layout/NavBar';
+import { OO_BRAND_IMAGE } from "@/utils/consts";
 
 export const metadata = {
   title: 'Links - Oslo Omvendt',
@@ -6,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: 'Links - Oslo Omvendt',
     description: 'Social Links for Oslo Omvendt',
-    images: 'https://i.imgur.com/rO9yY4J.png',
+    images: OO_BRAND_IMAGE,
   },
 };
 export default function Layout({ children }) {

@@ -3,7 +3,6 @@
 import { urlFor } from '@/lib/sanity/sanityClient';
 
 const JsonLDPlace = ({ location }) => {
-  //console.log({ location });
   const { name, description, url, image, address } = location;
 
   // Fetch the image properties using useNextSanityImage
@@ -30,7 +29,6 @@ const JsonLDPlace = ({ location }) => {
     image: imageUrl ? imageUrl.toString() : undefined,
     address: addressJsonLd,
   };
-  //console.log({ jsonLd });
 
   return (
     <script

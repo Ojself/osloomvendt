@@ -5,22 +5,6 @@ import React from 'react';
 import { redirect } from 'next/navigation';
 import Embed from '@/components/embed/Embed';
 
-const answers = [
-  'Monument !',
-  'Soria and Monument 😍',
-  'Monument!',
-  'Trevarefest i Lofoten 🥰🏔️',
-  'Monument:)',
-  'Stone Techno 🥳',
-  'Butik',
-  'Soria',
-  'Musikkfest og Vårlys',
-  'Sober beat og Insomnia',
-  'Soria!',
-  'Vårlys',
-  'Monument',
-];
-
 const Test = () => {
   const { data: session } = useSession();
   const products = useAppSelector((state) => state.products);

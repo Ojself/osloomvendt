@@ -1,5 +1,6 @@
 import NavBar from '@/components/layout/NavBar';
 import NewFooter from '@/components/layout/NewFooter';
+import { OO_BRAND_IMAGE } from "@/utils/consts";
 
 export const metadata = {
   title: 'FAQ - Oslo Omvendt',
@@ -7,7 +8,7 @@ export const metadata = {
   openGraph: {
     title: 'FAQ - Oslo Omvendt',
     description: 'Frequency Asked Questions about Oslo Omvendt',
-    images: 'https://i.imgur.com/rO9yY4J.png',
+    images: OO_BRAND_IMAGE,
   },
 };
 

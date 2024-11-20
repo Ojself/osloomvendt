@@ -1,10 +1,12 @@
+import { OO_BRAND_IMAGE } from "@/utils/consts";
+
 export const metadata = {
   title: 'Terms of sale - Oslo Omvendt',
   description: 'Terms of sale of Oslo Omvendt',
   openGraph: {
     title: 'Terms of sale - Oslo Omvendt',
     description: 'Terms of sale of Oslo Omvendt',
-    images: 'https://i.imgur.com/rO9yY4J.png',
+    images: OO_BRAND_IMAGE,
   },
 };
 

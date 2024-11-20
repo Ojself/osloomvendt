@@ -1,10 +1,12 @@
+import { OO_BRAND_IMAGE } from "@/utils/consts";
+
 export const metadata = {
   title: 'Data deletion - Oslo Omvendt',
   description: 'Data deletion policy',
   openGraph: {
     title: 'Data deletion - Oslo Omvendt',
     description: 'Data deletion policy',
-    images: 'https://i.imgur.com/rO9yY4J.png',
+    images: OO_BRAND_IMAGE,
   },
 };
 
