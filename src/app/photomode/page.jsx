@@ -4,7 +4,6 @@ import groq from 'groq';
 
 import { sanityFetch } from '@/lib/sanity/sanityClient';
 import { getDateOfIsoWeek } from '@/utils';
-import events from '@/data/events';
 
 import { redirect } from 'next/navigation';
 import PhotomodeClient from "@/components/PhotomodeClient";
@@ -39,11 +38,10 @@ const getData = async (weekNumber) => {
     tags,
   });
 
-  const weekEvents = events.find((e) => e.week === weekNumber);
   weekEvents.events?.sort(
     (a, b) => new Date(a.startDate) - new Date(b.startDate)
   );
-  const allEvents = [...weekEvents.events, ...sanityEvents]
+  const allEvents = [ ...sanityEvents]
     .filter((event) => event)
     .map((event) => ({
       ...event,
