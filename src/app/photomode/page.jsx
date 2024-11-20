@@ -38,10 +38,8 @@ const getData = async (weekNumber) => {
     tags,
   });
 
-  weekEvents.events?.sort(
-    (a, b) => new Date(a.startDate) - new Date(b.startDate)
-  );
-  const allEvents = [ ...sanityEvents]
+  
+  const allEvents = [...sanityEvents]
     .filter((event) => event)
     .map((event) => ({
       ...event,

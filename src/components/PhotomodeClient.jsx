@@ -22,7 +22,7 @@ const PhotomodeClient = ({ events, weekNumber }) => {
     toPng(photomodeRef.current, { cacheBust: true })
       .then((dataUrl) => {
         const link = document.createElement('a');
-        link.download = 'photomode.png';
+        link.download = `${weekNumber}.png`;
         link.href = dataUrl;
         link.click();
       })
