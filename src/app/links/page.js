@@ -12,6 +12,11 @@ import Container from '@/components/layout/Container';
 
 const links = [
   {
+    href: 'https://www.spleis.no/project/400135',
+    children: <>Hausmania Brenner Spleis</>,
+    large: true,
+  },
+  {
     href: '/',
     children: <>OsloOmvendt.no</>,
     large: true,
@@ -54,18 +59,7 @@ const links = [
       </>
     ),
   },
-  /* {
-    href: '/blog/17may-2024',
-    children: <>🇳🇴 17. mai-program</>,
-  },
-  {
-    href: '/blog/musikkfest-2024',
-    children: <>Musikkfest 2024</>,
-  },
-  {
-    href: '/blog/norwegian-summer-festival-guide-2024',
-    children: <>Festival Guide 2024</>,
-  }, */
+
   {
     href: '/2023-wrapped',
     children: <>2023 WRAPPED</>,
