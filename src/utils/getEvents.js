@@ -4,6 +4,13 @@ import { sanityFetch } from '@/lib/sanity/sanityClient';
 import { getDateOfIsoWeek } from '@/utils';
 import currentWeekNumber from 'current-week-number';
 
+import dayjs from 'dayjs'
+import utc from 'dayjs/plugin/utc'
+import timezone from 'dayjs/plugin/timezone'
+
+dayjs.extend(utc)
+dayjs.extend(timezone)
+
 const eventsQuery = groq`*[_type == 'event' && !(_id in path("drafts.**")) && startDate >= $weekStartIsoDate && startDate < $weekEndIsoDate ] | order(startDate asc){
     name,
     startDate,
@@ -35,15 +42,25 @@ const getEvents = async (
     params: eventParams,
     tags,
   });
+  
 
   const allEvents = sanityEvents
-    .filter((event) => event)
-    .map((event) => ({
-      ...event,
-      startDate: new Date(event.startDate),
-    }));
+  .filter((event) => event)
+  .map((event) => {
+    // Parse the UTC date from Sanity
+    const utcTime = dayjs.utc(event.startDate)
 
-  return allEvents;
+    
+    const osloTime = utcTime.tz('Europe/Oslo')
+    const formattedOsloTime = osloTime.format('YYYY-MM-DDTHH:mm:ss.SSSZ')
+
+    return {
+      ...event,
+      startDate: new Date(formattedOsloTime),
+    }
+  });
+    
+    return allEvents;
 };
 
 export default getEvents;

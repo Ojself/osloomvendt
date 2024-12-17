@@ -1,6 +1,7 @@
 'use client';
 import react, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const NewFooter = () => {
   const [horsePositionX, setHorsePositionX] = useState(5);
@@ -10,7 +11,9 @@ const NewFooter = () => {
       setHorsePositionX((prevPosition) => prevPosition - random);
     }, 80);
   };
-  const rotation = horsePositionX % 15;
+  const horseInMotion = horsePositionX !== 5
+  const rotation = horseInMotion ? (horsePositionX % 25) + 10: 0 
+  
 
   return (
     <div
@@ -25,12 +28,17 @@ const NewFooter = () => {
 
         <div
           onClick={handleClick}
-          className='z-10 ml-1 cursor-pointer'
+          className="z-10 ml-1 cursor-pointer"
           style={{
             transform: `translateX(${horsePositionX}px) rotate(${rotation}deg)`,
           }}
         >
-          🐎
+          <Image
+            src="/imgs/oohorse.png"
+            alt="Horse"
+            width={30} 
+            height={30} 
+          />
         </div>
         <Link href='/terms-of-sale'>
           <p className='text-sm  hover:underline'>Terms of sale</p>
