@@ -13,7 +13,7 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <>
-      <NavBar showLogo={true} lightMode={true} minified={false} />
+      <NavBar showLogo={true} lightMode={true} minified={true} />
 
       <main className='min-h-screen bg-gray-200 px-2 pb-20 pt-32 font-source-code-pro  text-whitish md:pt-40'>
         {children}
