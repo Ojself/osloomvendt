@@ -8,9 +8,8 @@ export const ignoreUnwantedKeysForNumberInput = (e) => {
   }
 };
 
-export const drunkAnimation = (shouldAnimate) => {
-  return shouldAnimate
-    ? {
+export const drunkAnimation = () => {
+  return  {
         x: Array.from({ length: 5 }).map(
           (_) => Math.floor(Math.random() * 8) - 4
         ),
@@ -27,7 +26,6 @@ export const drunkAnimation = (shouldAnimate) => {
           repeatType: 'mirror',
         },
       }
-    : {};
 };
 
 export const anonymizeEmail = (email) => {

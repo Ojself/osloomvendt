@@ -6,7 +6,7 @@ import { drunkAnimation } from '@/utils';
 const ActionButton = ({ onClick, className, children, isNight = false }) => {
   return (
     <motion.button
-      animate={drunkAnimation(isNight)}
+      animate={isNight ? drunkAnimation() : {}}
       onClick={onClick}
       className={twMerge(
         className,

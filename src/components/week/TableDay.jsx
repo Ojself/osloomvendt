@@ -38,7 +38,7 @@ const TableDay = ({ date, events, isNight = false }) => {
                 )} */}
                 <div className='ml-4 w-2/3 py-1'>
                   <motion.p
-                    animate={drunkAnimation(isNight)}
+                    animate={isNight ? drunkAnimation() : {}}
                     className='w-fit '
                   >
                     {name}
@@ -46,7 +46,7 @@ const TableDay = ({ date, events, isNight = false }) => {
                 </div>
                 <div className='absolute right-1 top-1/2 -translate-y-1/2  md:right-3 '>
                   <motion.p
-                    animate={drunkAnimation(isNight)}
+                    animate={isNight ? drunkAnimation() : {}}
                     className='rounded bg-whitish px-1 italic text-blackish md:px-2'
                   >
                     {location}

@@ -44,7 +44,7 @@ function EventDateBannerOutline({ weekday, date, isNight }) {
         <motion.time
           className="flex w-fit rounded-lg px-4"
           style={bannerStyle}
-          animate={drunkAnimation(isNight)}
+          animate={isNight ? drunkAnimation() : {}}
         >
           {formattedDate}
         </motion.time>
