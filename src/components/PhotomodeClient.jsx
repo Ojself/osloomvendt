@@ -14,7 +14,7 @@ const middleBlobStyle = {
 
 const PhotomodeClient = ({ events, weekNumber }) => {
   const photomodeRef = useRef(null);
-  const [photoSize, setPhotoSize] = useState(1200);
+  
 
   const onButtonClick = useCallback(() => {
     if (photomodeRef.current === null) {
@@ -49,14 +49,10 @@ const PhotomodeClient = ({ events, weekNumber }) => {
 
   return (
     <div className='flex flex-col items-center justify-center text-[#F9FAFC]'>
-      <div className="text-blackish space-x-2 mb-2">
-      <button className="border-2 border-secondaryLight  p-2 bg-secondary rounded-md" onClick={()=> setPhotoSize(800)}>Small</button>
-      <button className="border-2 border-secondary  p-2 bg-secondaryDark rounded-md" onClick={()=> setPhotoSize(1000)}>Medium</button>  
-      <button className="border-2 border-secondaryDark p-2 bg-secondaryLight rounded-md" onClick={()=> setPhotoSize(1200)}>Large</button>
-      </div>
+      
       <button className="border-2 mb-1 border-primary  p-2 bg-primaryDark rounded-md " onClick={onButtonClick}>Download Image</button>
       <div id='photomode' ref={photomodeRef} className='flex flex-col items-center justify-center text-[#F9FAFC]'>
-        <div style={middleBlobStyle} className={`h-[${photoSize}px] w-[${photoSize}px] p-6`}>
+        <div style={middleBlobStyle} className={`h-[1000px] w-[1000px] p-6`}>
           <Header1 className='uppercase' text={monthName} />
           <Header2 text={`[WEEK ${weekNumber}]`} />
           {allDatesShort.map((eventDate) => {

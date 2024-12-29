@@ -19,7 +19,7 @@ const eventsQuery = groq`*[_type == 'event' && location->region == "oslo" && !(_
 `;
 
 const getData = async (weekNumber) => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear() +1;
   if (process.env.NODE_ENV !== 'development') {
     redirect('/');
   }
@@ -50,7 +50,7 @@ const getData = async (weekNumber) => {
 };
 
 const Photomode = async () => {
-  const weekNumber = currentWeekNumber();
+  const weekNumber = 1 //currentWeekNumber();
   const events = await getData(weekNumber);
 
   return (
